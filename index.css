@@ -1,0 +1,17 @@
+@font-face{
+    font-family: 'Science';
+    src:url(Lato-Bold.ttf);
+}
+
+.txtincrease{
+    color: #afafaf;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition-duration: 0.4s;
+}
+
+.txtincrease:hover{
+    transform: scale(1.2); 
+}
