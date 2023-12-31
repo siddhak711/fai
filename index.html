@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="forest">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAI</title>
+    <link href="./dist/output.css" rel="stylesheet" >
+    <link href="index.css" rel="stylesheet" >
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  function openMenu(){
+    var elem = document.getElementById("fainavlinks");
+    elem.classList.toggle("hidden");
+  }
+  function visitPage(){
+    window.open('https://06f0kz9cclf.typeform.com/to/JSvZ5oHP', '_blank');
+  }
+</script>
+</head>
+<body>
+  <!--This is where the page layout gets separated into 12 columns-->
+  <header class="bg-[#926F34] sm:flex sm:justify-between">
+    <div class="flex items-center justify-between px-4 py-3">
+      <div>
+        <img src="images/failogo.png" alt="FAI" class="drop-shadow-lg h-12">
+      </div>
+      <div class="sm:hidden">
+        <button onclick="openMenu()" class="text-white hover:text-yellow-400 sm:hidden">
+          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id ="fainavlinks"  class="hidden px-5 pt-2 pb-4 sm:flex">
+      <a href="index.html"class="  text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3        hover:bg-gray-800">HOME</a>
+      <a href="team.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  hover:bg-gray-800">OUR TEAM</a>
+      <a href="#contact"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  hover:bg-gray-800">CONTACT</a>
+      <a href="#"         class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">CHAPTERS</a>
+    </div>
+  </header>
+  <div class="px-2 sm:px-10">
+  <!--This uses container that adds breakpoints to divs to change screen size and uses relative to position it absolute-->
+  <!--This is the main body of the page-->
+  <div class="container mx-auto ">
+    <h1 class="text-6xl text-left mt-44 text-white font-bold">FAI</h1>
+    <h3 class="text-lg text-left text-gray-400">Empowering financial futures.</h3>
+    <button class="bg-[#926F34] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] 
+    mt-2 p-4 text-center text-white text-base font-semibold"
+     onclick="visitPage();">Donate
+     <img src="images/_3114931.png" alt="" class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1">
+    </button>
+    <div>
+      <img src="images/fai.png" alt="" class="mt-32 border-8 border-[#926F34]">
+    </div>
+    <div class="mt-60 bg-gradient-to-r from-[#926F34] to-[#DFBD69] p-2">
+      <div class="bg-black p-1 shadow-lg">
+        <h1 class="text-white text-6xl text-center mt-5">WHO ARE WE?</h1>
+        <p class="text-white text-xl font-semibold mt-10 ml-5">
+          FAI, which stands for Finance and Investment Club, is a student-led organization based out of North Texas that is committed to
+          teaching students and sharing knowledge about finance and investments to help the next generation become financially literate.
+        </p>
+        <p class="text-white text-xl font-semibold mt-5 ml-5 mb-5">
+          ​We do this by building a curriculum, which mainly consists of slideshows, and providing this to chapters, where the officers will teach the lessons. 
+          We will also host a nationwide stock market game with prizes of $100 or more, where we provide our members with an opportunity to display their skills. 
+          We will also host guest speakers who are industry professionals to provide advice to our members!
+        </p>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+</html>
