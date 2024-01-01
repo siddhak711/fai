@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="forest">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAI</title>
+    <link href="./dist/output.css" rel="stylesheet" >
+    <link href="index.css" rel="stylesheet" >
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  function openMenu(){
+    var elem = document.getElementById("fainavlinks");
+    elem.classList.toggle("hidden");
+  }
+</script>
+</head>
+<body>
+  <header class="bg-[#926F34] sm:flex sm:justify-between">
+    <div class="flex items-center justify-between px-4 py-3">
+      <div>
+        <img src="images/failogo.png" alt="FAI" class="drop-shadow-lg h-12">
+      </div>
+      <div class="sm:hidden">
+        <button onclick="openMenu()" class="text-white hover:text-yellow-400 sm:hidden">
+          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id ="fainavlinks"  class="hidden px-5 pt-2 pb-4 sm:flex">
+      <a href="index.html"class="  text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3        hover:bg-gray-800">HOME</a>
+      <a href="team.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  hover:bg-gray-800">OUR TEAM</a>
+      <a href="#contact"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  hover:bg-gray-800">CONTACT</a>
+      <a href="#"         class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">CHAPTERS</a>
+      <a href="blog.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">BLOG</a>
+    </div>
+  </header>
+  <div class="px-2 sm:px-2 md:px-8 lg:px-20 xl:px-32">
+    <!--This is where the page layout gets separated into 12 columns-->
+    <!--This uses container that adds breakpoints to divs to change screen size and uses relative to position it absolute-->
+    <!--This is the main body of the page-->
+    <h1 class="text-6xl text-center mt-28 bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 font-bold drop-shadow-lg">Our Team</h1>
+    <div class="grid sm:grid-cols-3 gap-10 mt-24">
+      
+      <div class="bg-white p-10 rounded-lg">
+        <img src="images/siddha.png" alt="" class="rounded-full ring-4 ring-[#926F34] mx-auto" width="200" height="200">
+        <div class="border-2 border-[#926F34] mt-5"></div>
+        <dd class="text-center font-bold text-white text-lg mt-5 bg-gradient-to-r from-[#926F34] to-[#DFBD69] rounded-full">SIDDHA KANTHI</dd>
+        <p class="text-[#DFBD69] text-2xl font-bold text-center mt-5 drop-shadow-lg">CEO & Founder</p>
+        <div class="justify-center flex mt-5">
+            <div class="justify-center flex mt-5">
+                <a target="_blank" href="https://www.linkedin.com/in/siddha-kanthi/" class="text-white bg-blue-400 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 rounded-lg 
+                text-sm px-5 py-2.5 drop-shadow-lg dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 font-bold
+                transition ease-in-out delay-150 duration-300 hover:scale-105">Linkedin</a>
+            </div>
+        </div>
+      </div>
+      <div class="bg-white p-10 rounded-lg ">
+        <img src="images/charlie.png" alt="" class="rounded-full ring-4 ring-[#926F34] mx-auto" width="200" height="200">
+        <div class="border-2 border-[#926F34] mt-5"></div>
+        <dd class="text-center font-bold text-white text-lg mt-5 bg-gradient-to-r from-[#926F34] to-[#DFBD69] rounded-full">CHARLIE GOLDBERG</dd>
+        <p class="text-[#DFBD69] text-2xl font-bold text-center mt-5 drop-shadow-lg">COO</p>
+        <div class="justify-center flex mt-5">
+            <div class="justify-center flex mt-5">
+                <a target="_blank" href="https://www.linkedin.com/in/goldbergcharles/" class="text-white bg-blue-400 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 rounded-lg 
+                text-sm px-5 py-2.5 drop-shadow-lg dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 font-bold
+                transition ease-in-out delay-150 duration-300 hover:scale-105">Linkedin</a>
+            </div>
+        </div>
+      </div>
+      <div class="bg-white p-10 rounded-lg">
+          <img src="images/anish.png" alt="" class="rounded-full ring-4 ring-[#926F34] mx-auto" width="200" height="200">
+          <div class="border-2 border-[#926F34] mt-5"></div>
+          <dd class="text-center font-bold text-white text-lg mt-5 bg-gradient-to-r from-[#926F34] to-[#DFBD69] rounded-full
+          transition ease-in-out delay-150 duration-300 hover:scale-105">ANISH MADDULA</dd>
+          <p class="text-[#DFBD69] text-2xl font-bold text-center mt-5 drop-shadow-lg">Curriculum Director</p>
+          <div class="justify-center flex mt-5">
+              <div class="justify-center flex mt-5">
+                  <a target="_blank" href="https://www.linkedin.com/in/anish-maddula-867298247/" class="text-white bg-blue-400 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 rounded-lg 
+                  text-sm px-5 py-2.5 drop-shadow-lg dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 font-bold
+                  transition ease-in-out delay-150 duration-300 hover:scale-105">Linkedin</a>
+              </div>
+          </div>
+      </div>
+      <div class="bg-white p-10 rounded-lg">
+        <img src="images/arnav.png" alt="" class="rounded-full ring-4 ring-[#926F34] mx-auto" width="200" height="200">
+        <div class="border-2 border-[#926F34] mt-5"></div>
+        <dd class="text-center font-bold text-white text-lg mt-5 bg-gradient-to-r from-[#926F34] to-[#DFBD69] rounded-full">ARNAV SENAPATHI</dd>
+        <p class="text-[#DFBD69] text-2xl font-bold text-center mt-5 drop-shadow-lg">Logistics Director</p>
+        <div class="justify-center flex mt-5">
+            <div class="justify-center flex mt-5">
+                <a target="_blank" href="#" class="text-white bg-blue-400 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 rounded-lg 
+                text-sm px-5 py-2.5 drop-shadow-lg dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 font-bold
+                transition ease-in-out delay-150 duration-300 hover:scale-105">Linkedin</a>
+            </div>
+        </div>
+      </div>
+      <div class="bg-white p-10 rounded-lg">
+        <img src="images/image_50447361.JPG" alt="" class="rounded-full ring-4 ring-[#926F34] mx-auto" width="200" height="200">
+        <div class="border-2 border-[#926F34] mt-5"></div>
+        <dd class="text-center font-bold text-white text-lg mt-5 bg-gradient-to-r from-[#926F34] to-[#DFBD69] rounded-full">NIKHIL KOTTA</dd>
+        <p class="text-[#DFBD69] text-2xl font-bold text-center mt-5 drop-shadow-lg">Outreach Director</p>
+        <div class="justify-center flex mt-5">
+            <div class="justify-center flex mt-5">
+                <a target="_blank" href="https://www.linkedin.com/in/nikhil-kotta-107806238/" class="text-white bg-blue-400 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 rounded-lg 
+                text-sm px-5 py-2.5 drop-shadow-lg dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 font-bold
+                transition ease-in-out delay-150 duration-300 hover:scale-105">Linkedin</a>
+            </div>
+        </div>
+      </div>
+      <div class="bg-white p-10 rounded-lg">
+          <img src="images/simeon.JPG" alt="" class="rounded-full ring-4 ring-[#926F34] mx-auto" width="200" height="200">
+          <div class="border-2 border-[#926F34] mt-5"></div>
+          <dd class="text-center font-bold text-white text-lg mt-5 bg-gradient-to-r from-[#926F34] to-[#DFBD69] rounded-full">SIMEON VARGHESE</dd>
+          <p class="text-[#DFBD69] text-2xl font-bold text-center mt-5 drop-shadow-lg">Tech Director</p>
+          <div class="justify-center flex mt-5">
+              <div class="justify-center flex mt-5">
+                  <a target="_blank" href="https://www.linkedin.com/in/simeon-varghese-aa700228a/" class="text-white bg-blue-400 hover:bg-blue-600 focus:ring-4 focus:ring-blue-300 rounded-lg 
+                  text-sm px-5 py-2.5 drop-shadow-lg dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800 font-bold
+                  transition ease-in-out delay-150 duration-300 hover:scale-105">Linkedin</a>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    </div>
+
+  </div>
+</body>
+</html>
