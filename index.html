@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="forest">
+<html lang="en" data-theme="nord">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
     var elem = document.getElementById("fainavlinks");
     elem.classList.toggle("hidden");
   }
-  function visitPage(){
+  function visitDonatePage(){
     window.open('https://gofund.me/c61e6ac1', '_blank');
   }
 </script>
@@ -36,8 +36,8 @@
     <div id ="fainavlinks"  class="hidden px-5 pt-2 pb-4 sm:flex">
       <a href="index.html"class="  text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3        hover:bg-gray-800">HOME</a>
       <a href="team.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  hover:bg-gray-800">OUR TEAM</a>
-      <a href="#contact"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  hover:bg-gray-800">CONTACT</a>
-      <a href="#"         class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">CHAPTERS</a>
+      <a href="contact.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  hover:bg-gray-800">CONTACT</a>
+      <a href="chapters.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">CHAPTERS</a>
       <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">GUEST LECTURES</a>
       <a href="blog.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">BLOG</a> 
     </div>
@@ -46,24 +46,28 @@
   <!--This uses container that adds breakpoints to divs to change screen size and uses relative to position it absolute-->
   <!--This is the main body of the page-->
   <div class="container mx-auto ">
-    <h1 class="text-6xl text-left mt-44 text-white font-bold">FAI</h1>
-    <h3 class="text-lg text-left text-gray-400">Empowering financial futures.</h3>
-    <button class="bg-[#926F34] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] 
-    mt-2 p-4 text-center text-white text-base font-semibold"
-     onclick="visitPage();">Donate
-     <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1">
-    </button>
-    <div>
-      <img src="images/fai.png" alt="" class="mt-32 border-8 border-[#926F34]">
+    <div class="flex">
+      <div class="w-2/5">
+        <h1 class="text-6xl text-left mt-44 text-white font-bold">FAI</h1>
+        <h3 class="text-lg text-left text-gray-400">Empowering financial futures.</h3>
+        <button class="bg-[#926F34] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] 
+          mt-2 p-4 text-center text-white text-base font-semibold"
+          onclick="visitDonatePage();">Donate
+          <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1">
+        </button>
+      </div>
+      <div class="">
+        <img src="images/fai.png" alt="" class="mt-32 border-8 border-[#926F34]">
+      </div>
     </div>
-    <div class="mt-60 bg-gradient-to-r from-[#926F34] to-[#DFBD69] p-2">
+    <div class="mt-28 bg-gradient-to-r from-[#926F34] to-[#DFBD69] p-2">
       <div class="bg-black p-1 shadow-lg">
         <h1 class="text-white text-6xl text-center mt-5">WHO ARE WE?</h1>
-        <p class="text-white text-xl font-semibold mt-10 ml-5">
+        <p class="text-white text-xl font-semibold mt-10 mx-5">
           FAI, which stands for Finance and Investment Club, is a student-led organization based out of North Texas that is committed to
           teaching students and sharing knowledge about finance and investments to help the next generation become financially literate.
         </p>
-        <p class="text-white text-xl font-semibold mt-5 ml-5 mb-5">
+        <p class="text-white text-xl font-semibold mt-5 mx-5 mb-5">
           We do this by building a curriculum, which mainly consists of slideshows, and providing this to chapters, where the officers will teach the lessons. 
           We will also host a nationwide stock market game with prizes of $1000 or more, where we provide our members with an opportunity to display their skills. 
           We will also host guest speakers who are industry professionals to provide advice to our members!
