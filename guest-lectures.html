@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="forest">
+<html lang="en" data-theme="nord">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +13,14 @@
     var elem = document.getElementById("fainavlinks");
     elem.classList.toggle("hidden");
   }
-  function videoPage(){
+  function visitBlakeInterview(){
     window.open('https://youtu.be/ogFhUzIh244?si=Tcbc10zcaSBSKgbQ', '_blank')
   }
-  function visitPage(){
+  function visitFaiYoutube(){
     window.open('https://www.youtube.com/@FAI_Club/embed/C8kSrkz8Hz8', '_blank');
+  }
+  function visitBlakeLinkedIn(){
+    window.open('https://www.linkedin.com/in/blakesiewert', '_blank');
   }
 </script>
 </head>
@@ -39,37 +42,49 @@
     <div id ="fainavlinks"  class="hidden px-5 pt-2 pb-4 sm:flex">
       <a href="index.html"class="  text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3        hover:bg-gray-800">HOME</a>
       <a href="team.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  hover:bg-gray-800">OUR TEAM</a>
-      <a href="#contact"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  hover:bg-gray-800">CONTACT</a>
-      <a href="#"         class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">CHAPTERS</a>
+      <a href="contact.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  hover:bg-gray-800">CONTACT</a>
+      <a href="chapters.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">CHAPTERS</a>
       <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">GUEST LECTURES</a>
       <a href="blog.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">BLOG</a> 
     </div>
   </header>
-  <div class="px-2 sm:px-10">
-    <div class="p-30 bg-gradient-to-r from-[#926F34] to-[#DFBD69] rounded-lg flex mt-20">
-      <div class="">
-        <iframe class="p-5" width="560" height="315" src="https://www.youtube.com/embed/ogFhUzIh244?si=OsVPWW3VKNrfvenv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
+  <div class="text-6xl font-bold text-center mt-20">
+    <span class=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg">Guest Lectures</span>
+  </div>
+  <div class="flex justify-center my-5">
+    <button class="bg-[#c02424] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] 
+      p-4 text-center text-white text-base font-semibold mt-4"
+      onclick="visitFaiYoutube();">
+      <img src="images/goldyt.png" alt="" class="inline-block h-8 w-8 mr-2">
+      FAI Youtube
+      <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1">
+    </button>
+  </div>
+  <div class="px-2 py-2 sm:px-10 sm:py-10">
+    <div class="p-30 bg-gradient-to-r from-[#926F34] to-[#DFBD69] rounded-lg md:max-lg:flex-wrap lg:flex">
+      <div class="lg:w-2/5">
+        <iframe class="p-5 w-full lg:w-140" height="330" src="https://www.youtube.com/embed/ogFhUzIh244?si=OsVPWW3VKNrfvenv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
          encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
-      <div class="mt-5">
-        <p class="text-white font-semibold">It is our pleasure to introduce Mr. Blake Siewert, the North American Head of Growth and Innovation at Siemens Healthineers, a leading global Medical Technology company. 
+      <div class="mt-5 lg:w-3/5">
+        <p class="text-white font-semibold mx-4">It is our pleasure to introduce Mr. Blake Siewert, the North American Head of Growth and Innovation at Siemens Healthineers, a leading global Medical Technology company. 
             With over 25 years of extensive experience, Mr. Siewert is a seasoned business professional skilled in leading cross-functional teams across sales, marketing, operations, customer service, and more. 
             He founded BSM Creative, a strategic marketing and advertising agency and founded LogiTran Group a boutique industrial and organizational consultancy and recruiting company. 
             Prior to joining Siemens Healthineers, he was employed at Adaptive Business Solutions serving as a lean coach and consultant for Six Sigma. 
             Beyond his professional achievements, he has made significant contributions as a district and state CDC judge in Wisconsin DECA competitions. 
             He is a married father of four residing in Madison, WI. Please join us in extending a warm welcome to Mr. Blake Siewert.
         </p>
-        <button class="bg-[#c02424] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] 
-         p-4 text-center text-white text-base font-semibold mt-4"
-         onclick="visitPage();">
-         <img src="images/goldyt.png" alt="" class="inline-block h-8 w-8 mr-2">
-          FAI Youtube
-         <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1">
+        <button class="bg-[#5c81e8a1] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] 
+          p-4 text-center text-white text-base font-semibold my-4 ml-4 mr-2"
+          onclick="visitBlakeLinkedIn();">
+          <img src="images/LinkedIn.png" alt="" class="inline-block h-6 w-6 mr-2">
+          Blake Siewert
+          <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1">
         </button>
         <button class="bg-[#181871] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] 
-         p-4 text-center text-white text-base font-semibold mt-4 ml-4"
-         onclick="videoPage();">
-         Blake Siewert Interview
+         p-4 text-center text-white text-base font-semibold my-4 ml-2 mr-4"
+         onclick="visitBlakeInterview();">
+         Check out the Interview
          <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1">
         </button>
       </div>
