@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="nord">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAI</title>
+    <link href="./dist/output.css" rel="stylesheet" >
+    <link href="index.css" rel="stylesheet" >
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  function openMenu(){
+    var elem = document.getElementById("fainavlinks");
+    elem.classList.toggle("hidden");
+  }
+</script>
+</head>
+<body>
+  <header class="bg-[#926F34] sm:flex sm:justify-between">
+    <div class="flex items-center justify-between px-4 py-3">
+      <div>
+        <img src="images/failogo.png" alt="FAI" class="drop-shadow-lg h-12">
+      </div>
+      <div class="sm:hidden">
+        <button onclick="openMenu()" class="text-white hover:text-yellow-400 sm:hidden">
+          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id ="fainavlinks"  class="hidden px-5 pt-2 pb-4 sm:flex">
+      <a href="index.html"class="  text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3        hover:bg-gray-800">HOME</a>
+      <a href="team.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  hover:bg-gray-800">OUR TEAM</a>
+      <a href="contact.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  hover:bg-gray-800">CONTACT</a>
+      <a href="chapters.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">CHAPTERS</a>
+      <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">GUEST LECTURES</a>
+      <a href="blog.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">BLOG</a> 
+    </div>
+  </header>
+  
+  <div class="relative flex justify-center sm:mt-10">
+    <img src="images/libraryinindia.jpg" alt="Library in India" class="w-full max-h-fit mx-14 object-cover opacity-50 sm:rounded-3xl" style="height: 425px;">
+  
+    <p class="absolute top-40 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-4xl font-bold">Library Fundraiser in India</p>
+    <p class="absolute top-48 left-1/2 transform -translate-x-1/2 translate-y-1/2 text-white text-xl font-semibold">Jonathan Ta - Feb 09, 2024</p>
+    <a target="_self" href="blog.html" class="absolute bottom-32 left-1/2 transform -translate-x-1/2 translate-y-1/2 
+    font-bold text-xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 hover:scale-110 transition">Back to Blog</a>
+ 
+  </div>
+
+  <div class="lg:mx-52 md:mx-36 sm:mx-16 mx-10 mt-20 text-white leading-relaxed">
+        <p class="font-bold mb-5">Our Mission</p>
+
+        <p>
+            Recently, FAI members have taken the initiative within their communities by going door-to-door to raise donations to help fund FAI's mission of building a library in India!
+            The current goal is to raise $47,000 to help bring the creation of this library to reality. Overall, this will help create more access to books and educational resources in the underdeveloped part of India!
+            Arnav Senapathi, FAI's chief financial officer (CFO), has helped apply for FAI for various grants and funding from private institutions and public universities, 
+            such as UT Austin. In addition, Arnav has helped FAI partner with Krispy Kreme in creating a fundraiser to help sell donuts, with all proceeds going towards the library's funding.
+        </p> 
+
+        <p class="font-bold my-5">Where is Funding Going?</p>
+        
+        <p>
+            With our funding, all proceeds will go to the Mahatma Jyotiba Phule Andhra Pradesh Backward Classes Welfare Residential Educational Institutions Society (MJPAPBCWREIS),
+            which aims to equalize educational opportunities for backward classes, foster parity with more developed communities, and promote a fair and egalitarian society. 
+            The society oversees a network of 105 schools, comprising 57 boys' and 48 girls' institutions, collectively educating over 35,000 students spanning grades 5 to 10.
+            Among the student population, 75% hail from backward classes, while the remaining 25% are from Scheduled Castes/Scheduled Tribes backgrounds. 
+            Building a library will help schools address the critical shortage of learning spaces. The lack of adequate classrooms has become a significant obstacle to providing quality education to MJP students. 
+            The library will help expose students to different worlds of knowledge and imagination.
+        </p> 
+        
+        
+        <p class="font-bold my-5">Why Should You Donate</p>
+        <p>
+            Over 30 million children in India lack the opportunity to receive an education. Among those who do have access, only 50% manage to complete secondary school, and a
+            staggering 71% of adults have not pursued higher education. This low education rate highlights the urgent need for our plan at FAI!
+        
+            Through the many facets of our fundraising, FAI can utilize the capital gained to pursue further ventures. We're looking to spread financial and primary education worldwide in many different ways. 
+            The FAI library will be a step towards accomplishing our goal, specifically in a local community that directly connects to many of our members. <em>-Charlie Goldberg (COO of FAI)</em>
+        </p>
+        
+        <div class="mt-5 mb-5 p-2 w-fit bg-[#926F34] rounded-xl transition ease-in-out duration-300 hover:scale-105 hover:bg-[#B88C41]">
+            <a target="_blank" href="https://gofund.me/c61e6ac1" class="flex items-center justify-center text-white text-base font-semibold" >
+              Donate Now!
+              <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2">
+            </a>
+        </div>
+        
+        <p class="mb-10">
+            Click the button to donate now! Any donation, big or small, makes a significant impact! 100% of the proceeds will go towards constructing a library in India!
+        </p>
+        
+        
+        
+
+  </div>
+
+</body>
+</html>
