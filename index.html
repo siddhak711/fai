@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="nord">
+<html lang="en" data-theme="forest">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,6 +12,8 @@
   function openMenu(){
     var elem = document.getElementById("fainavlinks");
     elem.classList.toggle("hidden");
+    var menu = document.getElementById("fainavlinks-donate");
+    menu.classList.toggle("hidden");
   }
   function visitDonatePage(){
     window.open('https://gofund.me/c61e6ac1', '_blank');
@@ -20,35 +22,40 @@
 </head>
 <body>
   <!--This is where the page layout gets separated into 12 columns-->
-  <header class="bg-[#926F34] sm:flex sm:justify-between">
+  <header class="bg-[#926F34] sm:flex sm:justify-between rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50">
+
     <div class="flex items-center justify-between px-4 py-3">
       <div>
-        <img src="images/failogo.png" alt="FAI" class="drop-shadow-lg h-12">
+        <img src="images/failogo.png" alt="FAI" class="h-12">
       </div>
       <div class="sm:hidden">
-        <button onclick="openMenu()" class="text-white hover:text-yellow-400 sm:hidden">
+        <button onclick="openMenu()" class="text-white sm:hidden">
           <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
           </svg>
         </button>
       </div>
     </div>
-    <div id ="fainavlinks"  class="hidden px-5 pt-2 pb-4 sm:flex">
-      <a href="index.html"class="  text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3        hover:bg-gray-800">HOME</a>
-      <a href="team.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  hover:bg-gray-800">OUR TEAM</a>
-      <a href="contact.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  hover:bg-gray-800">CONTACT</a>
-      <a href="chapters.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">CHAPTERS</a>
-      <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">GUEST LECTURES</a>
-      <a href="blog.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">BLOG</a> 
+    <div id ="fainavlinks"  class="hidden px-5 pt-2 sm:pb-4 sm:flex">
+      <a href="index.html"class="  text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Home</a>
+      <a href="team.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Our Team</a>
+      <a href="contact.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Contact</a>
+      <a href="chapters.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Chapters</a>
+      <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Guest Lectures</a>
+      <a href="blog.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Blog</a> 
+    </div>
+    <div id ="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
+      <a target="_blank" href="https://gofund.me/c61e6ac1" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Donate</a> 
     </div>
   </header>
   <div class="px-2 sm:px-10">
   <!--This uses container that adds breakpoints to divs to change screen size and uses relative to position it absolute-->
   <!--This is the main body of the page-->
   <div class="container mx-auto ">
+    <h1 class="text-center mt-28 text-2xl font-bold">Finance and Investments Club</h1>
     <div class="flex">
       <div class="w-2/5">
-        <h1 class="text-6xl text-left mt-44 text-white font-bold">FAI</h1>
+        <h1 class="text-6xl text-left mt-44 text-LighterGold font-bold">FAI</h1>
         <h3 class="text-lg text-left text-gray-400">Empowering financial futures.</h3>
         <button class="bg-[#926F34] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] 
           mt-2 p-4 text-center text-white text-base font-semibold"

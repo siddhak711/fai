@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="nord">
+<html lang="en" data-theme="forest">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,36 +12,41 @@
   function openMenu(){
     var elem = document.getElementById("fainavlinks");
     elem.classList.toggle("hidden");
+    var menu = document.getElementById("fainavlinks-donate");
+    menu.classList.toggle("hidden");
   }
 </script>
 </head>
 <body>
   <!--This is where the page layout gets separated into 12 columns-->
-  <header class="bg-[#926F34] sm:flex sm:justify-between">
+  <header class="bg-[#926F34] sm:flex sm:justify-between rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0">
+
     <div class="flex items-center justify-between px-4 py-3">
-        <div>
-            <img src="images/failogo.png" alt="FAI" class="h-12 shadow-lg">
-        </div>
+      <div>
+        <img src="images/failogo.png" alt="FAI" class="h-12">
+      </div>
       <div class="sm:hidden">
-        <button onclick="openMenu()" class="text-white hover:text-yellow-400 sm:hidden">
+        <button onclick="openMenu()" class="text-white sm:hidden">
           <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
             <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
           </svg>
         </button>
       </div>
     </div>
-    <div id ="fainavlinks"  class="hidden px-5 pt-2 pb-4 sm:flex">
-      <a href="index.html"class="  text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3        hover:bg-gray-800">HOME</a>
-      <a href="team.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  hover:bg-gray-800">OUR TEAM</a>
-      <a href="contact.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  hover:bg-gray-800">CONTACT</a>
-      <a href="chapters.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">CHAPTERS</a>
-      <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">GUEST LECTURES</a>
-      <a href="blog.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 hover:bg-gray-800">BLOG</a> 
-
-    </div> 
+    <div id ="fainavlinks"  class="hidden px-5 pt-2 sm:pb-4 sm:flex">
+      <a href="index.html"class="  text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Home</a>
+      <a href="team.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Our Team</a>
+      <a href="contact.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Contact</a>
+      <a href="chapters.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Chapters</a>
+      <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Guest Lectures</a>
+      <a href="blog.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Blog</a> 
+    </div>
+    <div id ="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
+      <a target="_blank" href="https://gofund.me/c61e6ac1" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Donate</a> 
+    </div>
   </header>
   <!--title-->
-  <div class="text-6xl font-bold text-center mt-20">
+  <div class="text-6xl font-bold text-center mt-32">
     <span class=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg">FAI Chapters</span>
   </div>
 
@@ -68,7 +73,7 @@
 
   <!--search bar-->
   <div class="flex justify-center my-10 drop-shadow-xl">
-    <div class="w-full max-w-xl mx-4 p-3 bg-gradient-to-r from-[#75592a] to-[rgb(173,147,81)] rounded-md">
+    <div class="w-full max-w-xl mx-4 p-3 bg-[#926F34] rounded-md">
       <div class="flex items-start my-1">
         <div>
           <img src="images/search.png" alt="" class="inline-block h-6 w-6 ml-1 mr-3">
