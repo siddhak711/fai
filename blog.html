@@ -96,11 +96,42 @@
         <span class=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg">Coming Soon...</span>
       </div>
     </div>
+      
     <div class="bg-[#373e50] p-10 rounded-lg">
-      <div class="text-3xl font-bold text-center mt-5">
-        <span class=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg">Coming Soon...</span>
+            <!--Background image-->
+      <img src="images/libraryinindia.jpg" alt="FAI Purpose" class="w-full h-40 object-cover rounded-t-lg">
+
+      <!--Title of blog-->
+      <p class="m-5 text-2xl font-semibold text-[#DFBD69]">
+        Financial Literacy & Financial Education for K-12 Students
+      </p>
+
+      <div class="relative h-40 mx-5 mb-1"> <!-- this defines an aboslutely positioned template for the desc, fade, and read more.
+      Read more is in this section because we can't get an even pixel cutoff for the desc, so we have to account for extra space
+      so we might as well put the read more there (if we didn't then there would either be too much or to little space)-->
+        
+        <!--Blog description-->
+        <div class="absolute top-0 bottom-10 text-white overflow-hidden">
+              <p>
+                According to Forbes, 87% of teens say they don't really understand their personal finances (2022). The need for financial literacy programs is undeniable. As of January 2024,
+            twenty-five U.S. states require financial education for high school students to graduate; many more have bills pending.
+              </p>
+        </div>
+        
+        <!--Fade effect-->
+        <div class="absolute bottom-10 left-0 right-0 bg-gradient-to-b from-transparent to-[#373e50] h-24"></div>
+            
+        <!--Read More redirect-->
+        <div class="absolute bottom-2"> 
+          <a target="_self" href="blog_finliteracy.html" class="w-fit h-full flex items-center transition ease-in-out delay-150 duration-300 hover:scale-110">
+            <p class="text-[#DFBD69] font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">Read More</p>
+            <img src="images/goldarrow.png" alt="" class="inline-block h-5 w-5 ml-2">
+          </a>
+        </div>
+
       </div>
     </div>
+
   </div>
 </body>
 
