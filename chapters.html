@@ -19,90 +19,89 @@
 </head>
 <body>
   <!--This is where the page layout gets separated into 12 columns-->
-  <header class="bg-[#926F34] sm:flex sm:justify-between rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50">
+    <header class="bg-[#926F34] sm:flex sm:justify-between rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50">
 
-    <div class="flex items-center justify-between px-4 py-3">
-      <div>
-        <img src="images/failogo.png" alt="FAI" class="h-12">
-      </div>
-      <div class="sm:hidden">
-        <button onclick="openMenu()" class="text-white sm:hidden">
-          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
-          </svg>
-        </button>
-      </div>
+        <div class="flex items-center justify-between px-4 py-3">
+        <div>
+            <img src="images/failogo.png" alt="FAI" class="h-12">
+        </div>
+        <div class="sm:hidden">
+            <button onclick="openMenu()" class="text-white sm:hidden">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+            </svg>
+            </button>
+        </div>
+        </div>
+        <div id ="fainavlinks"  class="hidden px-5 pt-2 sm:pb-4 sm:flex">
+        <a href="index.html"class="  text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Home</a>
+        <a href="team.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Our Team</a>
+        <a href="contact.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Contact</a>
+        <a href="chapters.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Chapters</a>
+        <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Guest Lectures</a>
+        <a href="blog.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Blog</a> 
+        </div>
+        <div id ="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
+        <a target="_blank" href="https://gofund.me/c61e6ac1" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Donate</a> 
+        </div>
+    </header>
+    <!--title-->
+    <div class="text-6xl font-bold text-center mt-32">
+        <span class=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg">FAI Chapters</span>
     </div>
-    <div id ="fainavlinks"  class="hidden px-5 pt-2 sm:pb-4 sm:flex">
-      <a href="index.html"class="  text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Home</a>
-      <a href="team.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Our Team</a>
-      <a href="contact.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Contact</a>
-      <a href="chapters.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Chapters</a>
-      <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Guest Lectures</a>
-      <a href="blog.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Blog</a> 
+    <div class ="text-4xl font-bold text-center mt-16 bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">
+        <span>57 School Chapters across 2 Continents</span>
     </div>
-    <div id ="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
-      <a target="_blank" href="https://gofund.me/c61e6ac1" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Donate</a> 
-    </div>
-  </header>
-  <!--title-->
-  <div class="text-6xl font-bold text-center mt-32">
-    <span class=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg">FAI Chapters</span>
-  </div>
-  <div class ="text-4xl font-bold text-center mt-16 bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">
-    <span>57 School Chapters across 2 Continents</span>
-  </div>
-
-  <!--Description-->
-  <div class ="text-center my-5 text-xl">
-    <p>FAI's global impact can be seen through our diverse chapters from many states and countries.</p>
-    <p>Find a chapter by using the search box below</p>
-  </div>
 
     <!--join-->
-  <div class="relative justify-center mb-44">
-    <div class="absolute top-4 right-1/2 sm:-translate-x-12 -translate-x-6 w-32 h-28 bg-[#c9e0ff] rounded-full mix-blend-overlay filter blur-xl animate-pulse"></div>
-    <div class="absolute top-3 right-1/2 translate-x-1/2 w-32 h-28 bg-[#ffc5f3] rounded-full mix-blend-overlay filter blur-xl animate-pulse"></div>
-    <div class="absolute top-4 left-1/2 sm:translate-x-12 translate-x-6 w-32 h-28 bg-[#ffce9a] rounded-full mix-blend-overlay filter blur-xl animate-pulse"></div>
+    <div class="relative justify-center mb-32 sm:mb-28 mt-2">
+        <div class="absolute top-0 right-1/2 sm:-translate-x-12 -translate-x-6 w-32 h-28 bg-[#c9e0ff] rounded-full mix-blend-overlay filter blur-xl animate-pulse"></div>
+        <div class="absolute top-0 right-1/2 translate-x-1/2 w-32 h-28 bg-[#ffc5f3] rounded-full mix-blend-overlay filter blur-xl animate-pulse"></div>
+        <div class="absolute top-0 left-1/2 sm:translate-x-12 translate-x-6 w-32 h-28 bg-[#ffce9a] rounded-full mix-blend-overlay filter blur-xl animate-pulse"></div>
 
 
-    <div class="absolute top-7 left-1/2 -translate-x-1/2 w-fit rounded-lg h-auto inline-flex bg-[#373e50] hover:bg-[#aa823b] px-10 py-5 drop-shadow-lg transition ease-in-out duration-300 hover:scale-105">
-      <a target="_blank" href="https://06f0kz9cclf.typeform.com/to/JSvZ5oHP/" class="w-full h-full flex items-center">
-        <p class="text-white text-lg font-bold ml-1"> Start Your Own Chapter </p>
-        <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2">
-      </a>
-    </div>
-  </div>
-
-  <!--search bar-->
-  <!--
-  <div class="flex justify-center my-10 drop-shadow-xl">
-    <div class="w-full max-w-xl mx-4 p-3 bg-[#926F34] rounded-md">
-      <div class="flex items-start my-1">
-        <div>
-          <img src="images/search.png" alt="" class="inline-block h-6 w-6 ml-1 mr-3">
+        <div class="absolute top-4 left-1/2 -translate-x-1/2 w-fit rounded-lg h-auto inline-flex bg-[#373e50] hover:bg-[#aa823b] px-10 py-5 drop-shadow-lg transition ease-in-out duration-300 hover:scale-105">
+        <a target="_blank" href="https://06f0kz9cclf.typeform.com/to/JSvZ5oHP/" class="w-full h-full flex items-center">
+            <p class="text-white text-lg font-bold ml-1"> Start Your Own Chapter </p>
+            <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2">
+        </a>
         </div>
-        <div class="w-full">
-          <input type="text" id="input-box" class="w-full font-medium bg-transparent text-white text-xl focus:outline-none" placeholder="Find a Chapter" autocomplete="off">
-        </div>
-      </div>
-      <div id="result-box" class="w-full text-gray-300 text-lg rounded-md hidden overflow-y-auto max-h-60"></div>
-
     </div>
-  </div>
-  -->
 
-  <div class="bg-white mt-8 sm:mt-20">
-                    <div class="mx-auto py-8 max-w-7xl lg:py-14">
+
+    <!--Description-->
+    <div class ="text-center my-5 text-xl">
+        <p>FAI's global impact can be seen through our diverse chapters from many states and countries.</p>
+        <p>Find a chapter by using the search box below</p>
+    </div>
+
+    
+    <!--search bar-->
+    <div class="flex justify-center mt-6 mb-10 drop-shadow-xl">
+        <div class="w-full max-w-xl mx-4 p-3 bg-[#926F34] rounded-md">
+            <div class="flex items-start my-1">
+                <div>
+                    <img src="images/search.png" alt="" class="inline-block h-6 w-6 ml-1 mr-3">
+                </div>
+                <div class="w-full">
+                    <input type="text" id="input-box" class="w-full font-medium bg-transparent text-white text-xl focus:outline-none" placeholder="Find a Chapter" autocomplete="off">
+                </div>
+            </div>
+            <div id="result-box" class="w-full text-gray-300 text-lg rounded-md hidden overflow-y-auto max-h-60"></div>
+        </div>
+    </div>
+    <!--chapter cards: image, name, city/state, contact. chapter-card and chapter-name ID's allow the showing/hiding-->
+    <div class="bg-[#282d39] mt-8 sm:mt-10 rounded-3xl">
+                    <div class="mx-auto py-2 max-w-7xl lg:py-4">
                         <ul class="flex flex-col sm:flex-row flex-wrap">
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/reedy-high-school.jpeg" alt="Saratoga High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Reedy High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Reedy High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Frisco, TX
                                                 <!-- -->
@@ -119,14 +118,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/lebanon-trail-high-school.jpeg" alt="Centennial High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Lebanon Trail High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Lebanon Trail High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Frisco, TX
                                                 <!-- -->
@@ -139,14 +138,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/montclair-high-school.jpeg" alt="Saratoga High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Montclair High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Montclair High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Montclair, NJ
                                                 <!-- -->
@@ -159,14 +158,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/pine-crest-high-school.jpeg" alt="Lynbrook High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Pine Crest High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Pine Crest High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Southern Pines, NC
                                                 <!-- -->
@@ -179,14 +178,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/henry-gunn-high-school.jpeg" alt="Newton South High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Henry M. Gunn High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Henry M. Gunn High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Palo Alto, CA
                                                 <!-- -->
@@ -199,14 +198,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/pine-richland-high-school.jpeg" alt="Harker School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Pine-Richland High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Pine-Richland High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Gibsonia, PA
                                                 <!-- -->
@@ -219,14 +218,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/central-high-school.jpeg" alt="Waubonsie Valley High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Central High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Central High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Keller, TX
                                                 <!-- -->
@@ -239,14 +238,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/plano-east-high-school.jpeg" alt="Eastlake High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Plano East Senior High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Plano East Senior High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Plano, TX
                                                 <!-- -->
@@ -259,14 +258,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/the-adelson-school.jpeg" alt="Joaquin Miller Middle School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">The Adelson School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">The Adelson School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Las Vegas, NV
                                                 <!-- -->
@@ -279,14 +278,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/bellarmine-college-prep.jpeg" alt="American High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Bellarmine College Preparatory</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Bellarmine College Preparatory</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 San Jose, CA
                                                 <!-- -->
@@ -299,14 +298,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/enloe-high-school.jpeg" alt="Chaparral High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Enloe Magnet High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Enloe Magnet High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Raleigh, NC
                                                 <!-- -->
@@ -319,14 +318,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/lick-wilmerding-high-school.jpeg" alt="Ardrey Kell"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Lick-Wilmerding High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Lick-Wilmerding High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 San Francisco, CA
                                                 <!-- -->
@@ -339,14 +338,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/north-broward-prep.jpeg" alt="Vaels International School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">North Broward Prep</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">North Broward Prep</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Coconut Creek, FL
                                                 <!-- -->
@@ -359,14 +358,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/shanghai-cambridge-international.jpeg" alt="Westwood High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Shanghai Guanghua Cambridge International School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Shanghai Guanghua Cambridge International School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Shanghai, China
                                                 <!-- -->
@@ -379,14 +378,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/pioneer-heritage-school.jpeg" alt="GEMS Wellington Academy Silicon Oasis"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Pioneer Heritage Middle School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Pioneer Heritage Middle School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Frisco, TX
                                                 <!-- -->
@@ -399,14 +398,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/edw-clark-high-school.jpeg" alt="BASIS Scottsdale"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Ed W. Clark High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Ed W. Clark High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Las Vegas, NV
                                                 <!-- -->
@@ -419,14 +418,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/abraham-lincoln-high-school.jpeg" alt="Richard Montgomery High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Abraham Lincoln High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Abraham Lincoln High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 San Francisco, CA
                                                 <!-- -->
@@ -439,14 +438,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/the-meadows-school.jpeg" alt="Green Hope High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">The Meadows School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">The Meadows School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 DeSoto, TX
                                                 <!-- -->
@@ -459,14 +458,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/drmichael-krop-hish-school.jpeg" alt="Redwood Middle School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Dr. Michael Krop Senior High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Dr. Michael Krop Senior High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Miami, FL
                                                 <!-- -->
@@ -479,14 +478,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/francis-howell-high-school.jpeg" alt="Palo Alto High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Francis Howell North High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Francis Howell North High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 St Charles, MO
                                                 <!-- -->
@@ -499,14 +498,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/griffin-middle-school.jpeg" alt="Homestead High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Griffin Middle School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Griffin Middle School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Frisco, TX
                                                 <!-- -->
@@ -519,14 +518,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/gyanodaya-international-school.jpeg" alt="El Camino Fundamental High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Gyanodaya International School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Gyanodaya International School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Madhya Pradesh, India
                                                 <!-- -->
@@ -539,14 +538,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/beijing-academy-school.jpeg" alt="Menlo High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Beijing Academy</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Beijing Academy</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Shanghai, China
                                                 <!-- -->
@@ -559,14 +558,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/ray-braswell-school.png" alt="John P. Stevens High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Ray Braswell</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Ray Braswell</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Little Elm, TX
                                                 <!-- -->
@@ -579,14 +578,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/hampton-high-school.jpeg" alt="Leigh High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Hampton High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Hampton High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Hampton, VA
                                                 <!-- -->
@@ -599,14 +598,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/jinan-foreign-school.jpeg" alt="Seven Lakes High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Jinan Foreign Language school</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Jinan Foreign Language school</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Shandong, China
                                                 <!-- -->
@@ -619,14 +618,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/dryb-patil-polytechnic.jpeg" alt="Sherwood Hall Senior Secondary School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Dr. YB Patil Polytechnic</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Dr. YB Patil Polytechnic</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Pune, India
                                                 <!-- -->
@@ -639,14 +638,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/green-level-high-school.jpeg" alt="Central High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Green Level High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Green Level High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Cary, NC
                                                 <!-- -->
@@ -659,14 +658,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/saratoga-high-school.jpeg" alt="Instituto Lange Ley"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Saratoga High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Saratoga High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Saratoga, CA
                                                 <!-- -->
@@ -679,14 +678,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/basis-international-school.jpeg" alt="Christian Heritage Academy"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">BASIS International School Guangzhou</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">BASIS International School Guangzhou</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Guangzhou, China
                                                 <!-- -->
@@ -699,14 +698,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/bergen-county_tech-high-school.jpeg" alt="Archbishop Mitty High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Bergen County Technical High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Bergen County Technical High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Paramus, NJ
                                                 <!-- -->
@@ -719,14 +718,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/heritage-high-school.jpeg" alt="Cupertino High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Heritage High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Heritage High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Frisco, TX
                                                 <!-- -->
@@ -739,14 +738,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/cypress-ranch-high-school.jpeg" alt="Dublin High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Cypress-Ranch High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Cypress-Ranch High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Cypress, TX
                                                 <!-- -->
@@ -759,14 +758,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/guangzhou-tianxin-school.jpeg" alt="Viewpoint School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Guangzhou Tianxin Experimental School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Guangzhou Tianxin Experimental School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Guangzhou, China
                                                 <!-- -->
@@ -779,14 +778,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/ulink-college-shanghai.jpeg" alt="Frisco Heritage High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Ulink College of Shanghai</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Ulink College of Shanghai</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Shanghai, China
                                                 <!-- -->
@@ -799,14 +798,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/frisco-high-school.jpeg" alt="Lower Merion High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Frisco High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Frisco High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Frisco, TX
                                                 <!-- -->
@@ -819,14 +818,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/liberty-high-school.jpeg" alt="Dougherty Valley High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Liberty High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Liberty High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Frisco, TX
                                                 <!-- -->
@@ -839,14 +838,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/westwood-high-school.jpeg" alt="Skyline High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Westwood High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Westwood High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Austin, TX
                                                 <!-- -->
@@ -859,14 +858,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/emerson-high-school.jpeg" alt="Allen High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Emerson High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Emerson High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Frisco, TX
                                                 <!-- -->
@@ -879,14 +878,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/lewisville-harmon-high-school.jpeg" alt="Bothell High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Lewisville Ben Harmon High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Lewisville Ben Harmon High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Lewisville, TX
                                                 <!-- -->
@@ -899,14 +898,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/prosper-high-school.jpeg" alt="Charlotte Country Day"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Prosper High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Prosper High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Prosper, TX
                                                 <!-- -->
@@ -919,14 +918,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/lone-star-high-school.jpeg" alt="GEMS Modern Academy"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Lone Star High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Lone Star High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Frisco, TX
                                                 <!-- -->
@@ -939,14 +938,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/the-woodlands-high-school.jpeg" alt="Obra D. Tompkins High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">The Woodlands High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">The Woodlands High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Woodlands, TX
                                                 <!-- -->
@@ -959,14 +958,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/northallegheny-intermediate-school.jpeg" alt="Meadowbrook High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">North Allegheny Intermediate School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">North Allegheny Intermediate School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Pittsburgh, PA
                                                 <!-- -->
@@ -979,14 +978,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/benjamin-franklin-high-school.jpeg" alt="Milton Academy"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Benjamin Franklin High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Benjamin Franklin High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 New Orleans, LA
                                                 <!-- -->
@@ -999,14 +998,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/wakeland-high-school.jpeg" alt="Santa Monica High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Wakeland High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Wakeland High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Frisco, TX
                                                 <!-- -->
@@ -1019,14 +1018,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/roy-ketcham-high-school.jpeg" alt="Bridgewater-Raritan Regional High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Roy C. Ketcham</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Roy C. Ketcham</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Wappingers Falls, NY
                                                 <!-- -->
@@ -1039,14 +1038,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/melissa-high-school.jpeg" alt="Mount Lebanon High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Melissa High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Melissa High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Melissa, TX
                                                 <!-- -->
@@ -1059,14 +1058,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/independence-high-school.jpeg" alt="American Academy in Tbilisi"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Independence High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Independence High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Frisco, TX
                                                 <!-- -->
@@ -1079,14 +1078,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/hebron-high-school.jpeg" alt="Santa Teresa High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Hebron High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Hebron High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Carrollton, TX
                                                 <!-- -->
@@ -1099,14 +1098,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/coppell-high-school.jpeg" alt="Doral Academy Preparatory"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Coppell High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Coppell High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Coppell, TX
                                                 <!-- -->
@@ -1119,14 +1118,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/centennial-high-school.jpeg" alt="Hankuk Academy of Foreign Studies"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Centennial High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Centennial High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Frisco, TX
                                                 <!-- -->
@@ -1139,14 +1138,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/manchester-essex-high-school.jpeg" alt="Najd National Schools"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Manchester Essex Regional High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Manchester Essex Regional High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Manchester, MA
                                                 <!-- -->
@@ -1159,14 +1158,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/flower-mound-high-school.jpeg" alt="Los Altos High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Flower Mound High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Flower Mound High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Flower Mound, TX
                                                 <!-- -->
@@ -1179,14 +1178,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/panther-creek-high-school.jpeg" alt="Alameda High Economics Club"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Panther Creek High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Panther Creek High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Frisco, TX
                                                 <!-- -->
@@ -1199,14 +1198,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/north-allegheny-high-school.jpeg" alt="Blue Valley West High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">North Allegheny High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">North Allegheny High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Wexford, PA
                                                 <!-- -->
@@ -1219,14 +1218,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li class="sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/parsippany-high-school.png" alt="Del Norte High School"/>
                                     </div>
                                     <div class="space-y-2">
                                         <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="text-lg font-bold leading-6">Parsippany Hills High School</h3>
+                                            <h3 class="chapter-name text-lg font-bold leading-6">Parsippany Hills High School</h3>
                                             <p class="text-yei-primary-main text-base">
                                                 Morris Plains, NJ
                                                 <!-- -->
