@@ -7,95 +7,97 @@
     <link href="./dist/output.css" rel="stylesheet" >
     <link href="index.css" rel="stylesheet" >
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  function openMenu(){
-    var elem = document.getElementById("fainavlinks");
-    elem.classList.toggle("hidden");
-    var menu = document.getElementById("fainavlinks-donate");
-    menu.classList.toggle("hidden");
-  }
-  function visitBlakeInterview(){
-    window.open('https://youtu.be/ogFhUzIh244?si=Tcbc10zcaSBSKgbQ', '_blank')
-  }
-  function visitFaiYoutube(){
-    window.open('https://www.youtube.com/@FAI_Club/embed/C8kSrkz8Hz8', '_blank');
-  }
-  function visitBlakeLinkedIn(){
-    window.open('https://www.linkedin.com/in/blakesiewert', '_blank');
-  }
-</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function openMenu(){
+            var elem = document.getElementById("fainavlinks");
+            elem.classList.toggle("hidden");
+            var menu = document.getElementById("fainavlinks-donate");
+            menu.classList.toggle("hidden");
+        }
+        function visitBlakeInterview(){
+            window.open('https://youtu.be/ogFhUzIh244?si=Tcbc10zcaSBSKgbQ', '_blank')
+        }
+        function visitFaiYoutube(){
+            window.open('https://www.youtube.com/@FAI_Club/embed/C8kSrkz8Hz8', '_blank');
+        }
+        function visitBlakeLinkedIn(){
+            window.open('https://www.linkedin.com/in/blakesiewert', '_blank');
+        }
+    </script>
+    <style>
+        /* Add this CSS */
+        .video-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .video-wrapper {
+            border: 4px solid rgba(154, 132, 9, 0.781); /* Adjust border properties as needed */
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
-  <!--This is where the page layout gets separated into 12 columns-->
-  <header class="bg-[#926F34] sm:flex sm:justify-between rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50">
-
+<header class="bg-[#926F34] sm:flex sm:justify-between rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50">
     <div class="flex items-center justify-between px-4 py-3">
-      <div>
-        <img src="images/failogo.png" alt="FAI" class="h-12">
-      </div>
-      <div class="sm:hidden">
-        <button onclick="openMenu()" class="text-white sm:hidden">
-          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
-          </svg>
-        </button>
-      </div>
+        <div>
+            <img src="images/failogo.png" alt="FAI" class="h-12">
+        </div>
+        <div class="sm:hidden">
+            <button onclick="openMenu()" class="text-white sm:hidden">
+                <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                    <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
+                </svg>
+            </button>
+        </div>
     </div>
     <div id ="fainavlinks"  class="hidden px-5 pt-2 sm:pb-4 sm:flex">
-      <a href="index.html"class="  text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Home</a>
-      <a href="team.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Our Team</a>
-      <a href="contact.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Contact</a>
-      <a href="chapters.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Chapters</a>
-      <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Guest Lectures</a>
-      <a href="blog.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Blog</a> 
+        <a href="index.html"class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Home</a>
+        <a href="team.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Our Team</a>
+        <a href="contact.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Contact</a>
+        <a href="chapters.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Chapters</a>
+        <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Blog</a>
     </div>
     <div id ="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
-      <a target="_blank" href="https://gofund.me/c61e6ac1" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Donate</a> 
+        <a target="_blank" href="https://gofund.me/c61e6ac1" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Donate</a>
     </div>
-  </header>
-  <div class="text-6xl font-bold text-center mt-32">
-    <span class=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg">Guest Lectures</span>
-  </div>
-  <div class="flex justify-center my-5">
-    <button class="bg-[#c02424] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] 
-      p-4 text-center text-white text-base font-semibold mt-4"
-      onclick="visitFaiYoutube();">
+</header>
+<div class="text-6xl font-bold text-center mt-32">
+    <span class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg">Guest Lectures</span>
+</div>
+<div class="video-container">
+    
+  <button class="bg-[#c02424] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] p-4 text-center text-white text-base font-semibold mt-4" onclick="visitFaiYoutube();">
       <img src="images/goldyt.png" alt="" class="inline-block h-8 w-8 mr-2">
       FAI Youtube
       <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1">
-    </button>
-  </div>
+  </button>
   <div class="px-2 py-2 sm:px-10 sm:py-10">
-    <div class="p-30 bg-white rounded-lg md:max-lg:flex-wrap lg:flex">
-      <div class="lg:w-2/5">
-        <iframe class="p-5 w-full lg:w-140" height="330" src="https://www.youtube.com/embed/ogFhUzIh244?si=OsVPWW3VKNrfvenv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write;
-         encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      <div class="mt-5 lg:w-3/5">
-        <p class="text-[#000000] font-semibold mx-4">It is our pleasure to introduce Mr. Blake Siewert, the North American Head of Growth and Innovation at Siemens Healthineers, a leading global Medical Technology company. 
-            With over 25 years of extensive experience, Mr. Siewert is a seasoned business professional skilled in leading cross-functional teams across sales, marketing, operations, customer service, and more. 
-            He founded BSM Creative, a strategic marketing and advertising agency and founded LogiTran Group a boutique industrial and organizational consultancy and recruiting company. 
-            Prior to joining Siemens Healthineers, he was employed at Adaptive Business Solutions serving as a lean coach and consultant for Six Sigma. 
-            Beyond his professional achievements, he has made significant contributions as a district and state CDC judge in Wisconsin DECA competitions. 
-            He is a married father of four residing in Madison, WI. Please join us in extending a warm welcome to Mr. Blake Siewert.
-        </p>
-        <button class="bg-[#5c81e8a1] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] 
-          p-4 text-center text-white text-base font-semibold my-4 ml-4 mr-2"
-          onclick="visitBlakeLinkedIn();">
-          <img src="images/LinkedIn.png" alt="" class="inline-block h-6 w-6 mr-2">
-          Blake Siewert
-          <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1">
-        </button>
-        <button class="bg-[#181871] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] 
-         p-4 text-center text-white text-base font-semibold my-4 ml-2 mr-4"
-         onclick="visitBlakeInterview();">
-         Check out the Interview
-         <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1">
-        </button>
-      </div>
-    </div>
-    
-  </div>
-</body>
-</html>
+      <div class="p-30 bg-[#373e50] rounded-lg md:max-lg:flex-wrap lg:flex video-wrapper">
+          <div class="lg:w-2/5">
+            <iframe class="p-5 w-full lg:w-" height="330" width="400" src="https://www.youtube.com/embed/ogFhUzIh244?si=OsVPWW3VKNrfvenv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="mt-5 lg:w-3/5">
+            <!-- First Element -->
+            <div class="font-bold text-xl mx-4 mb-4">Value Squared with Blake Siewert</div>
+
+              <!-- Second Element -->
+  <p class="text-white mx-4 mt-4">It is our pleasure to introduce Mr. Blake Siewert, the North American Head of Growth and Innovation at Siemens Healthineers, a leading global Medical Technology company.
+  With over 25 years of extensive experience, Mr. Siewert is a seasoned business professional skilled in leading cross-functional teams across sales, marketing, operations, customer service, and more.
+  He founded BSM Creative, a strategic marketing and advertising agency and founded LogiTran Group a boutique industrial and organizational consultancy and recruiting company.
+  Prior to joining Siemens Healthineers, he was employed at Adaptive Business Solutions serving as a lean coach and consultant for Six Sigma.
+
+  Beyond his professional achievements, he has made significant contributions as a district and state CDC judge in Wisconsin DECA competitions.
+  He is a married father of four residing in Madison, WI. Please join us in extending a warm welcome to Mr. Blake Siewert.
+</p>
+                <button class="bg-[#5c81e8a1] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] p-4 text-center text-white text-base font-semibold my-4 ml-4 mr-2" onclick="visitBlakeLinkedIn();">
+                    <img src="images/LinkedIn.png" alt="" class="inline-block h-6 w-6 mr-2">
+                    Blake Siewert
+                    <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1">
+                </button>
+                <button class="bg-[#181871] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] p-4 text-center text-white text-base font-semibold my-4 ml-2 mr-4" onclick="visitBlakeInterview();">
+                    Check out the Interview
+                    <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1">
+                </button>
