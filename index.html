@@ -8,23 +8,75 @@
     <link href="./dist/output.css" rel="stylesheet" >
     <link href="index.css" rel="stylesheet" >
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  function openMenu(){
-    var elem = document.getElementById("fainavlinks");
-    elem.classList.toggle("hidden");
-    var menu = document.getElementById("fainavlinks-donate");
-    menu.classList.toggle("hidden");
-  }
-  function visitDonatePage(){
-    window.open('https://gofund.me/c61e6ac1', '_blank');
-  }
-</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      #school-name {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      }
+
+      #white-title {
+        font-size: 2rem;
+        color: white;
+        margin-top: 1rem;
+        text-align: left; 
+        margin-bottom: 0.5rem; 
+      }
+
+      #faihome-image,
+      #faiMeeting1-image {
+        max-width: 80%;
+        margin: 2rem auto;
+      }
+
+      #caption {
+        text-align: left;
+        color: #fff;
+      }
+    </style>
+    <script>
+      function openMenu() {
+        var elem = document.getElementById("fainavlinks");
+        elem.classList.toggle("hidden");
+        var menu = document.getElementById("fainavlinks-donate");
+        menu.classList.toggle("hidden");
+      }
+    
+      function visitDonatePage() {
+        window.open('https://gofund.me/c61e6ac1', '_blank');
+      }
+    
+      const schoolNames = [
+        "North Texas University.",
+        "Texas A&M University.",
+        "University of Texas.",
+        "Texas Tech University.",
+        "Rice University."
+      ];
+    
+      let index = 0;
+    
+      setInterval(() => {
+        const schoolNameElement = document.getElementById("school-name");
+    
+        schoolNameElement.style.opacity = "0";
+        schoolNameElement.style.transform = "translateY(10px)";
+    
+        setTimeout(() => {
+          index = (index + 1) % schoolNames.length;
+          schoolNameElement.innerHTML = schoolNames[index];
+          schoolNameElement.style.opacity = "1";
+          schoolNameElement.style.transform = "translateY(10)";
+        }, 500);
+    
+      }, 1000);
+    </script>
+    
 </head>
 <body>
   <!--This is where the page layout gets separated into 12 columns-->
   <header class="bg-[#926F34] sm:flex sm:justify-between rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50">
-
     <div class="flex items-center justify-between px-4 py-3">
       <div>
         <img src="images/failogo.png" alt="FAI" class="h-12">
@@ -56,39 +108,24 @@
     <div class="flex">
       <div class="w-2/5">
         <h1 class="text-6xl text-left mt-44 text-LighterGold font-bold">FAI</h1>
-        <h3 class="text-lg text-left text-gray-400">Empowering financial futures.</h3>
+        <h3 class="text-lg text-left text-gray-400">Empowering financial futures at
+          <span id="school-name" class="text-LighterGold font-bold"></span>
+        </h3>
         <button class="bg-[#926F34] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] 
           mt-2 p-4 text-center text-white text-base font-semibold"
           onclick="visitDonatePage();">Donate
           <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1">
         </button>
       </div>
-      <div class="">
-        <img src="images/fai.png" alt="" class="mt-32 border-8 border-[#926F34]">
-      </div>
     </div>
-    <div class="mt-28 mb-9 mx-5 bg-gradient-to-r from-[#926F34] to-[#DFBD69] p-2 shadow-lg">
-      <div class="bg-[#1f222b] p-1">
-        <h1 class="text-white text-6xl text-center mt-5">WHO ARE WE?</h1>
-        <div class="sm:flex items-center">
-          <p class="text-white text-xl font-semibold mt-10 ml-10">
-            FAI, which stands for Finance and Investment Club, is a student-led organization based out of North Texas that is committed to
-            teaching students and sharing knowledge about finance and investments to help the next generation become financially literate.
-          </p>
-          <img src="images/faiMeeting1.png" alt="" class="rounded-3xl ring-4 ring-[#926F34] mr-10 ml-1 mt-10" width="475" height="200">
-        </div>
-
-        <div class="sm:flex items-center mb-5">
-          <img src="images/faiInterview1.png" alt="" class="rounded-3xl ring-4 ring-[#926F34] ml-10 mr-1 mt-10" width="460" height="200">
-          <p class="text-white text-xl font-semibold mt-10 ml-5 mr-10">
-            We do this by building a curriculum, which mainly consists of slideshows, and providing this to chapters, where the officers will teach the lessons. 
-            We will also host a nationwide stock market game with prizes of $1000 or more, where we provide our members with an opportunity to display their skills. 
-            We will also host guest speakers who are industry professionals to provide advice to our members!
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
+  <div><img src="images/faiMeeting1.png" alt="" id="faiMeeting1-image" class="mt-10 max-w-2/5 h-auto"></div>
+  <div><h2 id="white-title" class="text-4xl text-LighterGold font-bold">Welcome to the Finance and Investments Club</h2></div>
+    <p id="caption" class="text-lg">Explore the world of finance with us under an offocial 501(c)(3) student-led nonprofit organization committed to securing your financial future.</p>
   </div>
 </body>
 </html>
+
+      
+      
+      
+      
