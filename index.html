@@ -1,131 +1,123 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="forest">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAI</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link href="./dist/output.css" rel="stylesheet" >
-    <link href="index.css" rel="stylesheet" >
+    <link href="./dist/output.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      #school-name {
-        opacity: 0;
-        transform: translateY(10px);
-        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-      }
-
-      #white-title {
-        font-size: 2rem;
-        color: white;
-        margin-top: 1rem;
-        text-align: left; 
-        margin-bottom: 0.5rem; 
-      }
-
-      #faihome-image,
-      #faiMeeting1-image {
-        max-width: 80%;
-        margin: 2rem auto;
-      }
-
-      #caption {
-        text-align: left;
-        color: #fff;
-      }
-    </style>
     <script>
-      function openMenu() {
-        var elem = document.getElementById("fainavlinks");
-        elem.classList.toggle("hidden");
-        var menu = document.getElementById("fainavlinks-donate");
-        menu.classList.toggle("hidden");
-      }
-    
-      function visitDonatePage() {
-        window.open('https://gofund.me/c61e6ac1', '_blank');
-      }
-    
-      const schoolNames = [
-        "North Texas University.",
-        "Texas A&M University.",
-        "University of Texas.",
-        "Texas Tech University.",
-        "Rice University."
-      ];
-    
-      let index = 0;
-    
-      setInterval(() => {
-        const schoolNameElement = document.getElementById("school-name");
-    
-        schoolNameElement.style.opacity = "0";
-        schoolNameElement.style.transform = "translateY(10px)";
-    
-        setTimeout(() => {
-          index = (index + 1) % schoolNames.length;
-          schoolNameElement.innerHTML = schoolNames[index];
-          schoolNameElement.style.opacity = "1";
-          schoolNameElement.style.transform = "translateY(10)";
-        }, 500);
-    
-      }, 1000);
-    </script>
-    
-</head>
-<body>
-  <!--This is where the page layout gets separated into 12 columns-->
-  <header class="bg-[#926F34] sm:flex sm:justify-between rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50">
-    <div class="flex items-center justify-between px-4 py-3">
-      <div>
-        <img src="images/failogo.png" alt="FAI" class="h-12">
-      </div>
-      <div class="sm:hidden">
-        <button onclick="openMenu()" class="text-white sm:hidden">
-          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div id ="fainavlinks"  class="hidden px-5 pt-2 sm:pb-4 sm:flex">
-      <a href="index.html"class="  text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Home</a>
-      <a href="team.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Our Team</a>
-      <a href="contact.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Contact</a>
-      <a href="chapters.html"  class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Chapters</a>
-      <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Guest Lectures</a>
-      <a href="blog.html" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Blog</a> 
-    </div>
-    <div id ="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
-      <a target="_blank" href="https://gofund.me/c61e6ac1" class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Donate</a> 
-    </div>
-  </header>
-  <div class="px-2 sm:px-10">
-  <!--This uses container that adds breakpoints to divs to change screen size and uses relative to position it absolute-->
-  <!--This is the main body of the page-->
-  <div class="container mx-auto ">
-    <div class="flex">
-      <div class="w-2/5">
-        <h1 class="text-6xl text-left mt-44 text-LighterGold font-bold">FAI</h1>
-        <h3 class="text-lg text-left text-gray-400">Empowering financial futures at
-          <span id="school-name" class="text-LighterGold font-bold"></span>
-        </h3>
-        <button class="bg-[#926F34] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] 
-          mt-2 p-4 text-center text-white text-base font-semibold"
-          onclick="visitDonatePage();">Donate
-          <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1">
-        </button>
-      </div>
-    </div>
-  <div><img src="images/faiMeeting1.png" alt="" id="faiMeeting1-image" class="mt-10 max-w-2/5 h-auto"></div>
-  <div><h2 id="white-title" class="text-4xl text-LighterGold font-bold">Welcome to the Finance and Investments Club</h2></div>
-    <p id="caption" class="text-lg">Explore the world of finance with us under an offocial 501(c)(3) student-led nonprofit organization committed to securing your financial future.</p>
-  </div>
-</body>
-</html>
+        function openMenu() {
+            var elem = document.getElementById("fainavlinks");
+            elem.classList.toggle("hidden");
+            var menu = document.getElementById("fainavlinks-donate");
+            menu.classList.toggle("hidden");
+        }
 
-      
-      
-      
-      
+        function visitDonatePage() {
+            window.open('https://gofund.me/c61e6ac1', '_blank');
+        }
+
+        const schoolNames = [
+            "North Texas University.",
+            "Texas A&M University.",
+            "University of Texas.",
+            "Texas Tech University.",
+            "Rice University."
+        ];
+
+        let index = 0;
+
+        setInterval(() => {
+            const schoolNameElement = document.getElementById("school-name");
+
+            schoolNameElement.style.opacity = "0";
+            schoolNameElement.style.transform = "translateY(10px)";
+
+            setTimeout(() => {
+                index = (index + 1) % schoolNames.length;
+                schoolNameElement.innerHTML = schoolNames[index];
+                schoolNameElement.style.opacity = "1";
+                schoolNameElement.style.transform = "translateY(10)";
+            }, 500);
+
+        }, 1000);
+
+
+        window.addEventListener("scroll", handleScroll);
+    </script>
+</head>
+
+<body>
+    <!--This is where the page layout gets separated into 12 columns-->
+    <header class="bg-[#926F34] sm:flex sm:justify-between rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50">
+        <div class="flex items-center justify-between px-4 py-3">
+            <div>
+                <img src="images/failogo.png" alt="FAI" class="h-12">
+            </div>
+            <div class="sm:hidden">
+                <button onclick="openMenu()" class="text-white sm:hidden">
+                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd"
+                            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="fainavlinks" class="hidden px-5 pt-2 sm:pb-4 sm:flex">
+            <a href="index.html"
+                class="  text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Home</a>
+            <a href="team.html"
+                class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Our
+                Team</a>
+            <a href="contact.html"
+                class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Contact</a>
+            <a href="chapters.html"
+                class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Chapters</a>
+            <a href="guest-lectures.html"
+                class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Guest
+                Lectures</a>
+            <a href="blog.html"
+                class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Blog</a>
+        </div>
+        <div id="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
+            <a target="_blank" href="https://gofund.me/c61e6ac1"
+                class="text-white text-base block sm:inline-block font-semibold rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Donate</a>
+        </div>
+    </header>
+    <div class="px-2 sm:px-10">
+        <!--This uses container that adds breakpoints to divs to change screen size and uses relative to position it absolute-->
+        <!--This is the main body of the page-->
+        <div class="container mx-auto ml-40">
+            <div class="flex bg-[rgba(146, 111, 52, 0.2)] rounded-xl p-6 mt-20 ml-30">
+                <div class="w-2/5 ml-60">
+                    <h1 class="text-7xl text-left mt-12 text-LighterGold font-bold">FAI</h1>
+                    <h3 class="text-4xl text-left text-gray-400">Empowering financial futures at
+                        <span id="school-name" class="text-LighterGold font-bold transition ease-in-out delay-400">University of Texas at Austin.</span>
+                    </h3>
+                    <button class="bg-[#926F34] rounded-xl transition ease-in-out delay-300 duration-300 hover:scale-105 hover:bg-[#B88C41] 
+                                    mt-2 p-4 text-center text-white text-base font-semibold" onclick="visitDonatePage();">
+                        Donate
+                        <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1">
+                    </button>
+                </div>
+            </div>
+            <div class="flex items-center ml-10 animate-float-in">
+                <div class="my-100" style="width: 100%;">
+                    <h2 id="white-title" class="text-4xl text-white font-bold" style="width: 100%;">Welcome to the</h2>
+                    <h2 class="text-4xl text-LighterGold font-bold" style="width: 120%;">Finance and Investments Club</h2>
+                    <p id="caption" class="text-lg text-gray-400" style="width: 100%;">Explore the world of finance with us under an official 501(c)(3) student-led nonprofit organization committed to securing your financial future.</p>
+                </div>
+                <div>
+                    <img src="images/faiMeeting1.png" id="faiMeeting1-image" class="mt-10 max-w-[65%] ml-10">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
