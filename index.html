@@ -22,33 +22,79 @@
             window.open('https://gofund.me/c61e6ac1', '_blank');
         }
 
-        const schoolNames = [
-            "North Texas University.",
-            "Texas A&M University.",
-            "University of Texas.",
-            "Texas Tech University.",
-            "Rice University."
-        ];
+        document.addEventListener("DOMContentLoaded", function() {
+            const schoolNames = [
+                'Reedy High School',
+                'Frisco High School',
+                'Lebanon Trail High School',
+                'Wakeland High School',
+                'Manchester Essex Regional High School',
+                'Pine Crest High School',
+                'North Broward Prep High School',
+                'Dr. Michael Krop Senior High School',
+                'Abraham Lincoln High School',
+                'Saratoga High School',
+                'Bellarmine College Prepatory',
+                'New Tech High @ Coppell',
+                'Hebron High School',
+                'Prosper High School',
+                'Lewisville High School - Harmon',
+                'Flower Mound HS',
+                'Francis Howell North',
+                'The Adelson School',
+                'Ed W. Clark High School',
+                'The Meadows School',
+                'Montclair High School',
+                'Pioneer Heritage Middle School',
+                'Griffin Middle School',
+                'Green Level High School',
+                'Heritage High School',
+                'Ray Braswell High School',
+                'Centennial High School',
+                'Panther Creek High School',
+                'Cypress Ranch High School',
+                'Cypress Ranch High School',
+                'North Allegheny Senior High School',
+                'North Allegheny Intermediate High School',
+                'Parsippany Hills High School',
+                'Pine-Richland High School',
+                'Roy C. Ketcham	High School',
+                'Benjamin Franklin High School',
+                'Gyanodaya International School',
+                'Y. B. Patil Polytechnic',
+                'BASIS International School Guangzhou',
+                'Guangzhou Tianxin Experimental School',
+                'Beijing Academy',
+                'Shanghai Guanghua Cambridge International School',
+                'Ulink College of Shanghai',
+                'The Woodlands High School',
+                'Lone Star High School',
+                'Central High School',
+            ];
 
-        let index = 0;
+            let currentIndex = 0;
+            const textElement = document.getElementById('schoolName'); // Updated to use the new id
 
-        setInterval(() => {
-            const schoolNameElement = document.getElementById("school-name");
+            function updateSchoolName() {
+                textElement.classList.remove('fade-in');
+                textElement.classList.add('fade-out');
 
-            schoolNameElement.style.opacity = "0";
-            schoolNameElement.style.transform = "translateY(10px)";
+                textElement.addEventListener('animationend', function() {
+                    textElement.classList.remove('fade-out');
+                
+                     // Select a random index from the schoolNames array
+                    const randomIndex = Math.floor(Math.random() * schoolNames.length);
 
-            setTimeout(() => {
-                index = (index + 1) % schoolNames.length;
-                schoolNameElement.innerHTML = schoolNames[index];
-                schoolNameElement.style.opacity = "1";
-                schoolNameElement.style.transform = "translateY(10)";
-            }, 500);
+                    // Update the text content with the randomly selected name
+                    textElement.textContent = schoolNames[randomIndex];
 
-        }, 2000);
+                    textElement.classList.add('fade-in');
+        }, { once: true }); // The 'once' option auto-removes the event listener after it fires once
+    }
 
-
-        window.addEventListener("scroll", handleScroll);
+    setInterval(updateSchoolName, 2500);
+        });
+        
     </script>
 </head>
 
@@ -83,26 +129,52 @@
     </header>
     <div class="px-2 sm:px-10">
         <!-- Main body of the page -->
-        <div class="p-6 mt-20 text-center">
-                <h1 class="text-7xl mt-12 text-LighterGold font-bold">FAI</h1>
+        <div class="p-6 text-center min-h-screen flex flex-col justify-center items-center translate-down-eighth">
+                <p class="text-7xl text-LighterGold font-bold mb-2">FAI</p>
                 <p class="text-3xl text-gray-400"> Empowering financial futures at </p>
-                <p id="school-name" class="text-LighterGold font-bold transition ease-in-out delay-400 text-3xl mb-4">University of Texas at Austin.</p>
-                <button class="bg-[#926F34] rounded-xl transition ease-in-out delay-300 duration-300 hover:scale-105 hover:bg-[#B88C41] mt-2 p-4 text-center text-white text-base font-semibold" onclick="visitDonatePage();">
+                <p id="schoolName" class="text-LighterGold font-bold transition text-3xl mb-3 mt-1">Reedy High School</p>
+                <button class="bg-[#926F34] rounded-xl transition ease-in-out duration-300 hover:scale-105 hover:bg-[#B88C41] mt-2 p-4 text-center text-white text-base font-semibold" onclick="visitDonatePage();">
                     Donate
-                    <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1">
+                    <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2">
                 </button>
         </div>
-        <div class="flex items-center ml-10 my-20 animate-float-in">
-            <div class="my-100" style="width: 100%;">
-                <h2 id="white-title" class="text-4xl text-white font-bold" style="width: 100%;">Welcome to the</h2>
-                <h2 class="text-4xl text-LighterGold font-bold" style="width: 100%;">Finance and Investments Club</h2>
-                <p id="caption" class="text-lg text-gray-400" style="width: 100%;">Explore the world of finance with us under an official 501(c)(3) student-led nonprofit organization committed to securing your financial future.</p>
+        <div class="sm:flex items-center ml-10 my-20">
+            <div class="w-screen sm:w-1/3">
+                <h2 class="text-4xl text-white font-bold">Welcome to </h2>
+                <h2 class="text-4xl text-LighterGold font-bold">Finance and Investments Org.</h2>
+                <p class="text-lg mt-4 text-gray-400">Explore the world of finance with us under an official 501(c)(3) student-led nonprofit organization committed to securing your financial future.</p>
             </div>
-            <div>
-                <img src="images/faiMeeting1.png" id="faiMeeting1-image" class="mt-10 max-w-[65%] ml-10">
+            <div class="sm:w-2/3">
+                <img src="images/faiMeeting1.png" id="faiMeeting1-image" class="mt-10 max-w-[90%] sm:ml-10">
             </div>
         </div>
-    </div>
+    </div> 
+    <style> /*this is necesary so we can customize the schoolname animation*/
+        @keyframes fadeIn {
+            from { 
+                opacity: 0; 
+                transform: translateY(15px); /* Adjust as needed */
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        .fade-in {
+            animation: fadeIn 800ms forwards;
+        }
+
+        .fade-out {
+        animation: fadeOut 150ms forwards;
+        }
+
+    </style>
 </body>
 
 </html>
