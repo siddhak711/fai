@@ -15,3 +15,12 @@
 .txtincrease:hover{
     transform: scale(1.2); 
 }
+
+.translate-down-eighth { /*translates eighth of screen size (vh) */
+    transform: translateY(12vh); 
+}
+
+.translate-up-eighth { /*translates eighth of screen size (vh) */
+    transform: translateY(-12vh); 
+}
+
