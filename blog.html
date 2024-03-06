@@ -50,10 +50,50 @@
   <div class="text-6xl font-bold text-center mt-32">
     <span class=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg">Blog</span>
   </div>
-  <!--Blog Cards-->
-  <div class="grid sm:grid-cols-3 gap-10 py-20 px-4 sm:px-10 md:px-4 lg:px-20 resize-none">
+
+  <!--FEATURED BLOG-->
+  <div class="grid sm:grid-cols-1 gap-4 pt-12 px-4 sm:px-10 md:px-4 lg:px-20 resize-none">
+    
+    <div class="bg-[#373e50] rounded-lg flex sm:flex-row w-full h-auto">
+
+      <div class="relative w-7/12">
+        <p class="mt-4 sm:mt-8 mx-4 sm:mx-8 text-md sm:text-2xl font-semibold text-[#DFBD69]">
+          FAI’s Upcoming Guest Lectures & What to Expect
+        </p>
+        <span class="mt-2 mx-4 sm:mx-8 w-fit inline-flex items-center px-1 sm:px-3 text-xs sm:text-base rounded-lg font-medium bg-green-100 text-green-800">Featured Blog</span>
+        <p class="mx-4 sm:mx-8 mt-28 text-white absolute top-0 bottom-12 sm:bottom-[70px] overflow-hidden">
+          FAI has teamed up with many professionals within the finance and business field to host guest lectures for FAI members to join and learn more about finance. These guest speakers will help create more profound insight into the proper field of business and finance while creating interest in why the field is so important!
+    
+          Recently, Charles Goldberg, the COO of FAI, and Siddha Kanthi, the organization’s CEO, interviewed Blake Siewart, the North American Head of Growth and Innovation at Siemens Healthineers, where they discussed the ideas of building value within a business in his presentation, <i>Value Squared.</i>
+    
+          This guest lecture is the first of many to come as we have lined up many other professionals to interview, such as Mr. Winston Black, founder and former CEO of SWK Holdings, and Mr. Matt Anderson, senior VP at Wells Fargo Private Bank.
+        </p>
+        <div class="absolute bottom-12 sm:bottom-[70px] left-0 right-0 bg-gradient-to-b from-transparent to-[#373e50] h-24"></div>
+    
+        <!--Read More redirect-->
+        <div class="absolute bottom-4 sm:bottom-7 left-4 sm:left-8">
+          <a target="_self" href="blog_plans.html" class="w-fit h-full flex items-center transition ease-in-out delay-150 duration-300 hover:scale-110">
+            <p class="text-[#DFBD69] font-bold text-lg sm:text-xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">Read More</p>
+            <img src="images/goldarrow.png" alt="" class="inline-block h-5 w-5 ml-2">
+          </a>
+        </div>
+      </div>
+      
+
+      <!--Background image-->
+      <div class="w-5/12 h-64 sm:h-auto">
+        <img src="images/professionals.jpeg" alt="Library in India" class="w-full h-full object-cover rounded-r-lg">
+      </div>
+
+    </div> <!--end of featured card-->
+  </div>
+  
+
+
+  <!--Regular Blog Cards-->
+  <div class="grid sm:grid-cols-3 gap-10 py-12 px-4 sm:px-10 md:px-4 lg:px-20 resize-none">
     <!--First blog card-->
-    <div class="bg-[#373e50] rounded-lg"> 
+    <div class="bg-[#373e50] rounded-lg flex-col relative"> 
 
       <!--Background image-->
       <img src="images/libraryinindia.jpg" alt="Library in India" class="w-full h-40 object-cover rounded-t-lg">
@@ -79,20 +119,20 @@
         
         <!--Fade effect-->
         <div class="absolute bottom-10 left-0 right-0 bg-gradient-to-b from-transparent to-[#373e50] h-24"></div>
-            
-        <!--Read More redirect-->
-        <div class="absolute bottom-2"> 
-          <a target="_self" href="blog_library.html" class="w-fit h-full flex items-center transition ease-in-out delay-150 duration-300 hover:scale-110">
-            <p class="text-[#DFBD69] font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">Read More</p>
-            <img src="images/goldarrow.png" alt="" class="inline-block h-5 w-5 ml-2">
-          </a>
-        </div>
+        
+      </div>
 
+      <!--Read More redirect-->
+      <div class="absolute bottom-3 left-5"> 
+        <a target="_self" href="blog_library.html" class="w-fit h-full flex items-center transition ease-in-out delay-150 duration-300 hover:scale-110">
+          <p class="text-[#DFBD69] font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">Read More</p>
+          <img src="images/goldarrow.png" alt="" class="inline-block h-5 w-5 ml-2">
+        </a>
       </div>
 
     </div>  <!--end of card-->
 
-    <div class="bg-[#373e50] rounded-lg"> 
+    <div class="bg-[#373e50] rounded-lg flex-col relative"> 
 
       <!--Background image-->
       <img src="images/sustainableinv.jpeg" alt="Library in India" class="w-full h-40 object-cover rounded-t-lg">
@@ -118,20 +158,21 @@
         <!--Fade effect-->
         <div class="absolute bottom-10 left-0 right-0 bg-gradient-to-b from-transparent to-[#373e50] h-24"></div>
             
-        <!--Read More redirect-->
-        <div class="absolute bottom-2"> 
-          <a target="_self" href="blog_sustainableinv.html" class="w-fit h-full flex items-center transition ease-in-out delay-150 duration-300 hover:scale-110">
-            <p class="text-[#DFBD69] font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">Read More</p>
-            <img src="images/goldarrow.png" alt="" class="inline-block h-5 w-5 ml-2">
-          </a>
-        </div>
+        
 
+      </div>
+      <!--Read More redirect-->
+      <div class="absolute bottom-3 left-5"> 
+        <a target="_self" href="blog_sustainableinv.html" class="w-fit h-full flex items-center transition ease-in-out delay-150 duration-300 hover:scale-110">
+          <p class="text-[#DFBD69] font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">Read More</p>
+          <img src="images/goldarrow.png" alt="" class="inline-block h-5 w-5 ml-2">
+        </a>
       </div>
 
     </div>  <!--end of card-->
 
       
-    <div class="bg-[#373e50] rounded-lg"> 
+    <div class="bg-[#373e50] rounded-lg flex-col relative"> 
 
       <!--Background image-->
       <img src="images/fin-literacy.gif" alt="Library in India" class="w-full h-40 object-cover rounded-t-lg">
@@ -156,14 +197,13 @@
         <!--Fade effect-->
         <div class="absolute bottom-10 left-0 right-0 bg-gradient-to-b from-transparent to-[#373e50] h-24"></div>
             
-        <!--Read More redirect-->
-        <div class="absolute bottom-2"> 
-          <a target="_self" href="blog_finliteracy.html" class="w-fit h-full flex items-center transition ease-in-out delay-150 duration-300 hover:scale-110">
-            <p class="text-[#DFBD69] font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">Read More</p>
-            <img src="images/goldarrow.png" alt="" class="inline-block h-5 w-5 ml-2">
-          </a>
-        </div>
-
+      </div>
+      <!--Read More redirect-->
+      <div class="absolute bottom-3 left-5"> 
+        <a target="_self" href="blog_finliteracy.html" class="w-fit h-full flex items-center transition ease-in-out delay-150 duration-300 hover:scale-110">
+          <p class="text-[#DFBD69] font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">Read More</p>
+          <img src="images/goldarrow.png" alt="" class="inline-block h-5 w-5 ml-2">
+        </a>
       </div>
 
     </div>  <!--end of card-->
