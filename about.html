@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="forest">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FAI</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function openMenu() {
+        var elem = document.getElementById("fainavlinks");
+        elem.classList.toggle("hidden");
+        var menu = document.getElementById("fainavlinks-donate");
+        menu.classList.toggle("hidden");
+      }
+      function visitBlakeInterview() {
+        window.open(
+          "https://youtu.be/ogFhUzIh244?si=Tcbc10zcaSBSKgbQ",
+          "_blank"
+        );
+      }
+      function visitFaiYoutube() {
+        window.open(
+          "https://www.youtube.com/@FAI_Club/embed/C8kSrkz8Hz8",
+          "_blank"
+        );
+      }
+      function visitBlakeLinkedIn() {
+        window.open("https://www.linkedin.com/in/blakesiewert", "_blank");
+      }
+    </script>
+    <style>
+      /* Add this CSS */
+      .video-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .video-wrapper {
+        border: 4px solid rgba(154, 132, 9, 0.781); /* Adjust border properties as needed */
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <header
+      class="bg-[#926F34] sm:flex sm:justify-between rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50"
+    >
+      <div class="flex items-center justify-between px-4 py-3">
+        <div>
+          <img src="images/failogo.png" alt="FAI" class="h-12" />
+        </div>
+        <div class="sm:hidden">
+          <button onclick="openMenu()" class="text-white sm:hidden">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+              <path
+                fill-rule="evenodd"
+                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="fainavlinks" class="hidden px-5 pt-2 sm:pb-4 sm:flex">
+        <a
+          href="index.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Home</a
+        >
+        <a
+          href="team.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Our Team</a
+        >
+        <a
+          href="contact.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Contact</a
+        >
+        <a
+          href="chapters.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Chapters</a
+        >
+        <a
+          href="guest-lectures.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Guest Lectures</a
+        >
+        <a
+          href="blog.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Blog</a
+        >
+        <a
+          href="about.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >About Us</a
+        >
+      </div>
+      <div id="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
+        <a
+          target="_blank"
+          href="http://linktr.ee/faiapp"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Join Our Team</a
+        >
+      </div>
+    </header>
+    <div class="text-6xl font-bold text-center mt-32">
+      <span
+        class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg"
+        >About Us</span
+      >
+    </div>
+
+    <!-----General Info ------>
+    <div class="\ flex text-white text-center ml-40 mr-40 mt-20 mb-40">
+      The Finance and Investments (FAI) Club looks to empower students with the
+      knowledge and skills to navigate the corporate world. FAI has evolved into
+      a thriving 501(c)(3) non-profit dedicated to fostering financial literacy
+      and education among students worldwide.
+    </div>
+
+    <!-----History Section ------>
+    <div class="bg-[#373e50] max-w-screen h-auto pb-10 flex items-center">
+      <div>
+        <h1 class="text-[#373e50]">History</h1>
+        <h2 class="font-bold text-2xl ml-10">History</h2>
+
+        <div class="text-white ml-10 w-fit mr-10">
+          Founded at Reedy High School in 2022, FAI was born with the mission of
+          helping students to better understand finance. What began as a small
+          school organization has now grown exponentially, with members spanning
+          across the United States and reaching three different continents. The
+          commitment to provide quality financial education remains strong as
+          the organization continues to expand its reach and impact.
+        </div>
+      </div>
+      <div class="ml-auto mr-10">
+        <!-- image -->
+        <img
+          src="images/faiMeeting1.png"
+          class="h-40 rounded-2xl mt-10 max-w-xl"
+        />
+      </div>
+
+      <!-----Available opportunities ------>
+    </div>
+
+    <div class="max-w-screen h-auto rounded-2xl pb-10 flex items-center">
+      <div>
+        <h1 class="text-black">History</h1>
+        <h2 class="font-bold text-2xl ml-10">Available Opportunities</h2>
+
+        <div class="text-white ml-10 w-fit mr-10">
+          At FAI, resources are continuously built up to meet members’ desires.
+          Our guest lectures continue each month, sharing some industry insights
+          and allowing a special attending member Q&A. This year, chapters will
+          share improved curriculum, featuring additional topics and interactive
+          sessions. In addition, FAI is introducing exciting new competitions,
+          namely virtual business challenges, entrepreneurship pitches, in
+          addition to the annual stock market game. The introduction of FAI’s
+          Mentor Pool will allow students to connect with seasoned business
+          professionals, turning to them for specific 1-to-1 guidance and
+          advice. Lastly, the Research Pipeline program will provide a one of a
+          kind opportunity for upperclassmen to collaborate with
+          finance/economics professors during hands-on research projects.
+        </div>
+      </div>
+      <div class="ml-auto mr-10">
+        <!-- image -->
+        <img
+          src="images/faiMeeting1.png"
+          class="h-40 rounded-2xl mt-10 max-w-xl"
+        />
+      </div>
+    </div>
+
+    <div class="bg-[#373e50] max-w-screen h-auto pb-10 flex items-center">
+      <div>
+        <h1 class="text-[#373e50]">History</h1>
+        <h2 class="font-bold text-2xl ml-10">Philanthropic Mission</h2>
+
+        <div class="text-white ml-10 w-fit mr-10">
+          As a non-profit organization, FAI is committed to making a positive
+          impact in underdeveloped communities. The organization is dedicated to
+          raising funds through donations and grants to establish libraries
+          across struggling communities worldwide. Currently, funds are being
+          allocated to a project in the southern region of India, aiming to
+          provide access to educational books for children in need. To learn
+          more about our mission and contribute, please visit the fundraiser.
+          <br />
+          <button
+            class="bg-[#926F34] rounded-xl transition ease-in-out duration-300 hover:scale-105 hover:bg-[#B88C41] mt-2 p-4 text-center text-white text-base font-semibold"
+            onclick="visitDonatePage();"
+          >
+            Donate
+            <img
+              src="images/arrow.png"
+              alt=""
+              class="inline-block h-6 w-6 ml-2"
+            />
+          </button>
+        </div>
+      </div>
+      <div class="ml-auto mr-10">
+        <!-- image -->
+        <img
+          src="images/faiMeeting1.png"
+          class="h-40 rounded-2xl mt-10 max-w-xl"
+        />
+      </div>
+    </div>
+
+    <div class="max-w-screen h-auto rounded-2xl pb-10 flex items-center">
+      <div>
+        <h1 class="text-black">History</h1>
+        <h2 class="font-bold text-2xl ml-10">Join FAI</h2>
+
+        <div class="text-white ml-10 w-fit mr-10">
+          Whether you're a novice or an enthusiast in the finance and
+          investments world, the FAI Club welcomes you to join a wide,
+          interactive, and determined community. Start a chapter at your school
+          by visiting the Chapters page. Also, join our national team through
+          the link on the navigation bar.
+        </div>
+      </div>
+      <div class="ml-auto mr-10">
+        <!-- image -->
+        <img
+          src="images/faiMeeting1.png"
+          class="h-40 rounded-2xl mt-10 max-w-xl"
+        />
+      </div>
+    </div>
+  </body>
+</html>
