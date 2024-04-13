@@ -1,233 +1,377 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="forest">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAI</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link href="./dist/output.css" rel="stylesheet">
-    <link href="index.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
-        function openMenu() {
-            var elem = document.getElementById("fainavlinks");
-            elem.classList.toggle("hidden");
-            var menu = document.getElementById("fainavlinks-donate");
-            menu.classList.toggle("hidden");
+      function openMenu() {
+        var elem = document.getElementById("fainavlinks");
+        elem.classList.toggle("hidden");
+        var menu = document.getElementById("fainavlinks-donate");
+        menu.classList.toggle("hidden");
+      }
+
+      function visitDonatePage() {
+        window.open("https://gofund.me/c61e6ac1", "_blank");
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        const schoolNames = [
+          "Reedy High School",
+          "Frisco High School",
+          "Lebanon Trail High School",
+          "Wakeland High School",
+          "Manchester Essex Regional High School",
+          "Pine Crest High School",
+          "North Broward Prep High School",
+          "Dr. Michael Krop Senior High School",
+          "Abraham Lincoln High School",
+          "Saratoga High School",
+          "Bellarmine College Prepatory",
+          "New Tech High @ Coppell",
+          "Hebron High School",
+          "Prosper High School",
+          "Lewisville High School - Harmon",
+          "Flower Mound HS",
+          "Francis Howell North",
+          "The Adelson School",
+          "Ed W. Clark High School",
+          "The Meadows School",
+          "Montclair High School",
+          "Pioneer Heritage Middle School",
+          "Griffin Middle School",
+          "Green Level High School",
+          "Heritage High School",
+          "Ray Braswell High School",
+          "Centennial High School",
+          "Panther Creek High School",
+          "Cypress Ranch High School",
+          "Cypress Ranch High School",
+          "North Allegheny Senior High School",
+          "North Allegheny Intermediate High School",
+          "Parsippany Hills High School",
+          "Pine-Richland High School",
+          "Roy C. Ketcham	High School",
+          "Benjamin Franklin High School",
+          "Gyanodaya International School",
+          "Y. B. Patil Polytechnic",
+          "BASIS International School Guangzhou",
+          "Guangzhou Tianxin Experimental School",
+          "Beijing Academy",
+          "Shanghai Guanghua Cambridge International School",
+          "Ulink College of Shanghai",
+          "The Woodlands High School",
+          "Lone Star High School",
+          "Central High School",
+        ];
+
+        let currentIndex = 0;
+        const textElement = document.getElementById("schoolName"); // Updated to use the new id
+
+        function updateSchoolName() {
+          textElement.classList.remove("fade-in");
+          textElement.classList.add("fade-out");
+
+          textElement.addEventListener(
+            "animationend",
+            function () {
+              textElement.classList.remove("fade-out");
+
+              // Select a random index from the schoolNames array
+              const randomIndex = Math.floor(
+                Math.random() * schoolNames.length
+              );
+
+              // Update the text content with the randomly selected name
+              textElement.textContent = schoolNames[randomIndex];
+
+              textElement.classList.add("fade-in");
+            },
+            { once: true }
+          ); // The 'once' option auto-removes the event listener after it fires once
         }
 
-        function visitDonatePage() {
-            window.open('https://gofund.me/c61e6ac1', '_blank');
-        }
-
-        document.addEventListener("DOMContentLoaded", function() {
-            const schoolNames = [
-                'Reedy High School',
-                'Frisco High School',
-                'Lebanon Trail High School',
-                'Wakeland High School',
-                'Manchester Essex Regional High School',
-                'Pine Crest High School',
-                'North Broward Prep High School',
-                'Dr. Michael Krop Senior High School',
-                'Abraham Lincoln High School',
-                'Saratoga High School',
-                'Bellarmine College Prepatory',
-                'New Tech High @ Coppell',
-                'Hebron High School',
-                'Prosper High School',
-                'Lewisville High School - Harmon',
-                'Flower Mound HS',
-                'Francis Howell North',
-                'The Adelson School',
-                'Ed W. Clark High School',
-                'The Meadows School',
-                'Montclair High School',
-                'Pioneer Heritage Middle School',
-                'Griffin Middle School',
-                'Green Level High School',
-                'Heritage High School',
-                'Ray Braswell High School',
-                'Centennial High School',
-                'Panther Creek High School',
-                'Cypress Ranch High School',
-                'Cypress Ranch High School',
-                'North Allegheny Senior High School',
-                'North Allegheny Intermediate High School',
-                'Parsippany Hills High School',
-                'Pine-Richland High School',
-                'Roy C. Ketcham	High School',
-                'Benjamin Franklin High School',
-                'Gyanodaya International School',
-                'Y. B. Patil Polytechnic',
-                'BASIS International School Guangzhou',
-                'Guangzhou Tianxin Experimental School',
-                'Beijing Academy',
-                'Shanghai Guanghua Cambridge International School',
-                'Ulink College of Shanghai',
-                'The Woodlands High School',
-                'Lone Star High School',
-                'Central High School',
-            ];
-
-            let currentIndex = 0;
-            const textElement = document.getElementById('schoolName'); // Updated to use the new id
-
-            function updateSchoolName() {
-                textElement.classList.remove('fade-in');
-                textElement.classList.add('fade-out');
-
-                textElement.addEventListener('animationend', function() {
-                    textElement.classList.remove('fade-out');
-                
-                     // Select a random index from the schoolNames array
-                    const randomIndex = Math.floor(Math.random() * schoolNames.length);
-
-                    // Update the text content with the randomly selected name
-                    textElement.textContent = schoolNames[randomIndex];
-
-                    textElement.classList.add('fade-in');
-        }, { once: true }); // The 'once' option auto-removes the event listener after it fires once
-    }
-
-    setInterval(updateSchoolName, 2500);
-        });
-        
+        setInterval(updateSchoolName, 2500);
+      });
     </script>
-</head>
+  </head>
 
-<body>
+  <body>
     <!--This is where the page layout gets separated into 12 columns-->
-    <header class="bg-[#926F34] sm:flex sm:justify-between shrink rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50">
-        <div class="flex items-center justify-between px-4 py-3">
-            <div>
-                <img src="images/failogo.png" alt="FAI" class="h-12">
-            </div>
-            <div class="sm:hidden">
-                <button onclick="openMenu()" class="text-white sm:hidden">
-                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd"
-                            d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
-                    </svg>
-                </button>
-            </div>
+    <header
+      class="bg-[#926F34] sm:flex sm:justify-between shrink rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50"
+    >
+      <div class="flex items-center justify-between px-4 py-3">
+        <div>
+          <img src="images/failogo.png" alt="FAI" class="h-12" />
         </div>
-        <div id="fainavlinks" class="hidden px-5 pt-2 sm:pb-4 sm:flex">
-            <a href="index.html" class="  text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Home</a>
-            <a href="team.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Our Team</a>
-            <a href="contact.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Contact</a>
-            <a href="chapters.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Chapters</a>
-            <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Guest Lectures</a>
-            <a href="blog.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Blog</a>
+        <div class="sm:hidden">
+          <button onclick="openMenu()" class="text-white sm:hidden">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+              <path
+                fill-rule="evenodd"
+                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+              />
+            </svg>
+          </button>
         </div>
-        <div id="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
-            <a target="_blank" href="http://linktr.ee/faiapp"
-                class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Join Our Team</a>
-        </div>
+      </div>
+      <div id="fainavlinks" class="hidden px-5 pt-2 sm:pb-4 sm:flex">
+        <a
+          href="index.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Home</a
+        >
+        <a
+          href="team.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Our Team</a
+        >
+        <a
+          href="contact.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Contact</a
+        >
+        <a
+          href="chapters.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Chapters</a
+        >
+        <a
+          href="guest-lectures.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Guest Lectures</a
+        >
+        <a
+          href="blog.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Blog</a
+        >
+        <a
+          href="about.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >About Us</a
+        >
+      </div>
+      <div id="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
+        <a
+          target="_blank"
+          href="http://linktr.ee/faiapp"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Join Our Team</a
+        >
+      </div>
     </header>
     <div class="px-2 sm:px-10">
-        <!-- Main body of the page -->
-        <div class="text-center min-h-screen flex flex-col justify-center items-center sm:translate-y-10">
-                <p class="text-7xl text-LighterGold font-bold mb-2">FAI</p>
-                <p class="text-3xl text-gray-400"> Empowering financial futures at </p>
-                <p id="schoolName" class="text-LighterGold font-bold transition text-3xl mb-3 mt-1">Reedy High School</p>
-                <button class="bg-[#926F34] rounded-xl transition ease-in-out duration-300 hover:scale-105 hover:bg-[#B88C41] mt-2 p-4 text-center text-white text-base font-semibold" onclick="visitDonatePage();">
-                    Donate
-                    <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2">
-                </button>
-        </div>
-
-    </div> 
-    
-    <div class="w-full">
-        <svg viewBox="-5.701 26.306 1415.7271 140.469" xmlns="http://www.w3.org/2000/svg">
-            <path d="M -5.701 34.107 L 160.427 58.751 L 357.529 32.58 L 556.829 59.881 L 751.695 29.681 L 990.328 56.875 C 1043.318 52.606 1071.206 46.707 1071.206 46.707 L 1223.428 62.52 L 1410.026 26.306 L 1410.026 166.775 L 1233.847 166.775 L 1056.094 166.775 L 879.916 166.775 L 702.162 166.775 L 525.983 166.775 L 348.23 166.775 L 172.051 166.775 L -5.701 166.775 L -5.701 34.107 Z" fill="#dfbd69"/>
-            <path d="M -5.701 79.423 L 172.051 88.025 L 445.871 70.295 L 569.509 83.919 L 663.271 73.42 L 808.593 61.993 L 943.011 81.276 L 1103.757 72.016 L 1275.697 87.132 L 1336.196 67.425 L 1410.026 50.262 L 1410.026 166.775 L 1233.847 166.775 L 1056.094 166.775 L 879.916 166.775 L 702.162 166.775 L 525.983 166.775 L 348.23 166.775 L 172.051 166.775 L -5.701 166.775 L -5.701 79.423 Z" fill="#d78469"/>
-            <path d="M -5.701 100.298 L 172.051 104.491 L 360.681 92.067 L 526.841 91.852 L 692.988 103.203 L 879.916 98.764 L 1063.069 95.27 L 1267.56 102.264 L 1410.026 74.721 L 1410.026 166.775 L 1233.847 166.775 L 1056.094 166.775 L 879.916 166.775 L 702.162 166.775 L 525.983 166.775 L 348.23 166.775 L 172.051 166.775 L -5.701 166.775 L -5.701 100.298 Z" fill="#a95c75"/>
-            <path d="M -5.701 127.4 L 174.052 115.504 L 344.953 110.653 L 449.312 102.597 L 702.162 113.082 L 882.917 123.976 L 1059.095 103.931 L 1232.684 126.507 L 1410.026 104.182 L 1410.026 166.775 L 1233.847 166.775 L 1056.094 166.775 L 879.916 166.775 L 702.162 166.775 L 525.983 166.775 L 348.23 166.775 L 172.051 166.775 L -5.701 166.775 L -5.701 127.4 Z" fill="#61456f"/>
-            <path d="M -5.701 144.582 L 172.051 131.696 L 348.23 133.127 L 525.983 137.423 L 702.162 128.832 L 879.916 140.287 L 1056.094 128.832 L 1233.847 145.298 L 1410.026 127.4 L 1410.026 166.775 L 1233.847 166.775 L 1056.094 166.775 L 879.916 166.775 L 702.162 166.775 L 525.983 166.775 L 348.23 166.775 L 172.051 166.775 L -5.701 166.775 L -5.701 144.582 Z" fill="#12304f"/>
-        </svg>
+      <!-- Main body of the page -->
+      <div
+        class="text-center min-h-screen flex flex-col justify-center items-center sm:translate-y-10"
+      >
+        <p class="text-7xl text-LighterGold font-bold mb-2">FAI</p>
+        <p class="text-3xl text-gray-400">Empowering financial futures at</p>
+        <p
+          id="schoolName"
+          class="text-LighterGold font-bold transition text-3xl mb-3 mt-1"
+        >
+          Reedy High School
+        </p>
+        <button
+          class="bg-[#926F34] rounded-xl transition ease-in-out duration-300 hover:scale-105 hover:bg-[#B88C41] mt-2 p-4 text-center text-white text-base font-semibold"
+          onclick="visitDonatePage();"
+        >
+          Donate
+          <img
+            src="images/arrow.png"
+            alt=""
+            class="inline-block h-6 w-6 ml-2"
+          />
+        </button>
+      </div>
     </div>
-    
-    <div class="md:flex  items-center justify-centerl px-2 sm:px-14 py-20 bg-[#12304f]">
-        <div class="w-auto sm:w-1/3">
-            <p class="text-4xl text-white font-bold">Welcome to </p>
-            <p class="text-4xl text-LighterGold font-bold">Finance and Investments Org.</p>
-            <p class="text-lg mt-4 text-gray-300">Explore the world of finance with us under an official 501(c)(3) student-led nonprofit organization committed to educating about finance, supporting investments, and giving back to those in need.</p>
-        </div>
-        <div class="sm:w-2/3 flex justify-center">
-            <img src="images/faiMeeting1.png" id="faiMeeting1-image" class="md:w-4/5 mt-10 h-auto rounded-xl">
-        </div>
+
+    <div class="w-full">
+      <svg
+        viewBox="-5.701 26.306 1415.7271 140.469"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M -5.701 34.107 L 160.427 58.751 L 357.529 32.58 L 556.829 59.881 L 751.695 29.681 L 990.328 56.875 C 1043.318 52.606 1071.206 46.707 1071.206 46.707 L 1223.428 62.52 L 1410.026 26.306 L 1410.026 166.775 L 1233.847 166.775 L 1056.094 166.775 L 879.916 166.775 L 702.162 166.775 L 525.983 166.775 L 348.23 166.775 L 172.051 166.775 L -5.701 166.775 L -5.701 34.107 Z"
+          fill="#dfbd69"
+        />
+        <path
+          d="M -5.701 79.423 L 172.051 88.025 L 445.871 70.295 L 569.509 83.919 L 663.271 73.42 L 808.593 61.993 L 943.011 81.276 L 1103.757 72.016 L 1275.697 87.132 L 1336.196 67.425 L 1410.026 50.262 L 1410.026 166.775 L 1233.847 166.775 L 1056.094 166.775 L 879.916 166.775 L 702.162 166.775 L 525.983 166.775 L 348.23 166.775 L 172.051 166.775 L -5.701 166.775 L -5.701 79.423 Z"
+          fill="#d78469"
+        />
+        <path
+          d="M -5.701 100.298 L 172.051 104.491 L 360.681 92.067 L 526.841 91.852 L 692.988 103.203 L 879.916 98.764 L 1063.069 95.27 L 1267.56 102.264 L 1410.026 74.721 L 1410.026 166.775 L 1233.847 166.775 L 1056.094 166.775 L 879.916 166.775 L 702.162 166.775 L 525.983 166.775 L 348.23 166.775 L 172.051 166.775 L -5.701 166.775 L -5.701 100.298 Z"
+          fill="#a95c75"
+        />
+        <path
+          d="M -5.701 127.4 L 174.052 115.504 L 344.953 110.653 L 449.312 102.597 L 702.162 113.082 L 882.917 123.976 L 1059.095 103.931 L 1232.684 126.507 L 1410.026 104.182 L 1410.026 166.775 L 1233.847 166.775 L 1056.094 166.775 L 879.916 166.775 L 702.162 166.775 L 525.983 166.775 L 348.23 166.775 L 172.051 166.775 L -5.701 166.775 L -5.701 127.4 Z"
+          fill="#61456f"
+        />
+        <path
+          d="M -5.701 144.582 L 172.051 131.696 L 348.23 133.127 L 525.983 137.423 L 702.162 128.832 L 879.916 140.287 L 1056.094 128.832 L 1233.847 145.298 L 1410.026 127.4 L 1410.026 166.775 L 1233.847 166.775 L 1056.094 166.775 L 879.916 166.775 L 702.162 166.775 L 525.983 166.775 L 348.23 166.775 L 172.051 166.775 L -5.701 166.775 L -5.701 144.582 Z"
+          fill="#12304f"
+        />
+      </svg>
+    </div>
+
+    <div
+      class="md:flex items-center justify-centerl px-2 sm:px-14 py-20 bg-[#12304f]"
+    >
+      <div class="w-auto sm:w-1/3">
+        <p class="text-4xl text-white font-bold">Welcome to</p>
+        <p class="text-4xl text-LighterGold font-bold">
+          Finance and Investments Org.
+        </p>
+        <p class="text-lg mt-4 text-gray-300">
+          Explore the world of finance with us under an official 501(c)(3)
+          student-led nonprofit organization committed to educating about
+          finance, supporting investments, and giving back to those in need.
+        </p>
+      </div>
+      <div class="sm:w-2/3 flex justify-center">
+        <img
+          src="images/faiMeeting1.png"
+          id="faiMeeting1-image"
+          class="md:w-4/5 mt-10 h-auto rounded-xl"
+        />
+      </div>
     </div>
 
     <div class="w-full px-2 py-8 bg-[#ead6ae] flex">
-        <!--<p class="font-bold text-center text-4xl text-[#926F34]"> The Leaders behind FAI </p>-->
-        <div class="w-full flex  flex-wrap sm:flex-row justify-between items-center sm:pl-12 sm:pr-6">
-            <div class="flex flex-col items-center">
-                <span class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#c79648] to-[#9a5700] drop-shadow-lg mb-2">CEO</span>
-                <img src="images/siddha.png" alt="" class="w-[150px] rounded-3xl ring-4 ring-[#926F34]">
-                <p class="text-xl font-bold text-[#926F34] mt-2 mb-5 sm:mb-0">Siddha Khanti</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <span class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#c79648] to-[#9a5700] drop-shadow-lg mb-2">COO</span>
-                <img src="images/charlie.png" alt="" class="w-[150px] rounded-3xl ring-4 ring-[#926F34]">
-                <p class="text-xl font-bold text-[#926F34] mt-2 mb-5 sm:mb-0">Charlie Goldberg</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <span class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#c79648] to-[#9a5700] drop-shadow-lg mb-2">CMO</span>
-                <img src="images/nikhil.png" alt="" class="w-[150px] rounded-3xl ring-4 ring-[#926F34]">
-                <p class="text-xl font-bold text-[#926F34] mt-2 mb-5 sm:mb-0">Nikhil Kotta</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <span class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#c79648] to-[#9a5700] drop-shadow-lg mb-2">CFO</span>
-                <img src="images/jonathan.png" alt="" class="w-[150px] rounded-3xl ring-4 ring-[#926F34]">
-                <p class="text-xl font-bold text-[#926F34] mt-2 mb-5 sm:mb-0">Jonathan Ta</p>
-            </div>
-            <div class="flex flex-col items-center">
-                <span class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#c79648] to-[#9a5700] drop-shadow-lg mb-2">CTO</span>
-                <img src="images/simeon.png" alt="" class="w-[150px] rounded-3xl ring-4 ring-[#926F34]">
-                <p class="text-xl font-bold text-[#926F34] mt-2 mb-5 sm:mb-0">Simeon Varghese</p>
-            </div>
-            <div class=" flex flex-col items-center">
-                <p class="text-4xl font-bold text-[#926F34]">Chief Officers</p>
-                <a href="team.html">
-                    <button class="bg-[#926F34] rounded-xl transition ease-in-out duration-300 hover:scale-105 hover:bg-[#B88C41] mt-2 p-3 text-center text-white text-base font-semibold">
-                        All National Officers
-                        <img src="images/arrow.png" alt="" class="inline-block h-6 w-6 ml-2">
-                    </button>
-                </a>
-            </div>
+      <!--<p class="font-bold text-center text-4xl text-[#926F34]"> The Leaders behind FAI </p>-->
+      <div
+        class="w-full flex flex-wrap sm:flex-row justify-between items-center sm:pl-12 sm:pr-6"
+      >
+        <div class="flex flex-col items-center">
+          <span
+            class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#c79648] to-[#9a5700] drop-shadow-lg mb-2"
+            >CEO</span
+          >
+          <img
+            src="images/siddha.png"
+            alt=""
+            class="w-[150px] rounded-3xl ring-4 ring-[#926F34]"
+          />
+          <p class="text-xl font-bold text-[#926F34] mt-2 mb-5 sm:mb-0">
+            Siddha Khanti
+          </p>
         </div>
+        <div class="flex flex-col items-center">
+          <span
+            class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#c79648] to-[#9a5700] drop-shadow-lg mb-2"
+            >COO</span
+          >
+          <img
+            src="images/charlie.png"
+            alt=""
+            class="w-[150px] rounded-3xl ring-4 ring-[#926F34]"
+          />
+          <p class="text-xl font-bold text-[#926F34] mt-2 mb-5 sm:mb-0">
+            Charlie Goldberg
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span
+            class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#c79648] to-[#9a5700] drop-shadow-lg mb-2"
+            >CMO</span
+          >
+          <img
+            src="images/nikhil.png"
+            alt=""
+            class="w-[150px] rounded-3xl ring-4 ring-[#926F34]"
+          />
+          <p class="text-xl font-bold text-[#926F34] mt-2 mb-5 sm:mb-0">
+            Nikhil Kotta
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span
+            class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#c79648] to-[#9a5700] drop-shadow-lg mb-2"
+            >CFO</span
+          >
+          <img
+            src="images/jonathan.png"
+            alt=""
+            class="w-[150px] rounded-3xl ring-4 ring-[#926F34]"
+          />
+          <p class="text-xl font-bold text-[#926F34] mt-2 mb-5 sm:mb-0">
+            Jonathan Ta
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <span
+            class="text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#c79648] to-[#9a5700] drop-shadow-lg mb-2"
+            >CTO</span
+          >
+          <img
+            src="images/simeon.png"
+            alt=""
+            class="w-[150px] rounded-3xl ring-4 ring-[#926F34]"
+          />
+          <p class="text-xl font-bold text-[#926F34] mt-2 mb-5 sm:mb-0">
+            Simeon Varghese
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <p class="text-4xl font-bold text-[#926F34]">Chief Officers</p>
+          <a href="team.html">
+            <button
+              class="bg-[#926F34] rounded-xl transition ease-in-out duration-300 hover:scale-105 hover:bg-[#B88C41] mt-2 p-3 text-center text-white text-base font-semibold"
+            >
+              All National Officers
+              <img
+                src="images/arrow.png"
+                alt=""
+                class="inline-block h-6 w-6 ml-2"
+              />
+            </button>
+          </a>
+        </div>
+      </div>
     </div>
 
-    <style> /*this is necesary so we can customize the schoolname animation*/
-        @keyframes fadeIn {
-            from { 
-                opacity: 0; 
-                transform: translateY(15px); /* Adjust as needed */
-            }
-            to { 
-                opacity: 1; 
-                transform: translateY(0); 
-            }
+    <style>
+      /*this is necesary so we can customize the schoolname animation*/
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(15px); /* Adjust as needed */
         }
-
-        @keyframes fadeOut {
-            from { opacity: 1; }
-            to { opacity: 0; }
+        to {
+          opacity: 1;
+          transform: translateY(0);
         }
+      }
 
-        .fade-in {
-            animation: fadeIn 800ms forwards;
+      @keyframes fadeOut {
+        from {
+          opacity: 1;
         }
+        to {
+          opacity: 0;
+        }
+      }
 
-        .fade-out {
+      .fade-in {
+        animation: fadeIn 800ms forwards;
+      }
+
+      .fade-out {
         animation: fadeOut 150ms forwards;
-        }
-
+      }
     </style>
-</body>
-
+  </body>
 </html>
