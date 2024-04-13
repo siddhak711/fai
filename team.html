@@ -1,353 +1,409 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="forest">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAI</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link href="./dist/output.css" rel="stylesheet" >
-    <link href="team.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  function openMenu(){
-    var elem = document.getElementById("fainavlinks");
-    elem.classList.toggle("hidden");
-    var menu = document.getElementById("fainavlinks-donate");
-    menu.classList.toggle("hidden");
-  }
-</script>
-</head>
-<body>
-  <header class="bg-[#926F34] sm:flex sm:justify-between shrink rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50">
-    <div class="flex items-center justify-between px-4 py-3">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link href="team.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function openMenu() {
+        var elem = document.getElementById("fainavlinks");
+        elem.classList.toggle("hidden");
+        var menu = document.getElementById("fainavlinks-donate");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+  </head>
+  <body>
+    <header
+      class="bg-[#926F34] sm:flex sm:justify-between shrink rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50"
+    >
+      <div class="flex items-center justify-between px-4 py-3">
         <div>
-            <img src="images/failogo.png" alt="FAI" class="h-12">
+          <img src="images/failogo.png" alt="FAI" class="h-12" />
         </div>
         <div class="sm:hidden">
-            <button onclick="openMenu()" class="text-white sm:hidden">
-                <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                    <path fill-rule="evenodd"
-                        d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
-                </svg>
-            </button>
+          <button onclick="openMenu()" class="text-white sm:hidden">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+              <path
+                fill-rule="evenodd"
+                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+              />
+            </svg>
+          </button>
         </div>
-    </div>
-    <div id="fainavlinks" class="hidden px-5 pt-2 sm:pb-4 sm:flex">
-        <a href="index.html" class="  text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Home</a>
-        <a href="team.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Our Team</a>
-        <a href="contact.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Contact</a>
-        <a href="chapters.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Chapters</a>
-        <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Guest Lectures</a>
-        <a href="blog.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Blog</a>
-    </div>
-    <div id="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
-        <a target="_blank" href="http://linktr.ee/faiapp"
-            class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Join Our Team</a>
-    </div>
-</header>
-  <div class="px-2 sm:px-2 md:px-8 lg:px-20 xl:px-32">
-    <!--This is where the page layout gets separated into 12 columns-->
-    <!--This uses container that adds breakpoints to divs to change screen size and uses relative to position it absolute-->
-    <!--This is the main body of the page-->
+      </div>
+      <div id="fainavlinks" class="hidden px-5 pt-2 sm:pb-4 sm:flex">
+        <a
+          href="index.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Home</a
+        >
+        <a
+          href="team.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Our Team</a
+        >
+        <a
+          href="contact.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Contact</a
+        >
+        <a
+          href="chapters.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Chapters</a
+        >
+        <a
+          href="guest-lectures.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Guest Lectures</a
+        >
+        <a
+          href="blog.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Blog</a
+        >
+        <a
+          href="about.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >About Us</a
+        >
+      </div>
+      <div id="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
+        <a
+          target="_blank"
+          href="http://linktr.ee/faiapp"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Join Our Team</a
+        >
+      </div>
+    </header>
+    <div class="px-2 sm:px-2 md:px-8 lg:px-20 xl:px-32">
+      <!--This is where the page layout gets separated into 12 columns-->
+      <!--This uses container that adds breakpoints to divs to change screen size and uses relative to position it absolute-->
+      <!--This is the main body of the page-->
 
-    <div class="text-6xl font-bold text-center mt-32">
-      <span class=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg">Our Team</span>
-    </div>
-    <div class="main mx-auto">
-      <div class="profile-card">
-
-        <div class="img">
-          <img src="images/siddha.png">
-        </div>
-        <div class="caption">
-          <h3 class="font-semibold text-[#DFBD69]">Siddha Kanthi</h3>
-          <p>CEO & Founder</p>
-          <div class="social-links">
-            <a href="#"><i class="fab fa-linkedin"></i>
-              <img src="#" class="mx-auto">
-            </a>
-          </div>
-        </div>
+      <div class="text-6xl font-bold text-center mt-32">
+        <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg"
+          >Our Team</span
+        >
       </div>
-    </div>
-    <div class="text-6xl font-bold text-center mt-32">
-      <span class=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg">Our Chief Officers</span>
-    </div>
-    <div class="sm:grid grid-cols-4 gap-24">
-      <div class="main">
+      <div class="main mx-auto">
         <div class="profile-card">
-  
           <div class="img">
-            <img src="images/charlie.png">
+            <img src="images/siddha.png" />
           </div>
           <div class="caption">
-            <h3 class="font-semibold text-[#DFBD69]">Charlie Goldberg</h3>
-            <p>COO</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i>
-                <img src="#" class="">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="main">
-        <div class="profile-card">
-  
-          <div class="img">
-            <img src="images/nikhil.png">
-          </div>
-          <div class="caption">
-            <h3 class="font-semibold text-[#DFBD69]">Nikhil Kotta</h3>
-            <p>CMO</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i>
-                <img src="#" class="mx-auto">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="main">
-        <div class="profile-card">
-  
-          <div class="img">
-            <img src="images/jonathan.png">
-          </div>
-          <div class="caption">
-            <h3 class="font-semibold text-[#DFBD69]">Jonathan Ta</h3>
+            <h3 class="font-semibold text-[#DFBD69]">Siddha Kanthi</h3>
             <p>CEO & Founder</p>
             <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i>
-                <img src="#" class="mx-auto">
+              <a href="#"
+                ><i class="fab fa-linkedin"></i>
+                <img src="#" class="mx-auto" />
               </a>
             </div>
           </div>
         </div>
       </div>
-      <div class="main">
-        <div class="profile-card">
-  
-          <div class="img">
-            <img src="images/simeon.png">
+      <div class="text-6xl font-bold text-center mt-32">
+        <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg"
+          >Our Chief Officers</span
+        >
+      </div>
+      <div class="sm:grid grid-cols-4 gap-24">
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/charlie.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Charlie Goldberg</h3>
+              <p>COO</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="" />
+                </a>
+              </div>
+            </div>
           </div>
-          <div class="caption">
-            <h3 class="font-semibold text-[#DFBD69]">Simeon Varghese</h3>
-            <p>CTO</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i>
-                <img src="#" class="mx-auto">
-              </a>
+        </div>
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/nikhil.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Nikhil Kotta</h3>
+              <p>CMO</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/jonathan.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Jonathan Ta</h3>
+              <p>CEO & Founder</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/simeon.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Simeon Varghese</h3>
+              <p>CTO</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <div class="text-6xl font-bold text-center mt-32">
+        <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg"
+          >Our Tech Team</span
+        >
+      </div>
+      <div class="sm:grid grid-cols-2">
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/simeon.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Simeon Varghese</h3>
+              <p>CTO</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/FAI-Blank_476x476.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Abhinav Mellamarthy</h3>
+              <p>Web Developer</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-6xl font-bold text-center mt-32">
+        <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg"
+          >Our Marketing Team</span
+        >
+      </div>
+      <div class="sm:grid grid-cols-4">
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/FAI-Blank_476x476.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Jonathan Ta</h3>
+              <p>Newsletter Lead</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/FAI-Blank_476x476.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Aarav</h3>
+              <p>Tiktok Lead</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/FAI-Blank_476x476.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Krshiv</h3>
+              <p>Outreach Lead</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/FAI-Blank_476x476.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Bharath Balanagu</h3>
+              <p>Instagram Lead</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--this is fundraising portion-->
+      <div class="text-6xl font-bold text-center mt-32">
+        <span
+          class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg"
+          >Our Fundraising Team</span
+        >
+      </div>
+      <div class="sm:grid grid-cols-5 gap-24 flex flex-wrap">
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/FAI-Blank_476x476.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Ranbir</h3>
+              <p>Grants</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/FAI-Blank_476x476.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Anish</h3>
+              <p>Grants</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/FAI-Blank_476x476.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Kabir</h3>
+              <p>Sponsorships</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/FAI-Blank_476x476.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Aahana</h3>
+              <p>Sponsorships</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/FAI-Blank_476x476.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Sambhav</h3>
+              <p>Sponsorships</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script src="all.min.js"></script>
     </div>
-    <div class="text-6xl font-bold text-center mt-32">
-      <span class=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg">Our Tech Team</span>
-    </div>
-    <div class="sm:grid grid-cols-2">
-      <div class="main">
-        <div class="profile-card">
-  
-          <div class="img">
-            <img src="images/simeon.png">
-          </div>
-          <div class="caption">
-            <h3 class="font-semibold text-[#DFBD69]">Simeon Varghese</h3>
-            <p>CTO</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i>
-                <img src="#" class="mx-auto">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="main">
-        <div class="profile-card">
-  
-          <div class="img">
-            <img src="images/FAI-Blank_476x476.png">
-          </div>
-          <div class="caption">
-            <h3 class="font-semibold text-[#DFBD69]">Abhinav Mellamarthy</h3>
-            <p>Web Developer</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i>
-                <img src="#" class="mx-auto">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="text-6xl font-bold text-center mt-32">
-      <span class=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg">Our Marketing Team</span>
-    </div>
-    <div class="sm:grid grid-cols-4">
-      <div class="main">
-        <div class="profile-card">
-  
-          <div class="img">
-            <img src="images/FAI-Blank_476x476.png">
-          </div>
-          <div class="caption">
-            <h3 class="font-semibold text-[#DFBD69]">Jonathan Ta</h3>
-            <p>Newsletter Lead</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i>
-                <img src="#" class="mx-auto">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="main">
-        <div class="profile-card">
-  
-          <div class="img">
-            <img src="images/FAI-Blank_476x476.png">
-          </div>
-          <div class="caption">
-            <h3 class="font-semibold text-[#DFBD69]">Aarav</h3>
-            <p>Tiktok Lead</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i>
-                <img src="#" class="mx-auto">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="main">
-        <div class="profile-card">
-  
-          <div class="img">
-            <img src="images/FAI-Blank_476x476.png">
-          </div>
-          <div class="caption">
-            <h3 class="font-semibold text-[#DFBD69]">Krshiv</h3>
-            <p>Outreach Lead</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i>
-                <img src="#" class="mx-auto">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="main">
-        <div class="profile-card">
-  
-          <div class="img">
-            <img src="images/FAI-Blank_476x476.png">
-          </div>
-          <div class="caption">
-            <h3 class="font-semibold text-[#DFBD69]">Bharath Balanagu</h3>
-            <p>Instagram Lead</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i>
-                <img src="#" class="mx-auto">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--this is fundraising portion-->
-    <div class="text-6xl font-bold text-center mt-32">
-      <span class=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg">Our Fundraising Team</span>
-    </div>
-    <div class="sm:grid grid-cols-5 gap-24 flex flex-wrap">
-      <div class="main">
-        <div class="profile-card">
-  
-          <div class="img">
-            <img src="images/FAI-Blank_476x476.png">
-          </div>
-          <div class="caption">
-            <h3 class="font-semibold text-[#DFBD69]">Ranbir</h3>
-            <p>Grants</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i>
-                <img src="#" class="mx-auto">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="main">
-        <div class="profile-card">
-  
-          <div class="img">
-            <img src="images/FAI-Blank_476x476.png">
-          </div>
-          <div class="caption">
-            <h3 class="font-semibold text-[#DFBD69]">Anish</h3>
-            <p>Grants</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i>
-                <img src="#" class="mx-auto">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="main">
-        <div class="profile-card">
-  
-          <div class="img">
-            <img src="images/FAI-Blank_476x476.png">
-          </div>
-          <div class="caption">
-            <h3 class="font-semibold text-[#DFBD69]">Kabir</h3>
-            <p>Sponsorships</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i>
-                <img src="#" class="mx-auto">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="main">
-        <div class="profile-card">
-  
-          <div class="img">
-            <img src="images/FAI-Blank_476x476.png">
-          </div>
-          <div class="caption">
-            <h3 class="font-semibold text-[#DFBD69]">Aahana</h3>
-            <p>Sponsorships</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i>
-                <img src="#" class="mx-auto">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="main">
-        <div class="profile-card">
-  
-          <div class="img">
-            <img src="images/FAI-Blank_476x476.png">
-          </div>
-          <div class="caption">
-            <h3 class="font-semibold text-[#DFBD69]">Sambhav</h3>
-            <p>Sponsorships</p>
-            <div class="social-links">
-              <a href="#"><i class="fab fa-linkedin"></i>
-                <img src="#" class="mx-auto">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <script src="all.min.js"></script>
-  </div>
-</body>
+  </body>
 </html>
