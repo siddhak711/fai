@@ -1,223 +1,349 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="forest">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAI</title>
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <link href="./dist/output.css" rel="stylesheet" >
-    <link href="index.css" rel="stylesheet" >
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-  function openMenu(){
-    var elem = document.getElementById("fainavlinks");
-    elem.classList.toggle("hidden");
-    var menu = document.getElementById("fainavlinks-donate");
-    menu.classList.toggle("hidden");
-  }
-</script>
-</head>
-<body>
-  <!--This is where the page layout gets separated into 12 columns-->
-  <header class="bg-[#926F34] sm:flex sm:justify-between rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50">
-
-    <div class="flex items-center justify-between px-4 py-3">
-      <div>
-        <img src="images/failogo.png" alt="FAI" class="h-12">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      function openMenu() {
+        var elem = document.getElementById("fainavlinks");
+        elem.classList.toggle("hidden");
+        var menu = document.getElementById("fainavlinks-donate");
+        menu.classList.toggle("hidden");
+      }
+    </script>
+  </head>
+  <body>
+    <!--This is where the page layout gets separated into 12 columns-->
+    <header
+      class="bg-[#926F34] sm:flex sm:justify-between rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50"
+    >
+      <div class="flex items-center justify-between px-4 py-3">
+        <div>
+          <img src="images/failogo.png" alt="FAI" class="h-12" />
+        </div>
+        <div class="sm:hidden">
+          <button onclick="openMenu()" class="text-white sm:hidden">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+              <path
+                fill-rule="evenodd"
+                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
-      <div class="sm:hidden">
-        <button onclick="openMenu()" class="text-white sm:hidden">
-          <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"/>
-          </svg>
-        </button>
-      </div>
-    </div>
-    <div id ="fainavlinks"  class="hidden px-5 pt-2 sm:pb-4 sm:flex">
-      <a href="index.html"class="  text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Home</a>
-      <a href="team.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Our Team</a>
-      <a href="contact.html"  class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3  transition ease-in-out delay-150 duration-300 hover:scale-110">Contact</a>
-      <a href="chapters.html"  class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Chapters</a>
-      <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Guest Lectures</a>
-      <a href="blog.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Blog</a> 
-    <a
+      <div id="fainavlinks" class="hidden px-5 pt-2 sm:pb-4 sm:flex">
+        <a
+          href="index.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Home</a
+        >
+        <a
+          href="team.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Our Team</a
+        >
+        <a
+          href="contact.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Contact</a
+        >
+        <a
+          href="chapters.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Chapters</a
+        >
+        <a
+          href="guest-lectures.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Guest Lectures</a
+        >
+        <a
+          href="blog.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Blog</a
+        >
+        <a
           href="about.html"
           class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
           >About Us</a
         >
+      </div>
+      <div id="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
+        <a
+          target="_blank"
+          href="http://linktr.ee/faiapp"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Join Our Team</a
+        >
+      </div>
+    </header>
+    <!--Title-->
+    <div class="text-6xl font-bold text-center mt-32">
+      <span
+        class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg"
+        >Blog</span
+      >
     </div>
-    <div id="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
-            <a target="_blank" href="http://linktr.ee/faiapp" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Join Our Team</a>
+
+    <!--FEATURED BLOG-->
+    <div
+      class="grid sm:grid-cols-1 gap-4 pt-12 px-4 sm:px-10 md:px-4 lg:px-20 resize-none"
+    >
+      <div class="bg-[#373e50] rounded-lg flex sm:flex-row w-full h-auto">
+        <div class="relative w-7/12">
+          <p
+            class="mt-4 sm:mt-8 mx-4 sm:mx-8 text-md sm:text-2xl font-semibold text-[#DFBD69]"
+          >
+            FAI’s Upcoming Guest Lectures & What to Expect
+          </p>
+          <span
+            class="mt-2 mx-4 sm:mx-8 w-fit inline-flex items-center px-1 sm:px-3 text-xs sm:text-base rounded-lg font-medium bg-green-100 text-green-800"
+            >Featured Blog</span
+          >
+          <p
+            class="mx-4 sm:mx-8 mt-28 text-white absolute top-4 sm:top-0 bottom-12 sm:bottom-[70px] text-sm sm:text-base overflow-hidden"
+          >
+            FAI has teamed up with many professionals within the finance and
+            business field to host guest lectures for FAI members to join and
+            learn more about finance. These guest speakers will help create more
+            profound insight into the proper field of business and finance while
+            creating interest in why the field is so important! Recently,
+            Charles Goldberg, the COO of FAI, and Siddha Kanthi, the
+            organization’s CEO, interviewed Blake Siewart, the North American
+            Head of Growth and Innovation at Siemens Healthineers, where they
+            discussed the ideas of building value within a business in his
+            presentation, <i>Value Squared.</i>
+
+            This guest lecture is the first of many to come as we have lined up
+            many other professionals to interview, such as Mr. Winston Black,
+            founder and former CEO of SWK Holdings, and Mr. Matt Anderson,
+            senior VP at Wells Fargo Private Bank.
+          </p>
+          <div
+            class="absolute bottom-12 sm:bottom-[70px] left-0 right-0 bg-gradient-to-b from-transparent to-[#373e50] h-24"
+          ></div>
+
+          <!--Read More redirect-->
+          <div class="absolute bottom-4 sm:bottom-7 left-4 sm:left-8">
+            <a
+              target="_self"
+              href="blog_plans.html"
+              class="w-fit h-full flex items-center transition ease-in-out delay-150 duration-300 hover:scale-110"
+            >
+              <p
+                class="text-[#DFBD69] font-bold text-lg sm:text-xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600"
+              >
+                Read More
+              </p>
+              <img
+                src="images/goldarrow.png"
+                alt=""
+                class="inline-block h-5 w-5 ml-2"
+              />
+            </a>
+          </div>
+        </div>
+
+        <!--Background image-->
+        <div class="w-5/12 h-64 sm:h-auto">
+          <img
+            src="images/professionals.jpeg"
+            alt="Library in India"
+            class="w-full h-full object-cover rounded-r-lg"
+          />
+        </div>
+      </div>
+      <!--end of featured card-->
     </div>
-  </header>
-  <!--Title-->
-  <div class="text-6xl font-bold text-center mt-32">
-    <span class=" bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg">Blog</span>
-  </div>
 
-  <!--FEATURED BLOG-->
-  <div class="grid sm:grid-cols-1 gap-4 pt-12 px-4 sm:px-10 md:px-4 lg:px-20 resize-none">
-    
-    <div class="bg-[#373e50] rounded-lg flex sm:flex-row w-full h-auto">
+    <!--Regular Blog Cards-->
+    <div
+      class="grid sm:grid-cols-3 gap-10 py-12 px-4 sm:px-10 md:px-4 lg:px-20 resize-none"
+    >
+      <!--First blog card-->
+      <div class="bg-[#373e50] rounded-lg flex-col relative">
+        <!--Background image-->
+        <img
+          src="images/libraryinindia.jpg"
+          alt="Library in India"
+          class="w-full h-40 object-cover rounded-t-lg"
+        />
 
-      <div class="relative w-7/12">
-        <p class="mt-4 sm:mt-8 mx-4 sm:mx-8 text-md sm:text-2xl font-semibold text-[#DFBD69]">
-          FAI’s Upcoming Guest Lectures & What to Expect
+        <!--Title of blog-->
+        <p class="m-5 text-2xl font-semibold text-[#DFBD69]">
+          Library Fundraiser in India
         </p>
-        <span class="mt-2 mx-4 sm:mx-8 w-fit inline-flex items-center px-1 sm:px-3 text-xs sm:text-base rounded-lg font-medium bg-green-100 text-green-800">Featured Blog</span>
-        <p class="mx-4 sm:mx-8 mt-28 text-white absolute top-4 sm:top-0 bottom-12 sm:bottom-[70px] text-sm sm:text-base overflow-hidden">
-          FAI has teamed up with many professionals within the finance and business field to host guest lectures for FAI members to join and learn more about finance. These guest speakers will help create more profound insight into the proper field of business and finance while creating interest in why the field is so important!
-    
-          Recently, Charles Goldberg, the COO of FAI, and Siddha Kanthi, the organization’s CEO, interviewed Blake Siewart, the North American Head of Growth and Innovation at Siemens Healthineers, where they discussed the ideas of building value within a business in his presentation, <i>Value Squared.</i>
-    
-          This guest lecture is the first of many to come as we have lined up many other professionals to interview, such as Mr. Winston Black, founder and former CEO of SWK Holdings, and Mr. Matt Anderson, senior VP at Wells Fargo Private Bank.
-        </p>
-        <div class="absolute bottom-12 sm:bottom-[70px] left-0 right-0 bg-gradient-to-b from-transparent to-[#373e50] h-24"></div>
-    
+
+        <div class="relative h-40 mx-5 mb-1">
+          <!-- this defines an aboslutely positioned template for the desc, fade, and read more.
+      Read more is in this section because we can't get an even pixel cutoff for the desc, so we have to account for extra space
+      so we might as well put the read more there (if we didn't then there would either be too much or to little space)-->
+
+          <!--Blog description-->
+          <div class="absolute top-0 bottom-10 text-white overflow-hidden">
+            <p>
+              Recently, FAI members have taken the initiative within their
+              communities by going door-to-door to raise donations to help fund
+              FAI's mission of building a library in India! The current goal is
+              to raise $47,000 to help bring the creation of this library to
+              reality. Overall, this will help create more access to books and
+              educational resources in the underdeveloped part of India!
+            </p>
+          </div>
+
+          <!--Fade effect-->
+          <div
+            class="absolute bottom-10 left-0 right-0 bg-gradient-to-b from-transparent to-[#373e50] h-24"
+          ></div>
+        </div>
+
         <!--Read More redirect-->
-        <div class="absolute bottom-4 sm:bottom-7 left-4 sm:left-8">
-          <a target="_self" href="blog_plans.html" class="w-fit h-full flex items-center transition ease-in-out delay-150 duration-300 hover:scale-110">
-            <p class="text-[#DFBD69] font-bold text-lg sm:text-xl bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">Read More</p>
-            <img src="images/goldarrow.png" alt="" class="inline-block h-5 w-5 ml-2">
+        <div class="absolute bottom-3 left-5">
+          <a
+            target="_self"
+            href="blog_library.html"
+            class="w-fit h-full flex items-center transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >
+            <p
+              class="text-[#DFBD69] font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600"
+            >
+              Read More
+            </p>
+            <img
+              src="images/goldarrow.png"
+              alt=""
+              class="inline-block h-5 w-5 ml-2"
+            />
           </a>
         </div>
       </div>
-      
+      <!--end of card-->
 
-      <!--Background image-->
-      <div class="w-5/12 h-64 sm:h-auto">
-        <img src="images/professionals.jpeg" alt="Library in India" class="w-full h-full object-cover rounded-r-lg">
-      </div>
+      <div class="bg-[#373e50] rounded-lg flex-col relative">
+        <!--Background image-->
+        <img
+          src="images/sustainableinv.jpeg"
+          alt="Library in India"
+          class="w-full h-40 object-cover rounded-t-lg"
+        />
 
-    </div> <!--end of featured card-->
-  </div>
-  
+        <!--Title of blog-->
+        <p class="m-5 text-2xl font-semibold text-[#DFBD69]">
+          Sustainable Investing
+        </p>
 
-
-  <!--Regular Blog Cards-->
-  <div class="grid sm:grid-cols-3 gap-10 py-12 px-4 sm:px-10 md:px-4 lg:px-20 resize-none">
-    <!--First blog card-->
-    <div class="bg-[#373e50] rounded-lg flex-col relative"> 
-
-      <!--Background image-->
-      <img src="images/libraryinindia.jpg" alt="Library in India" class="w-full h-40 object-cover rounded-t-lg">
-
-      <!--Title of blog-->
-      <p class="m-5 text-2xl font-semibold text-[#DFBD69]">
-        Library Fundraiser in India
-      </p>
-
-      <div class="relative h-40 mx-5 mb-1"> <!-- this defines an aboslutely positioned template for the desc, fade, and read more.
+        <div class="relative h-40 mx-5 mb-1">
+          <!-- this defines an aboslutely positioned template for the desc, fade, and read more.
       Read more is in this section because we can't get an even pixel cutoff for the desc, so we have to account for extra space
       so we might as well put the read more there (if we didn't then there would either be too much or to little space)-->
-        
-        <!--Blog description-->
-        <div class="absolute top-0 bottom-10 text-white overflow-hidden">
-              <p>
-                Recently, FAI members have taken the initiative within their communities by going door-to-door to raise 
-                donations to help fund FAI's mission of building a library in India! The current goal is to raise $47,000 
-                to help bring the creation of this library to reality. Overall, this will help create more access to books 
-                and educational resources in the underdeveloped part of India!
-              </p>
+
+          <!--Blog description-->
+          <div class="absolute top-0 bottom-10 text-white overflow-hidden">
+            <p>
+              At FAI we believe that sustainable investing is how we can secure
+              the environment for future generations. Lets get some nomenclature
+              clear. Investment world refers to sustainable investing in
+              multiple different formats such as impact investing, socially
+              responsible investing, green investing, and responsible investing.
+            </p>
+          </div>
+
+          <!--Fade effect-->
+          <div
+            class="absolute bottom-10 left-0 right-0 bg-gradient-to-b from-transparent to-[#373e50] h-24"
+          ></div>
         </div>
-        
-        <!--Fade effect-->
-        <div class="absolute bottom-10 left-0 right-0 bg-gradient-to-b from-transparent to-[#373e50] h-24"></div>
-        
+        <!--Read More redirect-->
+        <div class="absolute bottom-3 left-5">
+          <a
+            target="_self"
+            href="blog_sustainableinv.html"
+            class="w-fit h-full flex items-center transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >
+            <p
+              class="text-[#DFBD69] font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600"
+            >
+              Read More
+            </p>
+            <img
+              src="images/goldarrow.png"
+              alt=""
+              class="inline-block h-5 w-5 ml-2"
+            />
+          </a>
+        </div>
       </div>
+      <!--end of card-->
 
-      <!--Read More redirect-->
-      <div class="absolute bottom-3 left-5"> 
-        <a target="_self" href="blog_library.html" class="w-fit h-full flex items-center transition ease-in-out delay-150 duration-300 hover:scale-110">
-          <p class="text-[#DFBD69] font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">Read More</p>
-          <img src="images/goldarrow.png" alt="" class="inline-block h-5 w-5 ml-2">
-        </a>
-      </div>
+      <div class="bg-[#373e50] rounded-lg flex-col relative">
+        <!--Background image-->
+        <img
+          src="images/fin-literacy.gif"
+          alt="Library in India"
+          class="w-full h-40 object-cover rounded-t-lg"
+        />
 
-    </div>  <!--end of card-->
+        <!--Title of blog-->
+        <p class="m-5 text-2xl font-semibold text-[#DFBD69]">
+          Financial Literacy for K-12
+        </p>
 
-    <div class="bg-[#373e50] rounded-lg flex-col relative"> 
-
-      <!--Background image-->
-      <img src="images/sustainableinv.jpeg" alt="Library in India" class="w-full h-40 object-cover rounded-t-lg">
-
-      <!--Title of blog-->
-      <p class="m-5 text-2xl font-semibold text-[#DFBD69]">
-        Sustainable Investing
-      </p>
-
-      <div class="relative h-40 mx-5 mb-1"> <!-- this defines an aboslutely positioned template for the desc, fade, and read more.
+        <div class="relative h-40 mx-5 mb-1">
+          <!-- this defines an aboslutely positioned template for the desc, fade, and read more.
       Read more is in this section because we can't get an even pixel cutoff for the desc, so we have to account for extra space
       so we might as well put the read more there (if we didn't then there would either be too much or to little space)-->
-        
-        <!--Blog description-->
-        <div class="absolute top-0 bottom-10 text-white overflow-hidden">
-              <p>
-                At FAI we believe that sustainable investing is how we can secure the environment for future generations. Lets get some nomenclature clear.
-                Investment world refers to sustainable investing in multiple different formats such as impact investing, socially responsible investing,
-                green investing, and responsible investing.
-              </p>
+
+          <!--Blog description-->
+          <div class="absolute top-0 bottom-10 text-white overflow-hidden">
+            <p>
+              According to Forbes, 87% of teens say they don't really understand
+              their personal finances (2022). The need for financial literacy
+              programs is undeniable. As of January 2024, twenty-five U.S.
+              states require financial education for high school students to
+              graduate; many more have bills pending.
+            </p>
+          </div>
+
+          <!--Fade effect-->
+          <div
+            class="absolute bottom-10 left-0 right-0 bg-gradient-to-b from-transparent to-[#373e50] h-24"
+          ></div>
         </div>
-        
-        <!--Fade effect-->
-        <div class="absolute bottom-10 left-0 right-0 bg-gradient-to-b from-transparent to-[#373e50] h-24"></div>
-            
-        
-
-      </div>
-      <!--Read More redirect-->
-      <div class="absolute bottom-3 left-5"> 
-        <a target="_self" href="blog_sustainableinv.html" class="w-fit h-full flex items-center transition ease-in-out delay-150 duration-300 hover:scale-110">
-          <p class="text-[#DFBD69] font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">Read More</p>
-          <img src="images/goldarrow.png" alt="" class="inline-block h-5 w-5 ml-2">
-        </a>
-      </div>
-
-    </div>  <!--end of card-->
-
-      
-    <div class="bg-[#373e50] rounded-lg flex-col relative"> 
-
-      <!--Background image-->
-      <img src="images/fin-literacy.gif" alt="Library in India" class="w-full h-40 object-cover rounded-t-lg">
-
-      <!--Title of blog-->
-      <p class="m-5 text-2xl font-semibold text-[#DFBD69]">
-        Financial Literacy for K-12
-      </p>
-
-      <div class="relative h-40 mx-5 mb-1"> <!-- this defines an aboslutely positioned template for the desc, fade, and read more.
-      Read more is in this section because we can't get an even pixel cutoff for the desc, so we have to account for extra space
-      so we might as well put the read more there (if we didn't then there would either be too much or to little space)-->
-        
-        <!--Blog description-->
-        <div class="absolute top-0 bottom-10 text-white overflow-hidden">
-              <p>
-                According to Forbes, 87% of teens say they don't really understand their personal finances (2022). The need for financial literacy programs is undeniable. As of January 2024,
-            twenty-five U.S. states require financial education for high school students to graduate; many more have bills pending.
-              </p>
+        <!--Read More redirect-->
+        <div class="absolute bottom-3 left-5">
+          <a
+            target="_self"
+            href="blog_finliteracy.html"
+            class="w-fit h-full flex items-center transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >
+            <p
+              class="text-[#DFBD69] font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600"
+            >
+              Read More
+            </p>
+            <img
+              src="images/goldarrow.png"
+              alt=""
+              class="inline-block h-5 w-5 ml-2"
+            />
+          </a>
         </div>
-        
-        <!--Fade effect-->
-        <div class="absolute bottom-10 left-0 right-0 bg-gradient-to-b from-transparent to-[#373e50] h-24"></div>
-            
       </div>
-      <!--Read More redirect-->
-      <div class="absolute bottom-3 left-5"> 
-        <a target="_self" href="blog_finliteracy.html" class="w-fit h-full flex items-center transition ease-in-out delay-150 duration-300 hover:scale-110">
-          <p class="text-[#DFBD69] font-bold text-lg bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">Read More</p>
-          <img src="images/goldarrow.png" alt="" class="inline-block h-5 w-5 ml-2">
-        </a>
-      </div>
-
-    </div>  <!--end of card-->
-
-
-
-  </div>
-</body>
-
+      <!--end of card-->
+    </div>
+  </body>
 </html>
+
 
 
