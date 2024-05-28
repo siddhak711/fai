@@ -66,13 +66,6 @@
     margin: 2px 0 6px 0;
 }
 
-.caption .social-links a {
-    color: #333;
-    margin-right: 8px;
-    font-size: 18px;
-    transition: .6s;
-}
-
 .social-links a:hover {
     color: #0c52a1;
 }
