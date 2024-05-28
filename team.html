@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="forest">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAI</title>
@@ -21,8 +21,33 @@
         menu.classList.toggle("hidden");
       }
     </script>
-  </head>
-  <body>
+    <style>
+      /* Additional CSS to make profile cards square */
+      .square-profile-card {
+        width: 200px;
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .square-profile-card .img {
+        width: 100%;
+        height: 80%;
+        overflow: hidden;
+      }
+      .square-profile-card .img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .square-profile-card .caption {
+        height: 20%;
+        text-align: center;
+      }
+    </style>
+</head>
+<body>
     <header
       class="bg-[#ffd35e] sm:flex sm:justify-between shrink rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50"
     >
@@ -115,12 +140,7 @@
           </div>
         </div>
       </div>
-      <div class="text-6xl font-bold text-center mt-32">
-        <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg"
-          >Our Chief Officers</span
-        >
-      </div>
+
       <div class="sm:grid grid-cols-4 gap-24">
         <div class="main">
           <div class="profile-card">
@@ -191,15 +211,78 @@
           </div>
         </div>
       </div>
-      <div class="text-6xl font-bold text-center mt-32">
-        <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg"
-          >Our Tech Team</span
-        >
-      </div>
-      <div class="sm:grid grid-cols-2">
+
+      <div class="sm:grid grid-cols-5 gap-24 mt-8">
         <div class="main">
-          <div class="profile-card">
+          <div class="square-profile-card">
+            <div class="img">
+              <img src="images/siddha.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Siddha Kanthi</h3>
+              <p>CEO & Founder</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="square-profile-card">
+            <div class="img">
+              <img src="images/charlie.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Charlie Goldberg</h3>
+              <p>COO</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="square-profile-card">
+            <div class="img">
+              <img src="images/nikhil.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Nikhil Kotta</h3>
+              <p>CMO</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="square-profile-card">
+            <div class="img">
+              <img src="images/jonathan.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Jonathan Ta</h3>
+              <p>CEO & Founder</p>
+              <div class="social-links">
+                <a href="#"
+                  ><i class="fab fa-linkedin"></i>
+                  <img src="#" class="mx-auto" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="square-profile-card">
             <div class="img">
               <img src="images/simeon.png" />
             </div>
@@ -215,264 +298,7 @@
             </div>
           </div>
         </div>
-        <div class="main">
-          <div class="profile-card">
-            <div class="img">
-              <img src="images/FAI-Blank_476x476.png" />
-            </div>
-            <div class="caption">
-              <h3 class="font-semibold text-[#DFBD69]">Abhinav Mellamarthy</h3>
-              <p>Web Developer</p>
-              <div class="social-links">
-                <a href="#"
-                  ><i class="fab fa-linkedin"></i>
-                  <img src="#" class="mx-auto" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="text-6xl font-bold text-center mt-32">
-        <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg"
-          >Our Marketing Team</span
-        >
-      </div>
-      <div class="sm:grid grid-cols-4">
-        <div class="main">
-          <div class="profile-card">
-            <div class="img">
-              <img src="images/FAI-Blank_476x476.png" />
-            </div>
-            <div class="caption">
-              <h3 class="font-semibold text-[#DFBD69]">Jonathan Ta</h3>
-              <p>Newsletter Lead</p>
-              <div class="social-links">
-                <a href="#"
-                  ><i class="fab fa-linkedin"></i>
-                  <img src="#" class="mx-auto" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="main">
-          <div class="profile-card">
-            <div class="img">
-              <img src="images/FAI-Blank_476x476.png" />
-            </div>
-            <div class="caption">
-              <h3 class="font-semibold text-[#DFBD69]">Aarav</h3>
-              <p>Tiktok Lead</p>
-              <div class="social-links">
-                <a href="#"
-                  ><i class="fab fa-linkedin"></i>
-                  <img src="#" class="mx-auto" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="main">
-          <div class="profile-card">
-            <div class="img">
-              <img src="images/FAI-Blank_476x476.png" />
-            </div>
-            <div class="caption">
-              <h3 class="font-semibold text-[#DFBD69]">Krshiv</h3>
-              <p>Outreach Lead</p>
-              <div class="social-links">
-                <a href="#"
-                  ><i class="fab fa-linkedin"></i>
-                  <img src="#" class="mx-auto" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="main">
-          <div class="profile-card">
-            <div class="img">
-              <img src="images/FAI-Blank_476x476.png" />
-            </div>
-            <div class="caption">
-              <h3 class="font-semibold text-[#DFBD69]">Bharath Balanagu</h3>
-              <p>Instagram Lead</p>
-              <div class="social-links">
-                <a href="#"
-                  ><i class="fab fa-linkedin"></i>
-                  <img src="#" class="mx-auto" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--this is fundraising portion-->
-      <div class="text-6xl font-bold text-center mt-32">
-        <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg"
-          >Our Fundraising Team</span
-        >
-      </div>
-      <div class="sm:grid grid-cols-5 gap-24 flex flex-wrap">
-        <div class="main">
-          <div class="profile-card">
-            <div class="img">
-              <img src="images/FAI-Blank_476x476.png" />
-            </div>
-            <div class="caption">
-              <h3 class="font-semibold text-[#DFBD69]">Ranbir</h3>
-              <p>Grants</p>
-              <div class="social-links">
-                <a href="#"
-                  ><i class="fab fa-linkedin"></i>
-                  <img src="#" class="mx-auto" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="main">
-          <div class="profile-card">
-            <div class="img">
-              <img src="images/FAI-Blank_476x476.png" />
-            </div>
-            <div class="caption">
-              <h3 class="font-semibold text-[#DFBD69]">Anish</h3>
-              <p>Grants</p>
-              <div class="social-links">
-                <a href="#"
-                  ><i class="fab fa-linkedin"></i>
-                  <img src="#" class="mx-auto" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="main">
-          <div class="profile-card">
-            <div class="img">
-              <img src="images/FAI-Blank_476x476.png" />
-            </div>
-            <div class="caption">
-              <h3 class="font-semibold text-[#DFBD69]">Kabir</h3>
-              <p>Sponsorships</p>
-              <div class="social-links">
-                <a href="#"
-                  ><i class="fab fa-linkedin"></i>
-                  <img src="#" class="mx-auto" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="main">
-          <div class="profile-card">
-            <div class="img">
-              <img src="images/FAI-Blank_476x476.png" />
-            </div>
-            <div class="caption">
-              <h3 class="font-semibold text-[#DFBD69]">Aahana</h3>
-              <p>Sponsorships</p>
-              <div class="social-links">
-                <a href="#"
-                  ><i class="fab fa-linkedin"></i>
-                  <img src="#" class="mx-auto" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="main">
-          <div class="profile-card">
-            <div class="img">
-              <img src="images/FAI-Blank_476x476.png" />
-            </div>
-            <div class="caption">
-              <h3 class="font-semibold text-[#DFBD69]">Sambhav</h3>
-              <p>Sponsorships</p>
-              <div class="social-links">
-                <a href="#"
-                  ><i class="fab fa-linkedin"></i>
-                  <img src="#" class="mx-auto" />
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <script src="all.min.js"></script>
-    </div>
-  </body>
-
-  <footer class="bg-veryDarkBlue">
-    <!-- Flex Container -->
-    <div
-      class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0"
-    >
-      
-      <div
-        class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start"
-      >
-        <div class="mx-auto my-6 text-center text-white md:hidden">
-          Add Copyrite Stamp
-        </div>
-        <!-- Logo -->
-        <div>
-          <img src="images/fai.png" class="h-12" alt="" />
-        </div>
-        <!-- Social Links Container -->
-        <div class="flex justify-center space-x-4">
-          <!-- Link 2 -->
-          <a href="https://www.youtube.com/@FAI_Club" target="_blank">
-            <img src="images/icon-youtube.svg" alt="" class="h-8" />
-          </a>
-          <a href="https://www.youtube.com/@FAI_Club" target="_blank">
-            <img src="images/linkedin.jpg" alt="" class="h-8" />
-          </a>
-          <a href="https://www.instagram.com/fai__club/" target="_blank">
-            <img src="images/Instagram Logo 2.png" alt="" class="h-8" />
-          </a>
-        </div>
-      </div>
-      
-      <div class="flex justify-around space-x-32">
-        <div class="flex flex-col space-y-3 text-white">
-          <a href="index.html" class="hover:text-brightRed">Home</a>
-          <a href="team.html" class="hover:text-brightRed">Our Team</a>
-          <a href="contact.html" class="hover:text-brightRed">Contact</a>
-          <a href="chapters.html" class="hover:text-brightRed">Chapters</a>
-        </div>
-        <div class="flex flex-col space-y-3 text-white">
-          <a href="guest-lectures.html" class="hover:text-brightRed"
-            >Guest Lectures</a
-          >
-          <a href="blog.html" class="hover:text-brightRed">Blog</a>
-          <a href="about.html" class="hover:text-brightRed">About Us</a>
-        </div>
-      </div>
-
-      
-      <div class="flex flex-col justify-between">
-        <form>
-          <div class="flex space-x-3">
-            <input
-              type="text"
-              class="flex-1 px-4 rounded-full focus:outline-none"
-              placeholder="Ask a Question"
-            />
-            <button
-              class="px-6 py-2 text-black rounded-full bg-lime-100 hover:bg-green-500 focus:outline-none"
-            >
-              Send
-            </button>
-          </div>
-        </form>
-        <div class="hidden text-white md:block">Add Copyright Stamp</div>
       </div>
     </div>
-  </footer>
+</body>
 </html>
-
