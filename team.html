@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="forest">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAI</title>
@@ -21,226 +21,383 @@
         menu.classList.toggle("hidden");
       }
     </script>
-</head>
-<body class="bg-black text-white">
-    <header class="bg-[#ffd35e] sm:flex sm:justify-between shrink rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50">
-        <div class="flex items-center justify-between px-4 py-3">
-            <div>
-                <img src="images/failogo.png" alt="FAI" class="h-12" />
-            </div>
-            <div class="sm:hidden">
-                <button onclick="openMenu()" class="text-white sm:hidden">
-                    <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
-                        <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z" />
-                    </svg>
-                </button>
-            </div>
+  </head>
+  <body class="bg-black text-white">
+    <header
+      class="bg-[#ffd35e] sm:flex sm:justify-between shrink rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50"
+    >
+      <div class="flex items-center justify-between px-4 py-3">
+        <div>
+          <img src="images/failogo.png" alt="FAI" class="h-12" />
         </div>
-        <div id="fainavlinks" class="hidden px-5 pt-2 sm:pb-4 sm:flex">
-            <a href="index.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Home</a>
-            <a href="team.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Our Team</a>
-            <a href="contact.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Contact</a>
-            <a href="chapters.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Chapters</a>
-            <a href="guest-lectures.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Guest Lectures</a>
-            <a href="blog.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Blog</a>
-            <a href="about.html" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">About Us</a>
+        <div class="sm:hidden">
+          <button onclick="openMenu()" class="text-white sm:hidden">
+            <svg class="h-6 w-6 fill-current" viewBox="0 0 24 24">
+              <path
+                fill-rule="evenodd"
+                d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"
+              />
+            </svg>
+          </button>
         </div>
-        <div id="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
-            <a target="_blank" href="http://linktr.ee/faiapp" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Join Our Team</a>
-        </div>
+      </div>
+      <div id="fainavlinks" class="hidden px-5 pt-2 sm:pb-4 sm:flex">
+        <a
+          href="index.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Home</a
+        >
+        <a
+          href="team.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Our Team</a
+        >
+        <a
+          href="contact.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Contact</a
+        >
+        <a
+          href="chapters.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Chapters</a
+        >
+        <a
+          href="guest-lectures.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Guest Lectures</a
+        >
+        <a
+          href="blog.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Blog</a
+        >
+        <a
+          href="about.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >About Us</a
+        >
+      </div>
+      <div id="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
+        <a
+          target="_blank"
+          href="http://linktr.ee/faiapp"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Join Our Team</a
+        >
+      </div>
     </header>
     <div class="px-2 sm:px-2 md:px-8 lg:px-20 xl:px-32 mt-32">
-        <div class="text-5xl font-bold text-center mt-16 text-[#C5A34C]">
-            Our Team
+      <div class="text-5xl font-bold text-center mt-16 text-[#C5A34C]">
+        Our Team
+      </div>
+      <div class="text-4xl font-bold text-center mt-16 text-[#C5A34C]">
+        Executive Board
+      </div>
+      <div class="sm:grid grid-cols-5 gap-8 mt-12">
+        <div class="profile-card">
+          <div class="img">
+            <img
+              src="images/siddha.png"
+              alt="Siddha Kanthi"
+              class="rounded-lg w-full"
+            />
+          </div>
+          <div class="caption text-center mt-4">
+            <a
+              href="https://www.linkedin.com/in/siddha-kanthi/"
+              target="_blank"
+              class="font-semibold text-xl text-white"
+              >Siddha Kanthi</a
+            >
+            <p class="text-lg">CEO & Founder</p>
+          </div>
         </div>
-        <div class="text-4xl font-bold text-center mt-16 text-[#C5A34C]">
-            Executive Board
+        <div class="profile-card">
+          <div class="img">
+            <img
+              src="images/charlie.png"
+              alt="Charlie Goldberg"
+              class="rounded-lg w-full"
+            />
+          </div>
+          <div class="caption text-center mt-4">
+            <a
+              href="https://www.linkedin.com/in/goldbergcharles/"
+              target="_blank"
+              class="font-semibold text-xl text-white"
+              >Charlie Goldberg</a
+            >
+            <p class="text-lg">COO</p>
+          </div>
         </div>
-        <div class="sm:grid grid-cols-5 gap-8 mt-12">
-            <div class="profile-card">
-                <div class="img">
-                    <img src="images/siddha.png" alt="Siddha Kanthi" class="rounded-lg w-full" />
-                </div>
-                <div class="caption text-center mt-4">
-                    <a href="https://www.linkedin.com/in/siddha-kanthi/" target="_blank" class="font-semibold text-xl text-white">Siddha Kanthi</a>
-                    <p class="text-lg">CEO & Founder</p>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="img">
-                    <img src="images/charlie.png" alt="Charlie Goldberg" class="rounded-lg w-full" />
-                </div>
-                <div class="caption text-center mt-4">
-                    <a href="https://www.linkedin.com/in/goldbergcharles/" target="_blank" class="font-semibold text-xl text-white">Charlie Goldberg</a>
-                    <p class="text-lg">COO</p>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="img">
-                    <img src="images/nikhil.png" alt="Nikhil Kotta" class="rounded-lg w-full" />
-                </div>
-                <div class="caption text-center mt-4">
-                    <a href="#" target="_blank" class="font-semibold text-xl text-white">Nikhil Kotta</a>
-                    <p class="text-lg">CMO</p>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="img">
-                    <img src="images/jonathan.png" alt="Jonathan Ta" class="rounded-lg w-full" />
-                </div>
-                <div class="caption text-center mt-4">
-                    <a href="https://www.linkedin.com/in/jonathan-ta-15721a28b/" target="_blank" class="font-semibold text-xl text-white">Jonathan Ta</a>
-                    <p class="text-lg">CEO & Founder</p>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="img">
-                    <img src="images/placeholder.png" alt="Meghana Chodavarapu" class="rounded-lg w-full" />
-                </div>
-                <div class="caption text-center mt-4">
-                    <a href="https://www.linkedin.com/in/meghana-chodavarapu/" target="_blank" class="font-semibold text-xl text-white">Meghana Chodavarapu</a>
-                    <p class="text-lg">CGO</p>
-                </div>
-            </div>
+        <div class="profile-card">
+          <div class="img">
+            <img
+              src="images/nikhil.png"
+              alt="Nikhil Kotta"
+              class="rounded-lg w-full"
+            />
+          </div>
+          <div class="caption text-center mt-4">
+            <a href="#" target="_blank" class="font-semibold text-xl text-white"
+              >Nikhil Kotta</a
+            >
+            <p class="text-lg">CMO</p>
+          </div>
         </div>
-        <div class="sm:grid grid-cols-3 gap-8 mt-12 justify-center">
-            <div class="profile-card">
-                <div class="img">
-                    <img src="images/placeholder.png" alt="Tanush Saxena" class="rounded-lg w-full" />
-                </div>
-                <div class="caption text-center mt-4">
-                    <a href="https://www.linkedin.com/in/tanush-s-801287271/" target="_blank" class="font-semibold text-xl text-white">Tanush Saxena</a>
-                    <p class="text-lg">CTO</p>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="img">
-                    <img src="images/placeholder.png" alt="Rohan Shome" class="rounded-lg w-full" />
-                </div>
-                <div class="caption text-center mt-4">
-                    <a href="https://www.linkedin.com/in/rohan-shome-17b891289/" target="_blank" class="font-semibold text-xl text-white">Rohan Shome</a>
-                    <p class="text-lg">Head of Curriculum</p>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="img">
-                    <img src="images/placeholder.png" alt="Ish Agarwal" class="rounded-lg w-full" />
-                </div>
-                <div class="caption text-center mt-4">
-                    <a href="#" target="_blank" class="font-semibold text-xl text-white">Ish Agarwal</a>
-                    <p class="text-lg">Head of Competition</p>
-                </div>
-            </div>
+        <div class="profile-card">
+          <div class="img">
+            <img
+              src="images/jonathan.png"
+              alt="Jonathan Ta"
+              class="rounded-lg w-full"
+            />
+          </div>
+          <div class="caption text-center mt-4">
+            <a
+              href="https://www.linkedin.com/in/jonathan-ta-15721a28b/"
+              target="_blank"
+              class="font-semibold text-xl text-white"
+              >Jonathan Ta</a
+            >
+            <p class="text-lg">CEO & Founder</p>
+          </div>
         </div>
-        <div class="text-4xl font-bold text-center mt-16 text-[#C5A34C]">
-            Curriculum Team
+        <div class="profile-card">
+          <div class="img">
+            <img
+              src="images/failogo.png"
+              alt="Meghana Chodavarapu"
+              class="rounded-lg w-full"
+            />
+          </div>
+          <div class="caption text-center mt-4">
+            <a
+              href="https://www.linkedin.com/in/meghana-chodavarapu/"
+              target="_blank"
+              class="font-semibold text-xl text-white"
+              >Meghana Chodavarapu</a
+            >
+            <p class="text-lg">CGO</p>
+          </div>
         </div>
-        <div class="sm:grid grid-cols-5 gap-8 mt-12">
-            <div class="profile-card">
-                <div class="img">
-                    <img src="images/placeholder.png" alt="Rishi Alluri" class="rounded-lg w-full" />
-                </div>
-                <div class="caption text-center mt-4">
-                    <a href="https://www.linkedin.com/in/rishi-a-6364aa20b/" target="_blank" class="font-semibold text-xl text-white">Rishi Alluri</a>
-                    <p class="text-lg">Banking Content Developer</p>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="img">
-                    <img src="images/placeholder.png" alt="Rowen Poddar" class="rounded-lg w-full" />
-                </div>
-                <div class="caption text-center mt-4">
-                    <a href="https://www.linkedin.com/in/rowen-poddar-b5899a27b/" target="_blank" class="font-semibold text-xl text-white">Rowen Poddar</a>
-                    <p class="text-lg">Accounting Content Developer</p>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="img">
-                    <img src="images/placeholder.png" alt="Akash Dasarraju" class="rounded-lg w-full" />
-                </div>
-                <div class="caption text-center mt-4">
-                    <a href="#" target="_blank" class="font-semibold text-xl text-white">Akash Dasarraju</a>
-                    <p class="text-lg">Content Developer/Editor</p>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="img">
-                    <img src="images/placeholder.png" alt="Arjun Patel" class="rounded-lg w-full" />
-                </div>
-                <div class="caption text-center mt-4">
-                    <a href="#" target="_blank" class="font-semibold text-xl text-white">Arjun Patel</a>
-                    <p class="text-lg">Content Developer (Personal Finance)</p>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="img">
-                    <img src="images/placeholder.png" alt="Rehaan Chamakura" class="rounded-lg w-full" />
-                </div>
-                <div class="caption text-center mt-4">
-                    <a href="#" target="_blank" class="font-semibold text-xl text-white">Rehaan Chamakura</a>
-                    <p class="text-lg">Content Developer/Project Manager</p>
-                </div>
-            </div>
-            <div class="profile-card">
-                <div class="img">
-                    <img src="images/placeholder.png" alt="Parin Chanana" class="rounded-lg w-full" />
-                </div>
-                <div class="caption text-center mt-4">
-                    <a href="#" target="_blank" class="font-semibold text-xl text-white">Parin Chanana</a>
-                    <p class="text-lg">Graphic Designer</p>
-                </div>
-            </div>
+      </div>
+      <div class="sm:grid grid-cols-3 gap-8 mt-12 justify-center">
+        <div class="profile-card">
+          <div class="img">
+            <img
+              src="images/failogo.png"
+              alt="Tanush Saxena"
+              class="rounded-lg w-full"
+            />
+          </div>
+          <div class="caption text-center mt-4">
+            <a
+              href="https://www.linkedin.com/in/tanush-s-801287271/"
+              target="_blank"
+              class="font-semibold text-xl text-white"
+              >Tanush Saxena</a
+            >
+            <p class="text-lg">CTO</p>
+          </div>
         </div>
+        <div class="profile-card">
+          <div class="img">
+            <img
+              src="images/failogo.png"
+              alt="Rohan Shome"
+              class="rounded-lg w-full"
+            />
+          </div>
+          <div class="caption text-center mt-4">
+            <a
+              href="https://www.linkedin.com/in/rohan-shome-17b891289/"
+              target="_blank"
+              class="font-semibold text-xl text-white"
+              >Rohan Shome</a
+            >
+            <p class="text-lg">Head of Curriculum</p>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="img">
+            <img
+              src="images/failogo.png"
+              alt="Ish Agarwal"
+              class="rounded-lg w-full"
+            />
+          </div>
+          <div class="caption text-center mt-4">
+            <a href="#" target="_blank" class="font-semibold text-xl text-white"
+              >Ish Agarwal</a
+            >
+            <p class="text-lg">Head of Competition</p>
+          </div>
+        </div>
+      </div>
+      <div class="text-4xl font-bold text-center mt-16 text-[#C5A34C]">
+        Curriculum Team
+      </div>
+      <div class="sm:grid grid-cols-5 gap-8 mt-12">
+        <div class="profile-card">
+          <div class="img">
+            <img
+              src="images/failogo.png"
+              alt="Rishi Alluri"
+              class="rounded-lg w-full"
+            />
+          </div>
+          <div class="caption text-center mt-4">
+            <a
+              href="https://www.linkedin.com/in/rishi-a-6364aa20b/"
+              target="_blank"
+              class="font-semibold text-xl text-white"
+              >Rishi Alluri</a
+            >
+            <p class="text-lg">Banking Content Developer</p>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="img">
+            <img
+              src="images/failogo.png"
+              alt="Rowen Poddar"
+              class="rounded-lg w-full"
+            />
+          </div>
+          <div class="caption text-center mt-4">
+            <a
+              href="https://www.linkedin.com/in/rowen-poddar-b5899a27b/"
+              target="_blank"
+              class="font-semibold text-xl text-white"
+              >Rowen Poddar</a
+            >
+            <p class="text-lg">Accounting Content Developer</p>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="img">
+            <img
+              src="images/failogo.png"
+              alt="Akash Dasarraju"
+              class="rounded-lg w-full"
+            />
+          </div>
+          <div class="caption text-center mt-4">
+            <a href="#" target="_blank" class="font-semibold text-xl text-white"
+              >Akash Dasarraju</a
+            >
+            <p class="text-lg">Content Developer/Editor</p>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="img">
+            <img
+              src="images/failogo.png"
+              alt="Arjun Patel"
+              class="rounded-lg w-full"
+            />
+          </div>
+          <div class="caption text-center mt-4">
+            <a href="#" target="_blank" class="font-semibold text-xl text-white"
+              >Arjun Patel</a
+            >
+            <p class="text-lg">Content Developer (Personal Finance)</p>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="img">
+            <img
+              src="images/failogo.png"
+              alt="Rehaan Chamakura"
+              class="rounded-lg w-full"
+            />
+          </div>
+          <div class="caption text-center mt-4">
+            <a href="#" target="_blank" class="font-semibold text-xl text-white"
+              >Rehaan Chamakura</a
+            >
+            <p class="text-lg">Content Developer/Project Manager</p>
+          </div>
+        </div>
+        <div class="profile-card">
+          <div class="img">
+            <img
+              src="images/failogo.png"
+              alt="Parin Chanana"
+              class="rounded-lg w-full"
+            />
+          </div>
+          <div class="caption text-center mt-4">
+            <a href="#" target="_blank" class="font-semibold text-xl text-white"
+              >Parin Chanana</a
+            >
+            <p class="text-lg">Graphic Designer</p>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 
-<footer class="bg-veryDarkBlue">
-    <div class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
-        <div class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start">
-            <div class="mx-auto my-6 text-center text-white md:hidden">
-                Add Copyrite Stamp
-            </div>
-            <div>
-                <img src="images/fai.png" class="h-12" alt="" />
-            </div>
-            <div class="flex justify-center space-x-4">
-                <a href="https://www.youtube.com/@FAI_Club" target="_blank">
-                    <img src="images/icon-youtube.svg" alt="" class="h-8" />
-                </a>
-                <a href="https://www.youtube.com/@FAI_Club" target="_blank">
-                    <img src="images/linkedin.jpg" alt="" class="h-8" />
-                </a>
-                <a href="https://www.instagram.com/fai__club/" target="_blank">
-                    <img src="images/Instagram Logo 2.png" alt="" class="h-8" />
-                </a>
-            </div>
+  <footer class="bg-veryDarkBlue">
+    <div
+      class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0"
+    >
+      <div
+        class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start"
+      >
+        <div class="mx-auto my-6 text-center text-white md:hidden">
+          Add Copyrite Stamp
         </div>
-        <div class="flex justify-around space-x-32">
-            <div class="flex flex-col space-y-3 text-white">
-                <a href="index.html" class="hover:text-brightRed">Home</a>
-                <a href="team.html" class="hover:text-brightRed">Our Team</a>
-                <a href="contact.html" class="hover:text-brightRed">Contact</a>
-                <a href="chapters.html" class="hover:text-brightRed">Chapters</a>
-            </div>
-            <div class="flex flex-col space-y-3 text-white">
-                <a href="guest-lectures.html" class="hover:text-brightRed">Guest Lectures</a>
-                <a href="blog.html" class="hover:text-brightRed">Blog</a>
-                <a href="about.html" class="hover:text-brightRed">About Us</a>
-            </div>
+        <div>
+          <img src="images/fai.png" class="h-12" alt="" />
         </div>
-        <div class="flex flex-col justify-between">
-            <form>
-                <div class="flex space-x-3">
-                    <input type="text" class="flex-1 px-4 rounded-full focus:outline-none" placeholder="Ask a Question" />
-                    <button class="px-6 py-2 text-black rounded-full bg-lime-100 hover:bg-green-500 focus:outline-none">
-                        Send
-                    </button>
-                </div>
-            </form>
-            <div class="hidden text-white md:block">Add Copyright Stamp</div>
+        <div class="flex justify-center space-x-4">
+          <a href="https://www.youtube.com/@FAI_Club" target="_blank">
+            <img src="images/icon-youtube.svg" alt="" class="h-8" />
+          </a>
+          <a href="https://www.youtube.com/@FAI_Club" target="_blank">
+            <img src="images/linkedin.jpg" alt="" class="h-8" />
+          </a>
+          <a href="https://www.instagram.com/fai__club/" target="_blank">
+            <img src="images/Instagram Logo 2.png" alt="" class="h-8" />
+          </a>
         </div>
+      </div>
+      <div class="flex justify-around space-x-32">
+        <div class="flex flex-col space-y-3 text-white">
+          <a href="index.html" class="hover:text-brightRed">Home</a>
+          <a href="team.html" class="hover:text-brightRed">Our Team</a>
+          <a href="contact.html" class="hover:text-brightRed">Contact</a>
+          <a href="chapters.html" class="hover:text-brightRed">Chapters</a>
+        </div>
+        <div class="flex flex-col space-y-3 text-white">
+          <a href="guest-lectures.html" class="hover:text-brightRed"
+            >Guest Lectures</a
+          >
+          <a href="blog.html" class="hover:text-brightRed">Blog</a>
+          <a href="about.html" class="hover:text-brightRed">About Us</a>
+        </div>
+      </div>
+      <div class="flex flex-col justify-between">
+        <form>
+          <div class="flex space-x-3">
+            <input
+              type="text"
+              class="flex-1 px-4 rounded-full focus:outline-none"
+              placeholder="Ask a Question"
+            />
+            <button
+              class="px-6 py-2 text-black rounded-full bg-lime-100 hover:bg-green-500 focus:outline-none"
+            >
+              Send
+            </button>
+          </div>
+        </form>
+        <div class="hidden text-white md:block">Add Copyright Stamp</div>
+      </div>
     </div>
-</footer>
+  </footer>
 </html>
-
 
