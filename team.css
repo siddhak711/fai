@@ -1,30 +1,37 @@
-
 .profile-card {
-    position: relative;
-    text-align: center;
+  position: relative;
+  text-align: center;
 }
 
 .profile-card .img img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover; /* Ensures consistent image sizing */
 }
 
 .profile-card .caption h3 {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
 
 .profile-card .caption p {
-    font-size: 1rem;
+  font-size: 1rem;
 }
 
 .profile-card .caption a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .profile-card .caption a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
+.sm\\:grid-cols-3 {
+  display: flex;
+  justify-content: center;
+}
 
+.bg-black {
+  background-color: black; /* Ensures background color matches */
+}
 
