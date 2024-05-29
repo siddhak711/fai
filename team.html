@@ -13,6 +13,18 @@
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .social-links a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #DFBD69;
+            font-size: 24px;
+            transition: transform 0.3s ease-in-out;
+        }
+        .social-links a:hover {
+            transform: scale(1.2);
+        }
+    </style>
     <script>
       function openMenu() {
         var elem = document.getElementById("fainavlinks");
@@ -92,11 +104,8 @@
       <!--This uses container that adds breakpoints to divs to change screen size and uses relative to position it absolute-->
       <!--This is the main body of the page-->
 
-      <div class="text-6xl font-bold text-center mt-32">
-        <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg"
-          >Our Team</span
-        >
+      <div class="text-6xl font-bold text-center mt-32 text-[#C5A34C]">
+        Our Team
       </div>
       <div class="main mx-auto">
         <div class="profile-card">
@@ -151,6 +160,20 @@
               <h3 class="font-semibold text-[#DFBD69]">Jonathan Ta</h3>
               <p>CEO & Founder</p>
               <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/aarav.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Aarav Patel</h3>
+              <p>CTO</p>
+              <div class="social-links">
                 <a href="#"><i class="fab fa-linkedin"></i></a>
               </div>
             </div>
@@ -159,11 +182,25 @@
         <div class="main">
           <div class="profile-card">
             <div class="img">
-              <img src="images/simeon.png" />
+              <img src="images/sophia.png" />
             </div>
             <div class="caption">
-              <h3 class="font-semibold text-[#DFBD69]">Simeon Varghese</h3>
-              <p>CTO</p>
+              <h3 class="font-semibold text-[#DFBD69]">Sophia Liu</h3>
+              <p>Head of HR</p>
+              <div class="social-links">
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="main">
+          <div class="profile-card">
+            <div class="img">
+              <img src="images/liam.png" />
+            </div>
+            <div class="caption">
+              <h3 class="font-semibold text-[#DFBD69]">Liam Wong</h3>
+              <p>Chief Designer</p>
               <div class="social-links">
                 <a href="#"><i class="fab fa-linkedin"></i></a>
               </div>
@@ -172,6 +209,62 @@
         </div>
       </div>
     </div>
-</body>
+    <footer
+      class="footer footer-center p-10 bg-base-200 text-base-content rounded"
+    >
+      <div class="grid grid-flow-col gap-4">
+        <a class="link link-hover" href="about.html">About us</a>
+        <a class="link link-hover" href="contact.html">Contact</a>
+        <a class="link link-hover" href="blog.html">Blog</a>
+        <a class="link link-hover" href="guest-lectures.html">Guest Lectures</a>
+      </div>
+      <div>
+        <div class="grid grid-flow-col gap-4">
+          <a href="https://twitter.com/fai" target="_blank"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="fill-current"
+            >
+              <path
+                d="M24 4.557a9.83 9.83 0 0 1-2.828.775 4.932 4.932 0 0 0 2.165-2.724c-.951.555-2.005.959-3.127 1.184A4.916 4.916 0 0 0 16.616 3c-2.717 0-4.92 2.203-4.92 4.917 0 .385.045.76.127 1.122-4.087-.205-7.715-2.162-10.14-5.134a4.822 4.822 0 0 0-.665 2.472c0 1.71.87 3.218 2.188 4.103a4.903 4.903 0 0 1-2.229-.617v.061c0 2.385 1.693 4.374 3.946 4.828a4.934 4.934 0 0 1-2.224.084c.627 1.956 2.445 3.379 4.6 3.418A9.867 9.867 0 0 1 0 19.54a13.944 13.944 0 0 0 7.548 2.213c9.058 0 14.01-7.507 14.01-14.01 0-.213-.004-.425-.013-.636A10.025 10.025 0 0 0 24 4.557z"
+              ></path></svg
+          ></a>
+          <a href="https://youtube.com/fai" target="_blank"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="fill-current"
+            >
+              <path
+                d="M19.615 3.184C20.382 3.315 21 3.943 21.131 4.715c.327 1.897.327 5.857.327 5.857s0 3.96-.327 5.857c-.131.772-.749 1.4-1.516 1.531-1.396.253-6.985.253-6.985.253s-5.589 0-6.985-.253c-.767-.131-1.385-.759-1.516-1.531C2 14.532 2 10.571 2 10.571s0-3.96.327-5.857C2.458 3.943 3.076 3.315 3.843 3.184 5.239 2.931 10.828 2.931 10.828 2.931s5.589 0 6.985.253zm-7.693 2.454v7.332l6.584-3.666-6.584-3.666z"
+              ></path></svg
+          ></a>
+          <a href="https://facebook.com/fai" target="_blank"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              class="fill-current"
+            >
+              <path
+                d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 5.989 4.388 10.963 10.125 11.855v-8.385H7.078V12.07h3.047V9.414c0-3.012 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.968h-1.514c-1.493 0-1.957.927-1.957 1.875v2.247h3.328l-.532 3.472h-2.796v8.385C19.612 23.036 24 18.062 24 12.073z"
+              ></path></svg
+          ></a>
+        </div>
+      </div>
+      <div>
+        <p class="font-bold">
+          Foundation for Artificial Intelligence <br />
+          Providing Solutions for a Better Future
+        </p>
+        <p>© 2024 - All rights reserved</p>
+      </div>
+    </footer>
+  </body>
 </html>
-
