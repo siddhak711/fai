@@ -7,7 +7,7 @@
 .profile-card .img img {
     width: 100%;
     height: auto;
-    border-radius: 0;
+    border-radius: 12px;
 }
 
 .profile-card .caption h3 {
@@ -18,16 +18,11 @@
     font-size: 1rem;
 }
 
-.profile-card .social-links {
-    margin-top: 10px;
+.profile-card .caption a {
+    text-decoration: none;
 }
 
-.profile-card .social-links a img {
-    width: 24px;
-    height: 24px;
-    transition: transform 0.3s ease;
+.profile-card .caption a:hover {
+    text-decoration: underline;
 }
 
-.profile-card .social-links a img:hover {
-    transform: scale(1.1);
-}
