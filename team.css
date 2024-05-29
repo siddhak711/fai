@@ -1,58 +1,33 @@
 
-.main {
-    width: 100%;
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .profile-card {
     position: relative;
-    width: 220px; /* Consistent width */
-    height: 220px; /* Consistent height */
-    background: #fff;
-    padding: 30px;
-    box-shadow: 0 0 22px #3336;
-    transition: .6s;
     text-align: center;
-    margin: auto;
 }
 
-.img img {
+.profile-card .img img {
     width: 100%;
-    border-radius: 50%;
+    height: auto;
+    border-radius: 0;
 }
 
-.caption {
+.profile-card .caption h3 {
+    font-size: 1.25rem;
+}
+
+.profile-card .caption p {
+    font-size: 1rem;
+}
+
+.profile-card .social-links {
     margin-top: 10px;
 }
 
-.caption h3 {
-    font-size: 20px;
-    color: #333;
-}
-
-.caption p {
-    font-size: 14px;
-    color: #666;
-    margin: 5px 0;
-}
-
-.caption .social-links {
-    margin-top: 10px;
-}
-
-.caption .social-links a {
-    margin: 0 5px;
-}
-
-.caption .social-links img {
+.profile-card .social-links a img {
+    width: 24px;
+    height: 24px;
     transition: transform 0.3s ease;
 }
 
-.caption .social-links img:hover {
+.profile-card .social-links a img:hover {
     transform: scale(1.1);
 }
-
-
