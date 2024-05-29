@@ -1,108 +1,93 @@
+/* team.css */
+body {
+  background-color: #f3f4f6;
+  font-family: Arial, sans-serif;
+}
+
 .main {
-    width: 100%;
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  margin: 20px;
 }
 
 .profile-card {
-    position: relative;
-    width: 220px;
-    height: 220px;
-    background: #fff;
-    padding: 30px;
-    /* border-radius: 50%; Remove this to make it rectangular */
-    box-shadow: 0 0 22px #3336;
-    transition: .6s;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
 }
 
 .profile-card:hover {
-    /* border-radius: 10px; Remove this to maintain rectangular shape */
-    height: 260px;
+  transform: scale(1.05);
 }
 
 .profile-card .img {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: .6s;
-    z-index: 49;
-}
-
-.profile-card:hover .img {
-    transform: translateY(-60px);
-}
-
-.img img {
-    width: 100%;
-    /* border-radius: 50%; Remove this to make it rectangular */
-    box-shadow: 0 0 22px #3336;
-    transition: .6s;
-}
-
-.profile-card:hover img {
-    /* border-radius: 10px; Remove this to maintain rectangular shape */
-}
-
-.caption {
-    text-align: center;
-    transform: translateY(-80px);
-    opacity: 0;
-    transition: .6s;
-}
-
-.profile-card:hover .caption {
-    opacity: 1;
-}
-
-.caption h3 {
-    font-size: 20px;
-}
-
-.caption p {
-    font-size: 16px;
-    color: #926F34;
-    margin: 2px 0 6px 0;
-}
-
-.social-links a:hover {
-    color: #0c52a1;
-}
-.square-profile-card {
-  width: 200px;
   height: 200px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #f8f8f8;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px;
   margin: 0 auto;
-  margin-bottom: 24px;
-}
-
-.square-profile-card .img {
-  width: 100%;
-  height: 80%;
   overflow: hidden;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 
-.square-profile-card .img img {
+.profile-card .img img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-bottom: 2px solid #dfbd69;
 }
 
-.square-profile-card .caption {
-  height: 20%;
+.profile-card .caption {
+  padding: 20px;
+}
+
+.profile-card .caption h3 {
+  margin: 10px 0;
+  font-size: 22px;
+}
+
+.profile-card .caption p {
+  font-size: 16px;
+  color: gray;
+}
+
+.social-links a {
+  display: inline-block;
+  margin: 10px 5px 0;
+  color: #dfbd69;
+  font-size: 24px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.social-links a:hover {
+  transform: scale(1.2);
+}
+
+/* Specific styles for the "Our Team" section */
+.text-6xl {
+  color: #c5a34c;
+}
+
+.footer {
+  background-color: #f8f9fa;
+  padding: 20px;
   text-align: center;
-  padding: 10px;
 }
 
+.footer .link {
+  color: #dfbd69;
+}
 
+.footer .fill-current {
+  fill: #dfbd69;
+}
+
+.footer p {
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+@media (min-width: 640px) {
+  .hidden {
+    display: none;
+  }
+}
 
