@@ -187,11 +187,11 @@
     
     <div class="w-full h-5 bg-black"></div>
     
-    <div class="relative flex items-center justify-center px-2 sm:px-14 py-20 bg-black">
-      <div class="w-full sm:w-2/3 relative z-10">
-        <img src="images/faiMeeting1.png" id="faiMeeting1-image" class="w-full h-auto object-cover transform -skew-y-6">
+    <div class="relative flex items-center justify-center px-2 sm:px-14 py-20 bg-black section-container">
+      <div class="w-full sm:w-2/3 relative z-10 image-container">
+        <img src="images/faiMeeting1.png" id="faiMeeting1-image" class="w-full h-auto object-cover skew-y-6">
       </div>
-      <div class="absolute inset-0 flex items-center justify-start px-10 sm:px-14">
+      <div class="absolute inset-0 flex items-center justify-start px-10 sm:px-14 text-container">
         <div class="text-left p-10 bg-black bg-opacity-75 backdrop-blur-lg rounded-2xl">
           <p class="text-4xl text-white font-bold">Welcome to </p>
           <p class="text-4xl text-[#FFDE59] font-bold">Finance and Investments Org.</p>
@@ -239,6 +239,47 @@
 
       .fade-out {
           animation: fadeOut 150ms forwards;
+      }
+
+      /* New Styles */
+      .section-container {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 2rem;
+          background-color: black;
+      }
+
+      .image-container {
+          position: relative;
+          width: 66.66%;
+      }
+
+      .image-container img {
+          width: 100%;
+          height: auto;
+          object-fit: cover;
+          transform: skewY(-6deg);
+      }
+
+      .text-container {
+          position: absolute;
+          left: 2rem;
+          background-color: rgba(0, 0, 0, 0.75);
+          backdrop-filter: blur(10px);
+          padding: 2rem;
+          border-radius: 1rem;
+          z-index: 1;
+      }
+
+      .text-container p {
+          margin: 0.5rem 0;
+          color: white;
+      }
+
+      .text-container .highlight {
+          color: #FFDE59;
       }
 
     </style>
@@ -299,6 +340,7 @@
     </footer>
   </body>
 </html>
+
 
 
 
