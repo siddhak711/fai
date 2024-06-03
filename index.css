@@ -24,3 +24,44 @@
     transform: translateY(-12vh); 
 }
 
+/* New Styles */
+.section-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: black;
+}
+
+.image-container {
+    position: relative;
+    width: 66.66%;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transform: skewY(-6deg);
+}
+
+.text-container {
+    position: absolute;
+    left: 2rem;
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 1rem;
+    z-index: 1;
+}
+
+.text-container p {
+    margin: 0.5rem 0;
+    color: white;
+}
+
+.text-container .highlight {
+    color: #FFDE59;
+}
+
