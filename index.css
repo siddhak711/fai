@@ -49,6 +49,8 @@
 .text-container {
     position: absolute;
     left: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.75);
     backdrop-filter: blur(10px);
     padding: 2rem;
