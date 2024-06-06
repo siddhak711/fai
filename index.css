@@ -1,9 +1,9 @@
-@font-face{
+@font-face {
     font-family: 'Science';
-    src:url(Lato-Bold.ttf);
+    src: url(Lato-Bold.ttf);
 }
 
-.txtincrease{
+.txtincrease {
     color: #afafaf;
     text-decoration: none;
     cursor: pointer;
@@ -12,19 +12,18 @@
     transition-duration: 0.4s;
 }
 
-.txtincrease:hover{
-    transform: scale(1.2); 
+.txtincrease:hover {
+    transform: scale(1.2);
 }
 
-.translate-down-eighth { /*translates eighth of screen size (vh) */
-    transform: translateY(12vh); 
+.translate-down-eighth {
+    transform: translateY(12vh);
 }
 
-.translate-up-eighth { /*translates eighth of screen size (vh) */
-    transform: translateY(-12vh); 
+.translate-up-eighth {
+    transform: translateY(-12vh);
 }
 
-/* New Styles */
 .section-container {
     position: relative;
     display: flex;
@@ -66,4 +65,3 @@
 .text-container .highlight {
     color: #FFDE59;
 }
-
