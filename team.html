@@ -1,33 +1,119 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="forest">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAI</title>
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link href="./dist/output.css" rel="stylesheet" />
-    <link href="team.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css"
       rel="stylesheet"
       type="text/css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      function openMenu() {
-        var elem = document.getElementById("fainavlinks");
-        elem.classList.toggle("hidden");
-        var menu = document.getElementById("fainavlinks-donate");
-        menu.classList.toggle("hidden");
-      }
-    </script>
-  </head>
-  <body class="bg-black text-white">
+
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .big-title{
+            background-color: black;
+            width: 100%;
+            height: auto;
+            font-size: 8em;
+            color: #FFDE59;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            font-family: archivo;
+            padding-top: 1em;
+        }
+
+        .small-title{
+            background-color: black;
+            width: 100%;
+            height: auto;
+            font-size: 3em;
+            color: #FFDE59;
+            margin: 0px;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+            font-family: archivo;
+            padding: 1em;
+        }
+
+        .name{
+            font-size: 2em;
+            color: #FFDE59;
+            justify-content: center;
+            text-align: center;
+            font-family: archivo;
+        }
+
+        .title{
+            font-size: 2em;
+            color: white;
+            justify-content: center;
+            text-align: center;
+            font-family: questrial;
+        }
+
+        .section{
+            padding-left: 3em;
+            padding-right: 3em;
+            padding-top: 1em;
+            padding-bottom: 1em;
+            display: flex;
+            width: 100%;
+            height: auto;
+            background-color: black;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .person{
+            padding: 2em;
+            width: 300px;
+
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .person:hover {
+            transform: scale(1.1);
+        }
+
+        .person img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        
+    </style>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-black">
     <header
-      class="bg-[#ffd35e] sm:flex sm:justify-between shrink rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50"
+      class="bg-[#FFDE59] sm:flex sm:justify-between shrink rounded-2xl mx-2 mt-4 bg-opacity-75 backdrop-blur-lg fixed top-0 right-0 left-0 z-50"
     >
       <div class="flex items-center justify-between px-4 py-3">
-        <div>
+        <div class="">
           <img src="images/failogo.png" alt="FAI" class="h-12" />
         </div>
         <div class="sm:hidden">
@@ -87,589 +173,402 @@
         >
       </div>
     </header>
-    <div class="px-2 sm:px-2 md:px-8 lg:px-20 xl:px-32 mt-32 bg-black">
-      <div class="text-5xl font-bold text-center mt-16 text-[#C5A34C]">
-        Our Team
-      </div>
-      <div class="text-4xl font-bold text-center mt-16 text-[#C5A34C]">
+
+    <div class="big-title">
+        Our Team 
+    </div>
+
+    <!-- Executive Board Section -->
+
+    <div class="small-title">
         Executive Board
-      </div>
-      <div class="sm:grid grid-cols-5 gap-8 mt-12">
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/siddha.png"
-              alt="Siddha Kanthi"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/siddha-kanthi/"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Siddha Kanthi</a
-            >
-            <p class="text-lg">CEO & Founder</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/charlie.png"
-              alt="Charlie Goldberg"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/goldbergcharles/"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Charlie Goldberg</a
-            >
-            <p class="text-lg">COO</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Tanush Saxena"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/tanush-s-801287271/"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Tanush Saxena</a
-            >
-            <p class="text-lg">CTO</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Rohan Shome"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/rohan-shome-17b891289/"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Rohan Shome</a
-            >
-            <p class="text-lg">Head of Curriculum</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Ish Aggarwal"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/ish-aggarwal-525799310"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Ish Aggarwal</a
-            >
-            <p class="text-lg">Head of Competition</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Meghana Chodavarapu"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/meghana-chodavarapu/"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Meghana Chodavarapu</a
-            >
-            <p class="text-lg">CGO</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/abhiram.png"
-              alt="Abhiram Nandiraju"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/abhiram-nandiraju-412016217/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Abhiram Nandiraju</aakaa
-            >
-            <p class="text-lg">CFO</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/neha.png"
-              alt="Neha Veeramani"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/neha-veeramani-040681255?trk=contact-info"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Neha Veeramani</a
-            >
-            <p class="text-lg">CSO</p>
-          </div>
-        </div>
-      </div>
+    </div>
 
-      <div class="text-4xl font-bold text-center mt-16 text-[#C5A34C]">
+        
+
+    <div class="section" >
+
+        <a href="https://www.linkedin.com/in/siddha-kanthi" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Sihha Kanthi.png" alt="">
+            <div class="name"> Siddha Kanthi</div>
+            <div class="title">CEO & Founder</div>
+        </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/goldbergcharles" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Charles Goldberg.png" alt="">
+            <div class="name"> Charlie Goldberg</div>
+            <div class="title">COO</div>
+        </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/neha-veeramani-040681255" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/neha veeramani.png" alt="">
+            <div class="name"> Neha Veeramani</div>
+            <div class="title">CMO</div>
+        </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/abhiram-nandiraju-412016217" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Abhiram Nandiraju.png" alt="">
+            <div class="name"> Abhiram Nandaraju</div>
+            <div class="title">CFO</div>
+        </div>
+        </a>    
+
+        <a href="https://www.linkedin.com/in/meghana-chodavarapu" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Meghana Chodavarapu.png" alt="">
+            <div class="name"> Meghana Chodavarapu</div>
+            <div class="title">CGO</div>
+        </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/rohan-shome-17b891289" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Rohan Shome.png" alt="">
+            <div class="name"> Rohan Shome</div>
+            <div class="title">Head Of Curriculum</div>
+        </div>
+    </a>
+
+    <a href="" target="_blank" style="text-decoration: none;">
+        <div class="person">
+                <img src="images/fai-team-pics/Ish Aggarwal.png" alt="">
+                <div class="name"> Ish Aggarwal</div>
+                <div class="title">Head of Competition</div>
+        </div>
+    </a>
+
+    </div>
+
+    <!-- Finance Team Section -->
+
+    <div class="small-title">
         Finance Team
-      </div>
-      <div class="sm:grid grid-cols-5 gap-8 mt-12">
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Abhiram Nandiraju"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/abhiram-nandiraju-412016217/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Abhiram Nandiraju</a
-            >
-            <p class="text-lg">CFO</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/sambhav.png"
-              alt="Sambhav Karuna"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a href="#" target="_blank" class="font-semibold text-xl text-white"
-              >Sambhav Karuna</a
-            >
-            <p class="text-lg">Finance Manager</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Kabir Vonkarey"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/kabir-vonkarey-56aa6227a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Kabir Vonkarey</a
-            >
-            <p class="text-lg">Finance Manager</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Ranbeer Rai"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/ranbeer-rai-173aab301?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Ranbeer Rai</a
-            >
-            <p class="text-lg">Finance Manager</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Anish Bangyanagar"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/anish-bhagyanagar-9b2067250/"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Anish Bangyanagar</a
-            >
-            <p class="text-lg">Finance Manager</p>
-          </div>
-        </div>
-      </div>
+    </div>
 
-      <div class="text-4xl font-bold text-center mt-16 text-[#C5A34C]">
+        
+
+    <div class="section">
+
+        <a href="https://www.linkedin.com/in/abhiram-nandiraju-412016217" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Abhiram Nandiraju.png" alt="">
+            <div class="name"> Abhiram Nandaraju</div>
+            <div class="title">CFO</div>
+        </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/sambhav-khurana-a70223311" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Sambhav Karuna.png" alt="">
+            <div class="name"> Sambhav Karuna</div>
+            <div class="title">Finance Manager</div>
+        </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/kabir-vonkarey-56aa6227a/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Kabir Vonkarey.png" alt="">
+            <div class="name"> Kabir Vonkarey</div>
+            <div class="title">Finance Manager</div>
+        </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/ranbeer-rai-173aab301/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Ranbeer Rai.png" alt="">
+            <div class="name"> Ranbeer Rai</div>
+            <div class="title">Finance Manager</div>
+        </div>
+        </a>
+
+        <a href="https://www.linkedin.com/in/anish-bhagyanagar-9b2067250/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Anish Bhagyanagar.png" alt="">
+            <div class="name"> Anish Bhagyanagar</div>
+            <div class="title">Finance Manager</div>
+        </div>
+        </a>
+
+
+    </div>
+    <!-- Tech Section -->
+
+    <div class="small-title">
+        Technology Team
+    </div>
+
+        
+
+    <div class="section">
+
+        
+        <a href="https://www.linkedin.com/in/rohit-shankar-85454017a/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Rohit SHankar.png" alt="">
+            <div class="name">Rohit Shankar</div>
+            <div class="title">Technical Manager</div>
+        </div>
+    </a>
+
+
+    <a href="https://www.linkedin.com/in/abhinav-mellamarthy-9876bb25b/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/favicon.ico" alt="">
+            <div class="name">Abhinav Mellamurthy</div>
+            <div class="title">Technical Manager</div>
+        </div>
+    </a>
+
+    <a href="https://www.linkedin.com/in/tanush-s-801287271/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Tanush Sexena.png" alt="">
+            <div class="name"> Tanush Saxena</div>
+            <div class="title">Technical Manager</div>
+        </div>
+    </a>
+
+    
+    <a href="https://www.linkedin.com/in/amal-sameel-585b462ab/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/favicon.ico" alt="">
+            <div class="name">Amal Sameel</div>
+            <div class="title">Technical Manager</div>
+        </div>
+    </a>
+
+    <a href="https://www.linkedin.com/in/simeon-varghese-aa700228a/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/favicon.ico" alt="">
+            <div class="name">Simeon Varghese</div>
+            <div class="title">Technical Manager</div>
+        </div>
+    </a>
+        
+
+        
+
+    </div>
+
+    <!-- Social Media Section -->
+
+    <div class="small-title">
         Social Media Team
-      </div>
-      <div class="sm:grid grid-cols-5 gap-8 mt-12">
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Neha Veeramani"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/neha-veeramani-040681255?trk=contact-info"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Neha Veeramani</a
-            >
-            <p class="text-lg">CSO</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/shanzay.png"
-              alt="Shanzay Ahmed"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/shanzay-ahmed-23669a294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Shanzay Ahmed</a
-            >
-            <p class="text-lg">Social Media Manager</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/balanagu.png"
-              alt="Bharath Balanagu"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/bharath-balanagu-a80765260?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Bharath Balanagu</a
-            >
-            <p class="text-lg">Social Media Manager</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/garima.png"
-              alt="Garima Duggal"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/garima-duggal-0580b5311?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Garima Duggal</a
-            >
-            <p class="text-lg">Social Media Manager</p>
-          </div>
-        </div>
-      </div>
+    </div>
 
-      <div class="text-4xl font-bold text-center mt-16 text-[#C5A34C]">
-        Tech Team
-      </div>
-      <div class="sm:grid grid-cols-5 gap-8 mt-12">
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Tanush Saxena"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/tanush-s-801287271/"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Tanush Saxena</a
-            >
-            <p class="text-lg">CTO</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Rohit Shankar"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/rohit-shankar-85454017a/"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Rohit Shankar</a
-            >
-            <p class="text-lg">Website Developer</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Abhinav Mellamarthy"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/abhinav-mellamarthy-9876bb25b/"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Abhinav Mellamarthy</a
-            >
-            <p class="text-lg">Website Developer</p>
-          </div>
-        </div>
-      </div>
+        
 
-      <div class="text-4xl font-bold text-center mt-16 text-[#C5A34C]">
+    <div class="section">
+
+        <a href="https://www.linkedin.com/in/neha-veeramani-040681255/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/neha veeramani.png" alt="">
+            <div class="name">Neha Veeramani</div>
+            <div class="title">CEO & Founder</div>
+        </div>
+    </a>
+
+    <a href="https://www.linkedin.com/in/shanzay-ahmed-23669a294/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Shanzay Ahmed.png" alt="">
+            <div class="name">Shanzay Ahmed</div>
+            <div class="title">Social Media Manager</div>
+        </div>
+    </a>
+
+    <a href="https://www.linkedin.com/in/bharath-balanagu-a80765260/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Bharath Balanagu.png" alt="">
+            <div class="name"> Bharath Balanagu</div>
+            <div class="title">Social Media Manager</div>
+        </div>
+    </a>
+
+    <a href="" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Garima Duggal.png" alt="">
+            <div class="name"> Garima Duggal</div>
+            <div class="title">Social Media Manager</div>
+        </div>
+    </a>
+        
+
+    </div>
+
+    <!-- Competition Logistics Team -->
+
+    <div class="small-title">
         Competition Logistics Team
-      </div>
-      <div class="sm:grid grid-cols-5 gap-8 mt-12">
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Ish Aggarwal"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/ish-aggarwal-525799310"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Ish Aggarwal</a
-            >
-            <p class="text-lg">Head of Competition</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Darsh Nirmal"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/darsh-nirmal-a7526b2b8/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Darsh Nirmal</a
-            >
-            <p class="text-lg">Competition Logistics Member</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Sujit Tandale"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/sujit-tandale/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Sujit Tandale</a
-            >
-            <p class="text-lg">Competition Logistics Member</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Aryan Aggarwal"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/aryan-aggarwal-18a6922a5/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Aryan Aggarwal</a
-            >
-            <p class="text-lg">Competition Logistics Member</p>
-          </div>
-        </div>
-      </div>
+    </div>
 
-      <div class="text-4xl font-bold text-center mt-16 text-[#C5A34C]">
+        
+
+    <div class="section">
+
+        <a href="https://www.linkedin.com/in/simeon-varghese-aa700228a/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Ish Aggarwal.png" alt="">
+            <div class="name">Ish Aggarwal</div>
+            <div class="title">Head of Competition</div>
+        </div>
+    </a>
+
+    <a href="https://www.linkedin.com/in/darsh-nirmal-a7526b2b8/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Darsh Nirmal.png" alt="">
+            <div class="name">Darsh Nirmal</div>
+            <div class="title">Competition Logistics Manager</div>
+        </div>
+    </a>
+
+    <a href="https://www.linkedin.com/in/sujit-tandale/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Sujit Tandale.png" alt="">
+            <div class="name"> Sujit Tandale</div>
+            <div class="title">Competition Logistics Manager</div>
+        </div>
+    </a>
+
+    <a href="https://www.linkedin.com/in/aryan-aggarwal-18a6922a5/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Aryan Aggarwal.png" alt="">
+            <div class="name"> Aryan Aggarwal</div>
+            <div class="title">Competition Logistics Manager</div>
+        </div>
+    </a>
+
+        
+
+    </div>
+
+    <!-- Growth Team -->
+
+    <div class="small-title">
         Growth Team
-      </div>
-      <div class="sm:grid grid-cols-5 gap-8 mt-12">
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/meghana.png"
-              alt="Meghana Chodavarapu"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/meghana-chodavarapu/"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Meghana Chodavarapu</a
-            >
-            <p class="text-lg">CGO</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Justin Ambrozai"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/me?trk=p_mwlite_feed_updates-secondary_nav"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Justin Ambrozai</a
-            >
-            <p class="text-lg">Growth Member</p>
-          </div>
-        </div>
-        <div class="profile-card">
-          <div class="img">
-            <img
-              src="images/failogo.png"
-              alt="Sahil Nawal"
-              class="rounded-lg w-full h-60 object-cover"
-            />
-          </div>
-          <div class="caption text-center mt-4">
-            <a
-              href="https://www.linkedin.com/in/sahil-nawal-109800239?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
-              target="_blank"
-              class="font-semibold text-xl text-white"
-              >Sahil Nawal</a
-            >
-            <p class="text-lg">Growth Member</p>
-          </div>
-        </div>
-      </div>
     </div>
-  </body>
 
-  <footer class="bg-veryDarkBlue">
-    <div
-      class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0"
-    >
-      <div
-        class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start"
-      >
-        <div class="mx-auto my-6 text-center text-white md:hidden">
-          Add Copyrite Stamp
+        
+
+    <div class="section">
+
+        <a href="https://www.linkedin.com/in/meghana-chodavarapu/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Meghana Chodavarapu.png" alt="">
+            <div class="name">Meghana Chodavarapu</div>
+            <div class="title">CGO</div>
         </div>
-        <div>
-          <img src="images/fai.png" class="h-12" alt="" />
+    </a>
+
+    <a href="https://www.linkedin.com/in/justin-ambrozaitis-67434224b/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Justin Ambrozai.png" alt="">
+            <div class="name">Justin Ambrozai</div>
+            <div class="title">Growth Manager</div>
         </div>
-        <div class="flex justify-center space-x-4">
-          <a href="https://www.youtube.com/@FAI_Club" target="_blank">
-            <img src="images/icon-youtube.svg" alt="" class="h-8" />
-          </a>
-          <a href="https://www.youtube.com/@FAI_Club" target="_blank">
-            <img src="images/linkedin.jpg" alt="" class="h-8" />
-          </a>
-          <a href="https://www.instagram.com/fai__club/" target="_blank">
-            <img src="images/Instagram Logo 2.png" alt="" class="h-8" />
-          </a>
+    </a>
+
+    <a href="https://www.linkedin.com/in/sahil-nawal-109800239/" target="_blank" style="text-decoration: none;">
+
+        <div class="person">
+            <img src="images/fai-team-pics/Sujit Tandale.png" alt="">
+            <div class="name"> Sahil Nawal</div>
+            <div class="title">Growth Manager</div>
         </div>
-      </div>
-      <div class="flex justify-around space-x-32">
-        <div class="flex flex-col space-y-3 text-white">
-          <a href="index.html" class="hover:text-brightRed">Home</a>
-          <a href="team.html" class="hover:text-brightRed">Our Team</a>
-          <a href="contact.html" class="hover:text-brightRed">Contact</a>
-          <a href="chapters.html" class="hover:text-brightRed">Chapters</a>
+    </a>
+    
+    <a href="https://www.linkedin.com/in/charlie-t-742717282/" target="_blank" style="text-decoration: none;">
+
+        <div class="person">
+            <img src="images/fai-team-pics/Charlie Turlington.png" alt="">
+            <div class="name"> Charlie Turlington</div>
+            <div class="title">Growth Manager</div>
         </div>
-        <div class="flex flex-col space-y-3 text-white">
-          <a href="guest-lectures.html" class="hover:text-brightRed"
-            >Guest Lectures</a
-          >
-          <a href="blog.html" class="hover:text-brightRed">Blog</a>
-          <a href="about.html" class="hover:text-brightRed">About Us</a>
-        </div>
-      </div>
-      <div class="flex flex-col justify-between">
-        <form>
-          <div class="flex space-x-3">
-            <input
-              type="text"
-              class="flex-1 px-4 rounded-full focus:outline-none"
-              placeholder="Ask a Question"
-            />
-            <button
-              class="px-6 py-2 text-black rounded-full bg-lime-100 hover:bg-green-500 focus:outline-none"
-            >
-              Send
-            </button>
-          </div>
-        </form>
-        <div class="hidden text-white md:block">Add Copyright Stamp</div>
-      </div>
+
+    </a>
+
+        
+
     </div>
-  </footer>
+
+
+    <!-- Curriculum Team -->
+
+    <div class="small-title">
+        Curriculum Team
+    </div>
+    
+        
+
+    <div class="section">
+
+        <a href="https://www.linkedin.com/in/rohan-shome-17b891289/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Rohan Shome.png" alt="">
+            <div class="name">Rohan Shome</div>
+            <div class="title">Head of Curriculum</div>
+        </div>
+    </a>
+
+    <a href="" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Rishi Alluru.png" alt="">
+            <div class="name">Rishi Alluru</div>
+            <div class="title">Curriculum Manager</div>
+        </div>
+
+    </a>
+
+    <a href="https://www.linkedin.com/in/rowen-poddar-b5899a27b/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Rowen Poddar.png" alt="">
+            <div class="name"> Rowen Poddar</div>
+            <div class="title">Curriculum Manager</div>
+        </div>
+    </a>
+
+    <a href="" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/favicon.ico" alt="">
+            <div class="name"> Arjun Patel</div>
+            <div class="title">Curriculum Manager</div>
+        </div>
+    </a>
+
+    <a href="https://www.linkedin.com/in/rehaan-chamakura-712b49310/" target="_blank" style="text-decoration: none;">
+
+        <div class="person">
+            <img src="images/fai-team-pics/Rehaan Chamakura.png" alt="">
+            <div class="name"> Rehaan Chamakura</div>
+            <div class="title">Curriculum Manager</div>
+        </div>
+
+    </a>
+
+    <a href="https://www.linkedin.com/in/parin-chanana-3b88012a1/" target="_blank" style="text-decoration: none;">
+        <div class="person">
+            <img src="images/fai-team-pics/Parin Chanana.png" alt="">
+            <div class="name"> Parin Chanana</div>
+            <div class="title">Curriculum Manager</div>
+        </div>
+    </a>
+        
+
+    </div>
+
+    <main>
+        <p>This is the home page.</p>
+        <button id="clickMe">Click Me</button>
+    </main>
+    <footer>
+        <p>&copy; FAI Club</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
 </html>
-
