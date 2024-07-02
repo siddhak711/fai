@@ -12,6 +12,187 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Questrial&display=swap" rel="stylesheet">
+    <style>
+      body, html {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          width: 100%;
+          overflow-x: hidden;
+          font-family: 'Questrial', sans-serif;
+          overflow-y: scroll;
+      }
+      html {
+          overflow-y: hidden;
+          scroll-behavior: smooth;
+      }
+      .segment {
+          width: 100%;
+          display: flex;
+          align-items: flex-end;
+          padding: 3%;
+          box-sizing: border-box;
+          position: relative;
+      }
+      .black {
+          background-color: black;
+          color: white;
+          text-align: right;
+          justify-content: flex-end;
+          padding-top: 10%;
+          position: relative;
+      }
+      .black.first {
+          height: 100vh;
+          background-image: url('lectures.png');
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          position: relative;
+          z-index: 1;
+      }
+      .black.first::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.75);
+          z-index: -1;
+      }
+      .yellow {
+          background-color: #FFDE5A;
+          color: black;
+          text-align: left;
+          justify-content: flex-start;
+          position: relative;
+      }
+      .yellow::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.3);
+          z-index: -1;
+      }
+      .title {
+          font-family: 'Archivo Black', sans-serif;
+          font-size: 2.5em;
+          margin-bottom: 1%;
+          word-wrap: break-word;
+          max-width: 50%;
+      }
+      .body-text {
+          font-size: 1.2em;
+          max-width: 50%;
+          word-wrap: break-word;
+      }
+      .black .title {
+          color: #FFDE5A;
+      }
+      .content-wrapper {
+          max-width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          margin-right: auto;
+      }
+      .black .content-wrapper {
+          align-items: flex-end;
+      }
+      .yellow .content-wrapper {
+          align-items: flex-start;
+      }
+      .video-container {
+          position: relative;
+          width: 100%;
+          padding-top: 56.25%; /* 16:9 Aspect Ratio (iframe video) */
+          margin-top: 0; /* Removed margin */
+          margin-bottom: -17%; /* Added margin */
+      }
+      .video-wrapper {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 70%; /* Adjust width as needed */
+          height: 70%; /* Adjust height as needed */
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 20px;
+          overflow: hidden;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      }
+      .video-wrapper iframe {
+          width: 100%;
+          height: 100%;
+          border: none;
+      }
+      .video-wrapper-right {
+          right: 0;
+          left: auto;
+      }
+      .icons-container {
+          background-color: #FFDE5A;
+          border-radius: 20px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 5px;
+          width: fit-content;
+          margin-top: 10px; /* Adjust margin as needed */
+          margin: 1%;
+      }
+      .icons {
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 10px; /* Added gap between icons */
+      }
+      .icon {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none; /* Ensure no underline for links */
+          color: black; /* Adjust color as needed */
+          position: relative;
+          overflow: hidden;
+      }
+      .icon img {
+          width: 40px;
+          height: 40px;
+          padding: 5px;
+          transition: transform 0.3s ease;
+          z-index: 1;
+      }
+      .icon:hover img {
+          transform: scale(1.2); /* Scale up on hover */
+      }
+      .icon .text {
+          position: absolute;
+          top: 50%;
+          left: 110%;
+          transform: translateY(-50%);
+          background-color: rgba(255, 255, 255, 0.9);
+          padding: 5px 10px;
+          border-radius: 5px;
+          white-space: nowrap;
+          visibility: hidden;
+          opacity: 0;
+          transition: opacity 0.3s, visibility 0s linear 0.3s;
+          z-index: 0;
+      }
+      .icon:hover .text {
+          visibility: visible;
+          opacity: 1;
+          transition-delay: 0s;
+          z-index: 2;
+      }
+  </style>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       function openMenu() {
@@ -48,21 +229,6 @@
         window.open("https://www.linkedin.com/in/mattandersonprofile/", "_blank");
       }
     </script>
-    <style>
-      .video-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-      }
-      .video-wrapper {
-        border: 4px solid rgba(154, 132, 9, 0.781);
-        border-radius: 10px;
-      }
-      .video-wrapper + .video-wrapper {
-        margin-top: 20px; /* Adjust this value to reduce the spacing between guest lectures */
-      }
-    </style>
   </head>
   <body>
     <header
@@ -129,217 +295,81 @@
         >
       </div>
     </header>
-    <div class="text-6xl font-bold text-center mt-36">
-      <span
-        class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg"
-        >Guest Lectures</span
-      >
-    </div>
-    <div class="video-container">
-      <button
-        class="bg-[#c02424] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] p-4 text-center text-white text-base font-semibold mt-4"
-        onclick="visitFaiYoutube();"
-      >
-        <img src="images/goldyt.png" alt="" class="inline-block h-8 w-8 mr-2" />
-        FAI Youtube
-        <img
-          src="images/arrow.png"
-          alt=""
-          class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1"
-        />
-      </button>
-      <div class="px-2 py-2 sm:px-10 sm:py-10">
-        <!-- First Guest Lecture -->
-        <div
-          class="p-30 bg-[#373e50] rounded-lg md:max-lg:flex-wrap lg:flex video-wrapper"
-        >
-          <div class="lg:w-2/5">
-            <iframe
-              class="p-5 w-full"
-              height="330"
-              width="400"
-              src="https://www.youtube.com/embed/CyXfw_J5nlw"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+      <div class="segment black first">
+          <div class="content-wrapper">
+              <div class="title">Guest Lectures</div>
+              <div class="body-text">The Finance and Investments Club is committed to providing students the most engaging and empowering resources to propel their learning to the next level. As such, we regularly host lectures with guest speakers that share professional insights into their careers.</div>
           </div>
-          <div class="mt-5 lg:w-3/5">
-            <div class="font-bold text-xl mx-4 mb-4">
-              Banking Exploration with Matt Anderson
-            </div>
-            <p class="text-white mx-4 mt-4">
-              FAI hosted its 3rd guest lecture with Matt Anderson, a Senior Vice
-              President at Wells Fargo Private Bank, at Reedy High School. Our
-              members had the opportunity to learn about the various career
-              pathways open within the banking industry, how to break through in
-              the competitive banking industry, and what the overall banking
-              industry was like.
-            </p>
-            <button
-              class="bg-[#5c81e8a1] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] p-4 text-center text-white text-base font-semibold my-4 ml-4 mr-2"
-              onclick="visitMattLinkedIn();"
-            >
-              <img
-                src="images/LinkedIn.png"
-                alt=""
-                class="inline-block h-8 w-8 mr-2"
-              />
-              Check out Matt Anderson
-              <img
-                src="images/arrow.png"
-                alt=""
-                class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1"
-              />
-            </button>
-            <button
-              class="bg-[#e8565ea1] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] p-4 text-center text-white text-base font-semibold my-4 mx-2"
-              onclick="visitMattInterview();"
-            >
-              <img
-                src="images/youtube.png"
-                alt=""
-                class="inline-block h-8 w-8 mr-2"
-              />
-              Check out the interview
-              <img
-                src="images/arrow.png"
-                alt=""
-                class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1"
-              />
-            </button>
-          </div>
-        </div>
       </div>
-      <div class="px-2 py-2 sm:px-10 sm:py-10">
-        <!-- Second Guest Lecture -->
-        <div
-          class="p-30 bg-[#373e50] rounded-lg md:max-lg:flex-wrap lg:flex video-wrapper"
-        >
-          <div class="lg:w-2/5">
-            <iframe
-              class="p-5 w-full"
-              height="330"
-              width="400"
-              src="https://www.youtube.com/embed/sSbcx8rg1nc"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+      <div class="segment yellow">
+          <div class="content-wrapper">
+              <div class="title">Banking Exploration with Matt Anderson</div>
+              <div class="video-container">
+                  <div class="video-wrapper yellow-border">
+                      <iframe src="https://www.youtube.com/embed/CyXfw_J5nlw" frameborder="0" allowfullscreen></iframe>
+                  </div>
+              </div>
+              <div class="icons-container">
+                  <div class="icons">
+                      <a href="https://www.linkedin.com/in/mattandersonprofile/" target="_blank" class="icon">
+                          <img src="images/LinkedIn.png" alt="LinkedIn">
+                          <div class="text">View the speaker's profile</div>
+                      </a>
+                      <a href="https://www.youtube.com/embed/CyXfw_J5nlw" target="_blank" class="icon">
+                          <img src="images/appYoutube.png" alt="YouTube">
+                          <div class="text">View the lecture</div>
+                      </a>
+                  </div>
+              </div>
+              <div class="body-text">FAI hosted its third guest lecture with Matt Anderson, a Senior Vice President at Wells Fargo Private Bank, at Reedy High School. Our members had the opportunity to learn about the various career pathways open within the banking industry, how to break through in the competitive banking industry, and what the overall banking industry was like.</div>
           </div>
-          <div class="mt-5 lg:w-3/5">
-            <div class="font-bold text-xl mx-4 mb-4">
-              So You Want to be The Boss? with Winston Black
-            </div>
-            <p class="text-white mx-4 mt-4">
-              It is our pleasure to introduce Mr. Winston Black, Founder and Former CEO of SWK Holdings!
-              Mr. Black is a senior life science executive with broad finance, operational and entrepreneurial experience. He most recently served as CEO and Chairman of SWK Holdings Corporation, a Nasdaq-listed, life science specialty finance company that he co-founded in 2012.
-              Prior to that time, Mr. Black was a partner at PBS Capital Management, LLC, an investment management business specializing in pharmaceutical royalties and healthcare equities that he co-founded in 2009. Prior to that, Mr. Black was a Senior Portfolio Analyst at Highland Capital Management, COO/Analyst and Chief Compliance Officer at Mallette Capital Management, and Vice President of Corporate Development for ATX Communications.
-              Mr. Black received MBAs with distinction from both Columbia Business School and London Business School and received a BA in Economics from Duke University, where he graduated Cum Laude.
-            </p>
-            <button
-              class="bg-[#5c81e8a1] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] p-4 text-center text-white text-base font-semibold my-4 ml-4 mr-2"
-              onclick="visitWinstonLinkedIn();"
-            >
-              <img
-                src="images/LinkedIn.png"
-                alt=""
-                class="inline-block h-8 w-8 mr-2"
-              />
-              Check out Winston Black
-              <img
-                src="images/arrow.png"
-                alt=""
-                class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1"
-              />
-            </button>
-            <button
-              class="bg-[#e8565ea1] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] p-4 text-center text-white text-base font-semibold my-4 mx-2"
-              onclick="visitWinstonInterview();"
-            >
-              <img
-                src="images/youtube.png"
-                alt=""
-                class="inline-block h-8 w-8 mr-2"
-              />
-              Check out the interview
-              <img
-                src="images/arrow.png"
-                alt=""
-                class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1"
-              />
-            </button>
-          </div>
-        </div>
       </div>
-      <div class="px-2 py-2 sm:px-10 sm:py-10">
-        <!-- Third Guest Lecture -->
-        <div
-          class="p-30 bg-[#373e50] rounded-lg md:max-lg:flex-wrap lg:flex video-wrapper"
-        >
-          <div class="lg:w-2/5">
-            <iframe
-              class="p-5 w-full"
-              height="330"
-              width="400"
-              src="https://www.youtube.com/embed/ogFhUzIh244"
-              title="YouTube video player"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowfullscreen
-            ></iframe>
+      <div class="segment black">
+          <div class="content-wrapper">
+              <div class="title">So You Want to be The Boss? with Winston Black</div>
+              <div class="video-container">
+                  <div class="video-wrapper video-wrapper-right">
+                      <iframe src="https://www.youtube.com/embed/sSbcx8rg1nc" frameborder="0" allowfullscreen></iframe>
+                  </div>                
+              </div>
+              <div class="icons-container">
+                  <div class="icons">
+                      <a href="https://www.linkedin.com/in/winston-black-069299/" target="_blank" class="icon">
+                          <img src="images/LinkedIn.png" alt="LinkedIn">
+                          <div class="text">View the speaker's profile</div>
+                      </a>
+                      <a href="https://www.youtube.com/embed/sSbcx8rg1nc" target="_blank" class="icon">
+                          <img src="images/appYoutube.png" alt="YouTube">
+                          <div class="text">View the lecture</div>
+                      </a>
+                  </div>
+              </div>
+              <div class="body-text">FAI's second guest lecture was with Mr. Winston Black, Founder and Former CEO of SWK Holdings. Mr. Black is a senior life science executive with extensive finance, operational, and entrepreneurial experience. He co-founded SWK Holdings, a Nasdaq-listed life science finance company, in 2012 and served as CEO and Chairman. Previously, he was a partner at PBS Capital Management and held roles at Highland Capital Management, Mallette Capital Management, and ATX Communications. Mr. Black holds MBAs from Columbia Business School and London Business School and a BA in Economics from Duke University.</div>
           </div>
-          <div class="mt-5 lg:w-3/5">
-            <div class="font-bold text-xl mx-4 mb-4">
-              Exploring Finance Careers with Blake Siewert
-            </div>
-            <p class="text-white mx-4 mt-4">
-              In our first guest lecture of the year, we were honored to host
-              Mr. Blake Siewert, the Managing Director at CIBC. Mr. Siewert has
-              extensive experience in finance, including over six years at CIBC
-              and nearly 15 years at J.P. Morgan. During the session, he shared
-              insights on career development in finance, navigating industry
-              challenges, and the importance of networking and continuous
-              learning. The lecture provided valuable knowledge for anyone
-              aspiring to build a career in finance.
-            </p>
-            <button
-              class="bg-[#5c81e8a1] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] p-4 text-center text-white text-base font-semibold my-4 ml-4 mr-2"
-              onclick="visitBlakeLinkedIn();"
-            >
-              <img
-                src="images/LinkedIn.png"
-                alt=""
-                class="inline-block h-8 w-8 mr-2"
-              />
-              Check out Blake Siewert
-              <img
-                src="images/arrow.png"
-                alt=""
-                class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1"
-              />
-            </button>
-            <button
-              class="bg-[#e8565ea1] rounded-xl transition ease-in-out delay-150 duration-300 hover:scale-105 hover:bg-[#B88C41] p-4 text-center text-white text-base font-semibold my-4 mx-2"
-              onclick="visitBlakeInterview();"
-            >
-              <img
-                src="images/youtube.png"
-                alt=""
-                class="inline-block h-8 w-8 mr-2"
-              />
-              Check out the interview
-              <img
-                src="images/arrow.png"
-                alt=""
-                class="inline-block h-6 w-6 ml-2 transition ease-in-out delay-150 duration-300 hover:translate-x-1"
-              />
-            </button>
+      </div>        
+      <div class="segment yellow">
+          <div class="content-wrapper">
+              <div class="title">Value Squared with Blake Siewert</div>
+              <div class="video-container">
+                  <div class="video-wrapper yellow-border">
+                      <iframe src="https://www.youtube.com/embed/ogFhUzIh244" frameborder="0" allowfullscreen></iframe>
+                  </div>
+              </div>
+              <div class="icons-container">
+                  <div class="icons">
+                      <a href="https://www.linkedin.com/in/blakesiewert/" target="_blank" class="icon">
+                          <img src="images/LinkedIn.png" alt="LinkedIn">
+                          <div class="text">View the speaker's profile</div>
+                      </a>
+                      <a href="https://www.youtube.com/embed/ogFhUzIh244" target="_blank" class="icon">
+                          <img src="images/appYoutube.png" alt="YouTube">
+                          <div class="text">View the lecture</div>
+                      </a>
+                  </div>
+              </div>
+              <div class="body-text">In our first guest lecture of the year, we were honored to host Mr. Blake Siewert, the Managing Director at CIBC. Mr. Siewert has extensive experience in finance, including over six years at CIBC and nearly 15 years at J.P. Morgan. During the session, he shared insights on career development in finance, navigating industry challenges, and the importance of networking and continuous learning. The lecture provided valuable knowledge for anyone aspiring to build a career in finance.</div>
           </div>
-        </div>
       </div>
-    </div>
-  </body>
+      
+      </body>
 </html>
