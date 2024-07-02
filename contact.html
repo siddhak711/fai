@@ -7,6 +7,7 @@
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link href="./dist/output.css" rel="stylesheet" />
     <link href="index.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Questrial&display=swap" rel="stylesheet">
     <link
       href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css"
       rel="stylesheet"
@@ -21,6 +22,95 @@
         menu.classList.toggle("hidden");
       }
     </script>
+    <style>
+      body, html {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          width: 100%;
+          overflow-x: hidden;
+          background-color: black;
+          font-family: 'Questrial', sans-serif;
+          overflow-y: scroll;
+      }
+      html {
+          overflow-y: hidden;
+          scroll-behavior: smooth;
+      }
+      .segment {
+          width: 100%;
+          display: flex;
+          align-items: flex-end;
+          padding: 3%;
+          box-sizing: border-box;
+          height: 100vh;
+          position: relative;
+      }
+      .black {
+          background-color: black;
+          color: white;
+          text-align: left;
+          justify-content: flex-start;
+          padding-top: 10%;
+          background-image: url('people_contact.png');
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          position: relative;
+          z-index: 1;
+      }
+      .black::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.75);
+          z-index: -1;
+      }
+      .title {
+          font-family: 'Archivo Black', sans-serif;
+          font-size: 2.5em;
+          margin-bottom: 1%;
+          color: #FFDE5A;
+      }
+      .body-text {
+          font-size: 1.2em;
+          max-width: 50%;
+          word-wrap: break-word;
+          color: white;
+      }
+      .content-wrapper {
+          max-width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+      }
+      .contact-icons {
+          background-color: #1d1b16;
+          border-radius: 10px;
+          padding: 1%;
+          display: flex;
+          justify-content: space-around;
+          align-items: center;
+          margin-top: 20px;
+          width: fit-content;
+      }
+      .contact-icons a {
+          display: flex;
+          align-items: center;
+          transition: transform 0.2s;
+      }
+      .contact-icons a:hover {
+          transform: scale(1.1);
+      }
+      .contact-icons img {
+          width: 40px;
+          height: 40px;
+          margin: 0 10px;
+      }
+  </style>
   </head>
   <body>
     <header
@@ -87,91 +177,28 @@
         >
       </div>
     </header>
-
-    <div class="px-4 sm:px-8 lg:px-20 xl:px-32">
-      <div class="text-6xl font-bold text-center mt-32">
-        <span
-          class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg"
-          >Contact Us</span
-        >
-      </div>
-
-      <div class="grid md:grid-cols-2 gap-10 py-16">
-        <div class="bg-[#373e50] p-10 rounded-lg">
-          <dd class="text-[#DFBD69] text-2xl font-bold drop-shadow-lg">
-            Email
-          </dd>
-          <div class="border-2 border-[#926F34] mt-5"></div>
-          <div class="flex-wrap">
-            <div
-              class="h-auto w-full inline-flex mt-5 hover:bg-[#445360] rounded-lg py-2.5 drop-shadow-lg transition ease-in-out delay-150 duration-300 hover:scale-105"
-            >
-              <a
-                target="_blank"
-                href="mailto:financeandinvestments@gmail.com"
-                class="w-full h-full flex items-center"
-              >
-                <p
-                  class="text-white text-sm sm:text-xl md:text-sm lg:text-xl font-bold mx-3"
-                >
-                  financeandinvestments@gmail.com
-                </p>
-              </a>
+    <div class="segment black">
+        <div class="content-wrapper">
+            <div class="title">Reach Us</div>
+            <div class="body-text">We are here to assist you with any questions or concerns you may have. Feel free to reach out to us through our email or social media channels. Our team is dedicated to providing prompt and helpful responses.</div>
+            <div class="contact-icons">
+                <a href="https://www.instagram.com/fai.club/" target="_blank">
+                    <img src="images/fai_Instagram_Hollow.png" alt="Instagram">
+                </a>
+                <a href="https://www.linkedin.com/company/fai-org/" target="_blank">
+                    <img src="images/fai_LinkedIn_Hollow.png" alt="LinkedIn">
+                </a>
+                <a href="https://www.youtube.com/@FAI_Club/embed/C8kSrkz8Hz8" target="_blank">
+                    <img src="images/fai_Youtube_Hollow.png" alt="YouTube">
+                </a>
+                <a href="mailto:financeandinvestments@gmail.com">
+                    <img src="images/fai_Gmail_Hollow.png" alt="Gmail">
+                </a>
             </div>
-            <div class="mt-5">
-              <p class="text-white text-md font-semibold mx-3">
-                Feel free to email us if you have questions about FAI or help
-                with starting your own chapter.
-              </p>
-            </div>
-          </div>
         </div>
-
-        <div class="bg-[#373e50] p-10 rounded-lg">
-          <dd class="text-[#DFBD69] text-2xl font-bold drop-shadow-lg">
-            Socials
-          </dd>
-          <div class="border-2 border-[#926F34] mt-5"></div>
-          <div class="flex mt-5">
-            <div
-              class="h-auto w-full inline-flex mt-5 hover:bg-[#445360] rounded-lg px-5 py-2.5 drop-shadow-lg transition ease-in-out delay-150 duration-300 hover:scale-105"
-            >
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/company/fai-org/"
-                class="w-full h-full flex items-center"
-              >
-                <img
-                  src="images/faiLinkedIn.png"
-                  alt=""
-                  class="inline-block h-10 w-10 mr-2"
-                />
-                <p class="text-white text-lg font-bold ml-1">FAI org</p>
-              </a>
-            </div>
-          </div>
-          <div class="flex">
-            <div
-              class="h-auto w-full inline-flex mt-5 hover:bg-[#445360] rounded-lg px-5 py-2.5 drop-shadow-lg transition ease-in-out delay-150 duration-300 hover:scale-105"
-            >
-              <a
-                target="_blank"
-                href="https://www.instagram.com/fai__club/"
-                class="w-full h-full flex items-center"
-              >
-                <img
-                  src="images/faiInstagram.png"
-                  alt=""
-                  class="inline-block h-10 w-10 mr-2 rounded-md"
-                />
-                <p class="text-white text-lg font-bold ml-1">fai__club</p>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </body>
+</body>
+  
 </html>
 
       
