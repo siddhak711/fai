@@ -12,8 +12,11 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Questrial&display=swap" rel="stylesheet">
     <style>/* Container holding the image and the text */
-
+      header {
+          font-family: 'Questrial', sans-serif;
+      }
     
       #met1,#guest, #library {
         position: relative;
@@ -67,7 +70,12 @@
       .containero:hover {
           transform: scale(1.1);
       }
-      
+      .title {
+          font-family: 'Archivo Black', sans-serif;
+        }
+        body {
+            font-family: 'Questrial', sans-serif;
+        }
       </style>
 
 <style> 
@@ -260,14 +268,9 @@
           >Home</a
         >
         <a
-          href="team.html"
+          href="about.html"
           class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
-          >Our Team</a
-        >
-        <a
-          href="contact.html"
-          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
-          >Contact</a
+          >About Us</a
         >
         <a
           href="chapters.html"
@@ -285,9 +288,14 @@
           >Blog</a
         >
         <a
-          href="about.html"
+          href="team.html"
           class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
-          >About Us</a
+          >Our Team</a
+        >
+        <a
+          href="contact.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Contact</a
         >
       </div>
       <div id="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
@@ -308,10 +316,10 @@
       
       <!-- Main Content -->
       <div class="relative z-10 top-[37vh]">
-        <p class="text-7xl text-[#FFDE59] font-bold mb-2">FAI</p>
+        <p class="text-7xl text-[#FFDE59] font-bold mb-2 title">FAI</p>
         <p class="text-3xl text-white">Empowering financial futures at</p>
-        <p id="schoolName" class="text-[#FFDE59] font-bold transition text-3xl mb-3 mt-1">Reedy High School</p>
-        <button class="bg-[#FFDE59] rounded-xl transition ease-in-out duration-300 hover:scale-105 mt-2 p-4 text-center text-black text-base font-semibold" onclick="visitDonatePage();">
+        <p id="schoolName" class="text-[#FFDE59] font-bold transition text-3xl mb-3 mt-1 title">Reedy High School</p>
+        <button class="bg-[#FFDE59] rounded-xl transition ease-in-out duration-300 hover:scale-105 mt-2 py-3 px-4 text-lg text-center text-black title" onclick="visitDonatePage();">
           Donate
         </button>
       </div>
@@ -319,7 +327,7 @@
       <!-- About Us Section -->
       <div class="absolute bottom-0 right-0 p-4 lg:w-[43vw]">
         <div class="text-right mt-4">
-          <h3 class="lg:text-6xl text-5xl font-extrabold text-[#FFDE59] mb-2">About Us</h3>
+          <h3 class="lg:text-6xl text-5xl font-extrabold text-[#FFDE59] mb-2 title">About Us</h3>
           <p class="lg:text-2xl text-[17px] text-white mt-2 ml-20 lg:ml-0">
             The Finance and Investments (FAI) Club looks to empower students with the knowledge and skills to navigate the corporate world. FAI has evolved into a thriving 501(c)(3) non-profit dedicated to fostering financial literacy and education among students worldwide.
           </p>
@@ -331,7 +339,7 @@
   <a href="https://06f0kz9cclf.typeform.com/to/JSvZ5oHP/?typeform-source=faiclub.org" style="text-decoration: none;width: 100%;height: 15em;background-color: #FFDE59;z-index: 999999; " target="_blank">
   <div style="background-color: #FFDE59; width: 100%; " class="text-center flex flex-col justify-center items-center h-full w-full transition ease-in-out duration-300 hover:scale-110 p-3">
       <p class="text-black md:text-3xl text-xl">Become a Part of Our Story</p>
-      <p class="text-black md:text-7xl text-4xl font-extrabold pb-4">Start A Chapter</p>
+      <p class="text-black md:text-7xl text-4xl font-extrabold pb-4 title">Start A Chapter</p>
   </div>
   </a>
   
@@ -340,8 +348,8 @@
 <div class="relative lg:flex justify-center items-center bg-black text-white lg:pl-10 px-8 lg:px-0">
   <!-- Text Content -->
   <div class="relative lg:w-7/12 z-10 lg:pr-20">
-    <h3 class="lg:text-6xl text-4xl font-extrabold text-[#FFDE59] mb-4 mt-16 lg:text-left text-center">Available Opportunities <br> For You</h3>
-    <p class="text-[14px] lg:mb-20 mb-5 lg:pr-10">
+    <h3 class="lg:text-6xl text-4xl font-extrabold text-[#FFDE59] mb-4 mt-16 lg:text-left text-center title">Available Opportunities <br> For You</h3>
+    <p class="text-[18px] lg:mb-20 mb-5 lg:pr-10">
       At FAl, resources are continuously built up to meet members' desires. Our guest lectures continue each month, sharing some industry insights and allowing a special attending member Q&A. This year, chapters will share improved curriculum, featuring additional topics and interactive sessions. In addition, FAl is introducing exciting new competitions, namely virtual business challenges, entrepreneurship pitches, in addition to the annual stock market game. The introduction of FAl's Mentor Pool will allow students to connect with seasoned business professionals, turning to them for specific 1-to-1 guidance and advice. Lastly, the Research Pipeline program will provide a one of a kind opportunity for upperclassmen to collaborate with finance/economics professors during hands-on research projects.
     </p>
   </div>
@@ -363,9 +371,9 @@
     <div class="md:w-1/2">
       <h3 class="lg:text-6xl text-3xl font-extrabold text-black mb-4">
         <span class="block lg:text-3xl text-xl font-normal">FAI EVENTS</span>
-        <p class="text-center lg:text-left">Guest Lectures</p>
+        <p class="text-center lg:text-left title">Guest Lectures</p>
       </h3>
-      <p class="text-[15px] text-black lg:pr-20 mb-5 lg:mb-0">
+      <p class="text-[18px] text-black lg:pr-20 mb-5 lg:mb-0">
         At FAl, resources are continuously built up to meet members' desires. Our guest lectures continue each month, sharing some industry insights and allowing a special attending member Q&A. This year, chapters will share improved curriculum, featuring additional topics and interactive sessions. In addition, FAl is introducing exciting new competitions, namely virtual business challenges, entrepreneurship pitches, in addition to the annual stock market game. The introduction of FAl's Mentor Pool will allow students to connect with seasoned business professionals, turning to them for specific 1-to-1 guidance and advice. Lastly, the Research Pipeline program will provide a one of a kind opportunity for upperclassmen to collaborate with finance/economics professors during hands-on research projects.
       </p>
     </div>
@@ -380,9 +388,9 @@
     <div class="lg:mx-12 mx-2">
       <h3 class="lg:text-6xl text-3xl font-extrabold text-[#FFDE59] mb-4">
         <span class="block lg:text-3xl text-xl font-normal">FAI EVENTS</span>
-        <p class="text-center lg:text-left">Stock Market Game</p>
+        <p class="text-center lg:text-left title">Stock Market Game</p>
       </h3>
-      <p class="text-lg">
+      <p class="text-[20px]">
         At FAl, we take pride in our Stock Market Game competition, an exciting and educational experience designed to immerse members of the Finance and Investments Club in the world of trading and investment. This interactive simulation allows participants to manage a virtual portfolio, make real-time decisions, and experience the thrills and challenges of the stock market.
       </p>
     </div>
@@ -394,9 +402,9 @@
     <div class="lg:w-7/12">
       <h3 class="lg:text-6xl text-3xl font-extrabold text-black mb-4">
         <span class="block lg:text-3xl text-xl font-normal">FAI PHILANTHROPY</span>
-        <p class="text-center lg:text-left">Around the World</p>
+        <p class="text-center lg:text-left title">Around the World</p>
       </h3>
-      <p class="text-lg text-black lg:pr-20">
+      <p class="text-[18px] text-black lg:pr-20">
         As part of our philanthropic efforts, we have embarked on an ambitious project to build a library in a rural village in India. This initiative aims to provide access to educational resources and foster a culture of learning and literacy among the local community. With the collective efforts of our dedicated members and generous contributions from supporters, we have made significant progress toward this goal. Fundraising events, charity drives, and community outreach programs have helped us secure a substantial portion of the necessary funds.
       </p>
     </div>
@@ -408,8 +416,8 @@
   
   <!-- Sponsors Section -->
   <div class="bg-black text-white py-16 text-center">
-    <p class="text-3xl mb-2 font-semibold">Thanks To Our</p>
-    <h3 class="text-6xl font-extrabold mb-8">Sponsors</h3>
+    <p class="text-3xl mb-2 font-semibold title">Thanks To Our</p>
+    <h3 class="text-6xl font-extrabold mb-8 title">Sponsors</h3>
     <div class="flex justify-center items-center lg:space-x-32 md:space-x-12 space-x-0">
       <img src="images/BLUEBOLT.png" alt="Bluebolt" class="lg:w-1/5 md:w-3/12 w-4/12 p-4">
       <img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3b/Chipotle_Mexican_Grill_logo.svg/800px-Chipotle_Mexican_Grill_logo.svg.png" alt="Chipotle" class="lg:w-1/5 md:w-3/12 w-4/12 p-4">

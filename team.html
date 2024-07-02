@@ -12,9 +12,20 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Questrial&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-
+    <script>
+        function openMenu() {
+          var elem = document.getElementById("fainavlinks");
+          elem.classList.toggle("hidden");
+          var menu = document.getElementById("fainavlinks-donate");
+          menu.classList.toggle("hidden");
+        }
+      </script>
     <style>
+        header {
+          font-family: 'Questrial', sans-serif;
+        }
         body, html {
             margin: 0;
             padding: 0;
@@ -33,25 +44,35 @@
             text-align: center;
             padding: 0;
             margin: 0;
-            font-family: archivo;
+            font-family: 'Questrial', sans-serif;
+            font-weight: bold;
             padding: 1em;
         }
 
         .name{
-            font-size: 2em;
+            font-size: 1.5em;
             color: #FFDE59;
             justify-content: center;
             text-align: center;
-            font-family: archivo;
+            font-family: 'Archivo Black', sans-serif;
+            font-weight: lighter;
         }
 
         .title{
-            font-size: 2em;
+            font-size: 1.8em;
             color: white;
             justify-content: center;
             text-align: center;
-            font-family: questrial;
+            font-family: 'Questrial', sans-serif;
         }
+        /*
+        .title {
+          font-family: 'Archivo Black', sans-serif;
+        }
+        body {
+            font-family: 'Questrial', sans-serif;
+        }
+            */
 
         .section{
             padding-left: 3em;
@@ -119,14 +140,9 @@
           >Home</a
         >
         <a
-          href="team.html"
+          href="about.html"
           class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
-          >Our Team</a
-        >
-        <a
-          href="contact.html"
-          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
-          >Contact</a
+          >About Us</a
         >
         <a
           href="chapters.html"
@@ -144,9 +160,14 @@
           >Blog</a
         >
         <a
-          href="about.html"
+          href="team.html"
           class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
-          >About Us</a
+          >Our Team</a
+        >
+        <a
+          href="contact.html"
+          class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
+          >Contact</a
         >
       </div>
       <div id="fainavlinks-donate" class="hidden px-5 sm:pt-2 pb-4 sm:flex">
@@ -355,7 +376,7 @@
         <div class="person">
             <img src="images/fai-team-pics/neha veeramani.png" alt="">
             <div class="name">Neha Veeramani</div>
-            <div class="title">CEO & Founder</div>
+            <div class="title">CMO</div>
         </div>
     </a>
 
