@@ -12,6 +12,7 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Questrial&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       function openMenu() {
@@ -19,21 +20,6 @@
         elem.classList.toggle("hidden");
         var menu = document.getElementById("fainavlinks-donate");
         menu.classList.toggle("hidden");
-      }
-      function visitBlakeInterview() {
-        window.open(
-          "https://youtu.be/ogFhUzIh244?si=Tcbc10zcaSBSKgbQ",
-          "_blank"
-        );
-      }
-      function visitFaiYoutube() {
-        window.open(
-          "https://www.youtube.com/@FAI_Club/embed/C8kSrkz8Hz8",
-          "_blank"
-        );
-      }
-      function visitBlakeLinkedIn() {
-        window.open("https://www.linkedin.com/in/blakesiewert", "_blank");
       }
     </script>
     <style>
@@ -49,6 +35,102 @@
         border-radius: 10px;
       }
     </style>
+    <style>
+      body, html {
+          margin: 0;
+          padding: 0;
+          height: 100%;
+          width: 100%;
+          overflow-x: hidden;
+          background-color: black;
+          font-family: 'Questrial', sans-serif;
+      }
+      .segment {
+          width: 100%;
+          display: flex;
+          align-items: flex-end;
+          padding: 3%;
+          box-sizing: border-box;
+          height: 60vh; 
+          position: relative;
+      }
+      .black {
+          background-color: black;
+          color: white;
+          text-align: right;
+          justify-content: flex-end;
+          padding-top: 10%;
+      }
+      .black.first {
+          height: 100vh; 
+          background-image: url('meeting_about.png');
+          background-size: cover;
+          background-position: center;
+          background-attachment: fixed;
+          position: relative;
+          z-index: 1;
+      }
+      .black.first::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.75);
+          z-index: -1;
+      }
+      .black.second {
+          background-color: black; 
+      }
+      .black.second::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.75); 
+          z-index: -1;
+      }
+      .yellow {
+          background-color: #FFDE5A;
+          color: black;
+          text-align: left;
+          justify-content: flex-start;
+      }
+      .title {
+          font-family: 'Archivo Black', sans-serif;
+          font-size: 2.5em;
+          margin-bottom: 1%;
+      }
+      .body-text {
+          font-size: 1.2em;
+          max-width: 50%;
+          word-wrap: break-word;
+      }
+      .black .title {
+          color: #FFDE5A;
+      }
+      .content-wrapper {
+          max-width: 100%;
+          display: flex;
+          flex-direction: column;
+      }
+      .black .content-wrapper {
+          align-items: flex-end;
+      }
+      .yellow .content-wrapper {
+          align-items: flex-start;
+      }
+      body {
+          overflow-y: scroll;
+      }
+      html {
+          overflow-y: hidden;
+          scroll-behavior: smooth;
+      }
+  </style>
   </head>
   <body>
     <header
@@ -115,133 +197,38 @@
         >
       </div>
     </header>
-    <div class="text-6xl font-bold text-center mt-32">
-      <span
-        class="bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600 drop-shadow-lg"
-        >About Us</span
-      >
-    </div>
-
-    <!-----General Info ------>
-    <div class="\ flex text-white text-center ml-40 mr-40 mt-20 mb-40">
-      The Finance and Investments (FAI) Club looks to empower students with the
-      knowledge and skills to navigate the corporate world. FAI has evolved into
-      a thriving 501(c)(3) non-profit dedicated to fostering financial literacy
-      and education among students worldwide.
-    </div>
-
-    <!-----History Section ------>
-    <div class="bg-[#373e50] max-w-screen h-auto pb-10 flex items-center">
-      <div>
-        <h1 class="text-[#373e50]">History</h1>
-        <h2 class="font-bold text-2xl ml-10">History</h2>
-
-        <div class="text-white ml-10 w-fit mr-10">
-          Founded at Reedy High School in 2022, FAI was born with the mission of
-          helping students to better understand finance. What began as a small
-          school organization has now grown exponentially, with members spanning
-          across the United States and reaching three different continents. The
-          commitment to provide quality financial education remains strong as
-          the organization continues to expand its reach and impact.
-        </div>
+    <body>
+      <div class="segment black first">
+          <div class="content-wrapper">
+              <div class="title">About us</div>
+              <div class="body-text">The Finance and Investments (FAI) Club looks to empower students with the knowledge and skills to navigate the corporate world. FAl has evolved into a thriving 501(c)(3) non-profit dedicated to fostering financial literacy and education among students worldwide.</div>
+          </div>
       </div>
-      <div class="ml-auto mr-10">
-        <!-- image -->
-        <img
-          src="images/faiMeeting1.png"
-          class="h-40 rounded-2xl mt-10 max-w-xl"
-        />
+      <div class="segment yellow">
+          <div class="content-wrapper">
+              <div class="title">History</div>
+              <div class="body-text">Founded at Reedy High School in 2022, FAl was born with the mission of helping students to better understand finance. What began as a small school organization has now grown exponentially, with members spanning across the United States and reaching three different continents. The commitment to provide quality financial education remains strong as the organization continues to expand its reach and impact.</div>
+          </div>
       </div>
-
-      <!-----Available opportunities ------>
-    </div>
-
-    <div class="max-w-screen h-auto rounded-2xl pb-10 flex items-center">
-      <div>
-        <h1 class="text-black">History</h1>
-        <h2 class="font-bold text-2xl ml-10">Available Opportunities</h2>
-
-        <div class="text-white ml-10 w-fit mr-10">
-          At FAI, resources are continuously built up to meet members’ desires.
-          Our guest lectures continue each month, sharing some industry insights
-          and allowing a special attending member Q&A. This year, chapters will
-          share improved curriculum, featuring additional topics and interactive
-          sessions. In addition, FAI is introducing exciting new competitions,
-          namely virtual business challenges, entrepreneurship pitches, in
-          addition to the annual stock market game. The introduction of FAI’s
-          Mentor Pool will allow students to connect with seasoned business
-          professionals, turning to them for specific 1-to-1 guidance and
-          advice. Lastly, the Research Pipeline program will provide a one of a
-          kind opportunity for upperclassmen to collaborate with
-          finance/economics professors during hands-on research projects.
-        </div>
+      <div class="segment black second">
+          <div class="content-wrapper">
+              <div class="title">Available Opportunities</div>
+              <div class="body-text">At FAl, resources are continuously built up to meet members desires. Our guest lectures continue each month, sharing some industry insights and allowing a special attending member Q&A. This year, chapters will share improved curriculum, featuring additional topics and interactive sessions. In addition, FAl is introducing exciting new competitions, namely virtual business challenges, entrepreneurship pitches, in addition to the annual stock market game. The introduction of FAl's Mentor Pool will allow students to connect with seasoned business professionals, turning to them for specific 1-to-1 guidance and advice. Lastly, the Research Pipeline program will provide a one of a kind opportunity for upperclassmen to collaborate with finance/economics professors during hands-on research projects.</div>
+          </div>
       </div>
-      <div class="ml-auto mr-10">
-        <!-- image -->
-        <img
-          src="images/faiMeeting1.png"
-          class="h-40 rounded-2xl mt-10 max-w-xl"
-        />
+      <div class="segment yellow">
+          <div class="content-wrapper">
+              <div class="title">Philanthropic Opportunities</div>
+              <div class="body-text">As a non-profit organization, FAl is committed to making a positive impact in underdeveloped communities. The organization is dedicated to raising funds through donations and grants to establish libraries across struggling communities worldwide. Currently, funds are being allocated to a project in the southern region of India, aiming to provide access to educational books for children in need. To learn more about our mission and contribute, please visit the fundraiser.</div>
+          </div>
       </div>
-    </div>
-
-    <div class="bg-[#373e50] max-w-screen h-auto pb-10 flex items-center">
-      <div>
-        <h1 class="text-[#373e50]">History</h1>
-        <h2 class="font-bold text-2xl ml-10">Philanthropic Mission</h2>
-
-        <div class="text-white ml-10 w-fit mr-10">
-          As a non-profit organization, FAI is committed to making a positive
-          impact in underdeveloped communities. The organization is dedicated to
-          raising funds through donations and grants to establish libraries
-          across struggling communities worldwide. Currently, funds are being
-          allocated to a project in the southern region of India, aiming to
-          provide access to educational books for children in need. To learn
-          more about our mission and contribute, please visit the fundraiser.
-          <br />
-          <button
-            class="bg-[#926F34] rounded-xl transition ease-in-out duration-300 hover:scale-105 hover:bg-[#B88C41] mt-2 p-4 text-center text-white text-base font-semibold"
-            onclick="visitDonatePage();"
-          >
-            Donate
-            <img
-              src="images/arrow.png"
-              alt=""
-              class="inline-block h-6 w-6 ml-2"
-            />
-          </button>
-        </div>
+      <div class="segment black">
+          <div class="content-wrapper">
+              <div class="title">Join FAI today</div>
+              <div class="body-text">Whether you're a novice or an enthusiast in the finance and investments world, the FAl Club welcomes you to join a wide, interactive, and determined community. Start a chapter at your school by visiting the Chapters page. Also, join our national team through the link on the navigation bar.</div>
+          </div>
       </div>
-      <div class="ml-auto mr-10">
-        <!-- image -->
-        <img
-          src="images/faiMeeting1.png"
-          class="h-40 rounded-2xl mt-10 max-w-xl"
-        />
-      </div>
-    </div>
-
-    <div class="max-w-screen h-auto rounded-2xl pb-10 flex items-center">
-      <div>
-        <h1 class="text-black">History</h1>
-        <h2 class="font-bold text-2xl ml-10">Join FAI</h2>
-
-        <div class="text-white ml-10 w-fit mr-10">
-          Whether you're a novice or an enthusiast in the finance and
-          investments world, the FAI Club welcomes you to join a wide,
-          interactive, and determined community. Start a chapter at your school
-          by visiting the Chapters page. Also, join our national team through
-          the link on the navigation bar.
-        </div>
-      </div>
-      <div class="ml-auto mr-10">
-        <!-- image -->
-        <img
-          src="images/faiMeeting1.png"
-          class="h-40 rounded-2xl mt-10 max-w-xl"
-        />
-      </div>
-    </div>
+  </body>
   </body>
 
   <footer class="bg-veryDarkBlue">
