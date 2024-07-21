@@ -54,18 +54,18 @@
             }
 
             chaptersCount.dataset.count = 57;
-            chaptersCount.dataset.text = "Chapters";
+            chaptersCount.dataset.text = "";
             chaptersCount.dataset.duration = 2600; // Duration in milliseconds
             statesCount.dataset.count = 12;
-            statesCount.dataset.text = "States";
+            statesCount.dataset.text = "";
             statesCount.dataset.duration = 2200; // Duration in milliseconds
             countriesCount.dataset.count = 3;
-            countriesCount.dataset.text = "Countries";
+            countriesCount.dataset.text = "";
             countriesCount.dataset.duration = 1800; // Faster duration in milliseconds
 
-            showElement(chaptersCount, 400);
-            showElement(statesCount, 800);
-            showElement(countriesCount, 1200);
+            showElement(chaptersCount, 0);
+            showElement(statesCount, 300);
+            showElement(countriesCount, 900);
         });
     </script>
     <style>
@@ -75,7 +75,6 @@
         .count-up {
             position: absolute;
             opacity: 0;
-            transform: translateY(100vh);
             transition: transform 1.8s ease-out, opacity 2s ease-out; /*how fast they slide up and fade*/
         }
 
@@ -156,25 +155,28 @@
             <a target="_blank" href="http://linktr.ee/faiapp" class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110">Join Our Team</a>
         </div>
     </header>
-    <div class="h-[100vh] relative flex flex-col items-center text-center">
+    <div class="h-[100vh] relative flex flex-row items-center text-center">
         <div class="bg-cover bg-center bg-no-repeat h-full w-full opacity-25" style="background-image: url('images/chaptersBG.png');">
         </div>
-        <div id="chaptersCount" class="sm:text-4xl text-3xl font-bold mt-32 absolute top-[13vh] count-up">
-            <div class="title">
-                <span class="text-[#FFDE5A]">0 Chapters</span>
+        <div id="chaptersCount" class=" font-bold mt-32 absolute top-[25vh] left-[40vh] count-up">
+            <div class="title flex-col">
+                <span class="text-[#FFDE5A] sm:text-5xl text-3xl">0</span>
+                <div class="text-[#FFDE5A] sm:text-4xl text-2xl">Chapters</div>
             </div>
         </div>
-        <div id="statesCount" class="sm:text-5xl text-4xl font-bold mt-32 absolute top-[24vh] count-up">
+        <div id="statesCount" class=" font-bold mt-32 absolute top-[25vh]  right-[97vh] count-up">
             <div class="title">
-                <span class="text-[#FFDE5A]">0 States</span>
+                <span class="text-[#FFDE5A] sm:text-5xl text-3xl">0</span>
+                <div class="text-[#FFDE5A] sm:text-4xl text-2xl">States</div>
             </div>
         </div>
-        <div id="countriesCount" class="sm:text-6xl text-5xl font-bold mt-32 absolute top-[35vh] count-up">
+        <div id="countriesCount" class=" font-bold mt-32 absolute top-[25vh] right-[43vh] count-up">
             <div class="title">
-                <span class="text-[#FFDE5A]">0 Countries</span>
+                <span class="text-[#FFDE5A] sm:text-5xl text-3xl">0</span>
+                <div class="text-[#FFDE5A] sm:text-4xl text-2xl">Countries</div>
             </div>
         </div>
-        <div class="absolute bottom-0 right-0 p-4 sm:w-[42vw]">
+        <div class="absolute bottom-0 right-0 sm:px-14 p-4 sm:w-[42vw]">
             <div class="text-right mt-4 flex flex-col">
               <div class="lg:text-4xl text-2xl font-extrabold text-[#FFDE59]">
                 <div class="title">FAI's Global Impact</div>
