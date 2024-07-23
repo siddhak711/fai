@@ -76,6 +76,16 @@
         body {
             font-family: 'Questrial', sans-serif;
         }
+        .pages{
+
+transition: transform 0.3s ease-in-out;
+
+}
+
+.pages:hover{
+transform: scale(1.1);
+color: gold;
+}
       </style>
 
 <style> 
@@ -308,7 +318,7 @@
           target="_blank"
           href="http://linktr.ee/faiapp"
           class="text-white text-base block sm:inline-block font-light rounded px-2 py-1 mt-3 transition ease-in-out delay-150 duration-300 hover:scale-110"
-          >Join Our Team</a
+          >Join Us</a
         >
       </div>
     </header>
@@ -341,12 +351,12 @@
     </div>
   
   
-  <a href="https://06f0kz9cclf.typeform.com/to/JSvZ5oHP/?typeform-source=faiclub.org" style="text-decoration: none;width: 100%;height: 15em;background-color: #FFDE59;z-index: 999999; " target="_blank">
-  <div style="background-color: #FFDE59; width: 100%; " class="text-center flex flex-col justify-center items-center h-full w-full transition ease-in-out duration-300 hover:scale-110 p-3">
-      <p class="text-black md:text-3xl text-xl">Become a Part of Our Story</p>
-      <p class="text-black md:text-7xl text-4xl font-extrabold pb-4 title">Start A Chapter</p>
-  </div>
-  </a>
+    <a href="https://06f0kz9cclf.typeform.com/to/JSvZ5oHP/?typeform-source=faiclub.org" style="text-decoration: none;width: 100%;height: 15em;background-color: #FFDE59;z-index: 999999; " target="_blank">
+      <div style="background-color: #FFDE59; width: 100%; " class="text-center flex flex-col justify-center items-center h-full w-full transition ease-in-out duration-300 hover:scale-110 p-3">
+          <p class="text-black md:text-3xl text-xl">Become a Part of Our Story</p>
+          <p class="text-black md:text-7xl text-4xl font-extrabold pb-4 title">Join Us</p>
+      </div>
+      </a>
   
   
   <!-- Available Opportunities Section -->
@@ -429,10 +439,7 @@
       <img src="images/majesticturbo.png" alt="Majestic Turbo" class="lg:w-1/5 md:w-3/12 w-4/12 p-4">
     </div>
   </div>
-  
-  <footer>
-      <p>&copy; FAI CLUB</p>
-  </footer> 
+
 
      <!-- 
     
@@ -467,16 +474,16 @@
     </div>
     -->
     
-    <footer class="bg-veryDarkBlue">
-      <div class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0">
+    <footer class="bg-veryDarkBlue" style="background-color: #2925257a;">
+      <div class="container flex flex-col-reverse justify-between px-6 py-10 mx-auto space-y-8 md:flex-row md:space-y-0" style="padding: 100px;">
         <div class="flex flex-col-reverse items-center justify-between space-y-12 md:flex-col md:space-y-0 md:items-start">
           <div class="mx-auto my-6 text-center text-white md:hidden">
             Add Copyright Stamp
           </div>
-          <div>
-            <img src="images/fai.png" class="h-12" alt="" />
+          <div class="containero" style="justify-content: center;">
+            <img src="images/favicon.ico" class="h-12" alt=""  style="height: 125px;"/>
           </div>
-          <div class="flex justify-center space-x-4">
+          <div class="flex justify-center space-x-4" style="padding-top: 40px;">
             <a href="https://www.youtube.com/@FAI_Club" target="_blank">
               <img src="images/icon-youtube.svg" alt="" class="h-8" />
             </a>
@@ -488,32 +495,24 @@
             </a>
           </div>
         </div>
-        
-        <div class="flex justify-around space-x-32">
-          <div class="flex flex-col space-y-3 text-white">
-            <a href="index.html" class="hover:text-brightRed">Home</a>
-            <a href="team.html" class="hover:text-brightRed">Our Team</a>
-            <a href="contact.html" class="hover:text-brightRed">Contact</a>
-            <a href="chapters.html" class="hover:text-brightRed">Chapters</a>
-          </div>
-          <div class="flex flex-col space-y-3 text-white">
-            <a href="guest-lectures.html" class="hover:text-brightRed">Guest Lectures</a>
-            <a href="blog.html" class="hover:text-brightRed">Blog</a>
-            <a href="about.html" class="hover:text-brightRed">About Us</a>
-          </div>
-        </div>
 
-        <div class="flex flex-col justify-between">
-          <form>
-            <div class="flex space-x-3">
-              <input type="text" class="flex-1 px-4 rounded-full focus:outline-none" placeholder="Ask a Question" />
-              <button class="px-6 py-2 text-black rounded-full bg-lime-100 hover:bg-green-500 focus:outline-none">
-                Send
-              </button>
-            </div>
-          </form>
-          <div class="hidden text-white md:block">Add Copyright Stamp</div>
-        </div>
+        
+
+        <div class="links-container">
+          <h2 class="title" style="padding-bottom: 2em;">Pages</h2>
+          <div class="flex justify-end space-x-32">
+              <div class="flex flex-col space-y-3 text-white" style="font-size: large;">
+                  <a class="pages" href="index.html" class="hover:text-brightRed">Home</a>
+                  <a class="pages" href="team.html" class="hover:text-brightRed">Our Team</a>
+                  <a class="pages" href="contact.html" class="hover:text-brightRed">Contact</a>
+                  <a class="pages" href="chapters.html" class="hover:text-brightRed">Chapters</a>
+              </div>
+              <div class="flex flex-col space-y-3 text-white" style="font-size: large;">
+                  <a class="pages" href="guest-lectures.html" class="hover:text-brightRed">Guest Lectures</a>
+                  <a class="pages" href="blog.html" class="hover:text-brightRed">Blog</a>
+                  <a class="pages" href="about.html" class="hover:text-brightRed">About Us</a>
+              </div>
+          </div>
       </div>
     </footer>
   </body>
