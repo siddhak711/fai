@@ -30,6 +30,7 @@
         menu.classList.toggle("hidden");
       }
     </script>
+    
       <style>
 *,
 *::before,
@@ -255,6 +256,11 @@ transition: transform 0.3s ease-in-out;
 .pages:hover{
 transform: scale(1.1);
 color: gold;
+}
+@media (max-width: 768px) {
+  .regular-blog-cards {
+    grid-template-columns: 1fr;
+  }
 }
 </style>
     </style>
