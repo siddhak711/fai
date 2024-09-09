@@ -13,7 +13,63 @@
       type="text/css"
     />
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Questrial&display=swap" rel="stylesheet">
+        
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
     <style>/* Container holding the image and the text */
+
+    /* Swiper Carousel Styling */
+.swiper {
+  width: 100%;
+  height: auto;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: stretch; /* This will stretch the content to equal heights */
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column; /* Flexbox for vertical alignment */
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 80vw;
+  height: 100%; /* Make sure the blog card takes full height */
+  overflow: hidden;
+}
+
+.blog-card img {
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+.blog-card .content {
+  padding: 1rem;
+  flex-grow: 1; /* Ensures the content fills the available space */
+}
+
+.blog-card h2 {
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 1.5rem;
+  color: #FFDE5A;
+  margin-bottom: 10px;
+}
+
+.read-more {
+  color: #FFDE5A;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+}
+
       header {
           font-family: 'Questrial', sans-serif;
       }
@@ -155,6 +211,58 @@ color: gold;
   .text-container .highlight {
       color: #FFDE59;
   }
+  /* Add padding to the top of the entire carousel section */
+#blog-carousel {
+  padding-top: 40px; /* Adjust the value as needed (e.g., 40px) */
+}
+
+/* Swiper Carousel Styling */
+.swiper {
+  width: 100%;
+  height: auto;
+  padding-bottom: 50px; /* Already existing bottom padding */
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.blog-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1c1c1c;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.blog-card .image-container {
+  width: 100%;
+  height: 150px; /* Fixed height for the image container */
+  overflow: hidden;
+}
+
+.blog-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog-card .content {
+  flex-grow: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.read-more {
+  margin-top: auto;
+}
+
 </style>
 
 
@@ -358,6 +466,23 @@ color: gold;
       </div>
       </a>
   
+
+      <!-- Swiper Carousel Section -->
+<section id="blog-carousel" class="swiper mySwiper">
+  <h2 style="text-align: center; color: #FFDE59; font-size: 48px; font-family: 'Archivo Black', sans-serif; padding-bottom: 20px;">Blog</h2>
+
+
+  <div class="swiper-wrapper">
+    <!-- Slides will be populated via JavaScript -->
+  </div>
+  <!-- Add optional navigation buttons -->
+  <div class="swiper-button-next" style="color: #FFDE5A;"></div>
+  <div class="swiper-button-prev " style="color: #FFDE5A;></div>
+  <!-- Swiper pagination -->
+  <div class="swiper-pagination"></div>
+</section>
+
+
   
   <!-- Available Opportunities Section -->
 <div class="relative lg:flex justify-center items-center bg-black text-white lg:pl-10 px-8 lg:px-0">
@@ -509,6 +634,108 @@ color: gold;
         </div>
       </div>
     </footer>
+
+    <!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script>
+  // Function to load blog content into the homepage carousel
+  function loadBlogsToCarousel() {
+    // Blog content structure from your blog page
+    const blogs = [
+      {
+        image: 'images/professionals.jpeg',
+        title: "FAI's Upcoming Guest Lectures & What to Expect",
+        date: 'March 1st, 2024',
+        description: 'FAI has teamed up with professionals in the finance field to host guest lectures...',
+        link: 'blog_plans.html'
+      },
+      {
+        image: 'images/libraryinindia.jpg',
+        title: 'Library Fundraiser in India',
+        date: 'February 9th, 2024',
+        description: 'FAI members raised donations to fund a library in India to provide access to education...',
+        link: 'blog_library.html'
+      },
+      {
+        image: 'images/sustainableinv.jpeg',
+        title: 'Sustainable Investing',
+        date: 'November 2nd, 2023',
+        description: 'FAI believes in sustainable investing to secure the environment for future generations...',
+        link: 'blog_sustainableinv.html'
+      },
+      {
+        image: 'images/fin-literacy.gif',
+        title: 'Financial Literacy for K-12',
+        date: 'August 14th, 2023',
+        description: 'The need for financial literacy programs is undeniable. 87% of teens don’t understand personal finances...',
+        link: 'blog_finliteracy.html'
+      }
+    ];
+
+    // Get the Swiper wrapper
+    const swiperWrapper = document.querySelector('.swiper-wrapper');
+
+    // Loop through blogs and create slides
+    blogs.forEach(blog => {
+      const slide = document.createElement('div');
+      slide.classList.add('swiper-slide');
+
+      // Create blog card structure adapted from your blog page
+      slide.innerHTML = `
+        <div class="blog-card">
+          <div class="image-container">
+            <img src="${blog.image}" alt="${blog.title}" class="image" />
+          </div>
+          <div class="content">
+            <span class="tag">${blog.date}</span>
+            <h2>${blog.title}</h2>
+            <p class="description">${blog.description}</p>
+            <a href="${blog.link}" class="read-more">Read More</a>
+          </div>
+        </div>
+      `;
+
+      // Append the slide to Swiper wrapper
+      swiperWrapper.appendChild(slide);
+    });
+
+    // Initialize Swiper with autoplay and navigation
+    const swiper = new Swiper('.swiper', {
+      loop: true,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      spaceBetween: 20,  // Space between slides
+      slidesPerView: 1,   // Number of slides visible at a time
+      breakpoints: {
+        640: {
+          slidesPerView: 1,
+        },
+        768: {
+          slidesPerView: 2,
+        },
+        1024: {
+          slidesPerView: 3,
+        },
+      },
+    });
+  }
+
+  // Call the function once the DOM content is loaded
+  window.addEventListener('DOMContentLoaded', loadBlogsToCarousel);
+</script>
+
+
   </body>
   
 
@@ -517,5 +744,8 @@ color: gold;
   
 
 </html>
+
+
+
 
 
