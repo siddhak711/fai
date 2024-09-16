@@ -19,6 +19,59 @@
     }
     </script>
     <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const chapterCards = document.querySelectorAll('.chapter-card');
+    const chapterContainer = document.getElementById('chapterContainer');
+
+    // Object to store chapters by state or country
+    const chaptersByLocation = {};
+
+    // Loop through each chapter card
+    chapterCards.forEach(function(card) {
+        const locationText = card.querySelector('p').textContent.trim();
+        const locationParts = locationText.split(', ');
+        const stateOrCountry = locationParts[1].split(" ")[0];
+
+        if (!chaptersByLocation[stateOrCountry]) {
+            chaptersByLocation[stateOrCountry] = [];
+        }
+        chaptersByLocation[stateOrCountry].push(card);
+    });
+
+    // Create a container for the buttons
+    const buttonsContainer = document.createElement('div');
+    buttonsContainer.classList.add('flex', 'justify-center', 'flex-wrap', 'gap-4', 'my-4');
+    
+    // Loop through each state or country and create buttons
+    for (const location in chaptersByLocation) {
+        const button = document.createElement('button');
+        button.textContent = location;
+        button.classList.add('bg-blue-500', 'text-white', 'px-4', 'py-2', 'rounded');
+        button.onclick = function() {
+            showChapters(location);
+        };
+        buttonsContainer.appendChild(button);  // Add buttons to the container
+    }
+
+    // Insert the buttons container before the chapterContainer
+    chapterContainer.parentNode.insertBefore(buttonsContainer, chapterContainer);
+
+    // Function to show chapters from the selected location
+    function showChapters(location) {
+        chapterCards.forEach(card => card.style.display = 'none');  // Hide all chapters
+        if (chaptersByLocation[location]) {
+            chaptersByLocation[location].forEach(card => card.style.display = 'block');
+        }
+    }
+});
+    
+        // Function to toggle dropdown visibility
+        function toggleDropdown(dropdownId) {
+            const dropdown = document.getElementById(dropdownId);
+            dropdown.classList.toggle('hidden');
+        }
+    </script>
+    <script>
         document.addEventListener("DOMContentLoaded", function () {
             const chaptersCount = document.getElementById("chaptersCount");
             const statesCount = document.getElementById("statesCount");
@@ -91,6 +144,9 @@
         }
         .title {
           font-family: 'Archivo Black', sans-serif;
+        }
+        .chapter-card {
+            list-style-type: none; /* Removes the bullet point from the top left of the cards*/
         }
         .pages{
 
@@ -222,7 +278,7 @@ color: gold;
     <!--chapter cards: image, name, city/state, contact. chapter-card and chapter-name ID's allow the showing/hiding-->
     <div class="bg-[#201d19] ">
         <div class ="text-white text-center sm:text-3xl text-lg pt-6">
-            <p>Find a chapter by using the search box below</p>
+            <p>Find a chapter by using the search box below, or filter by region</p>
         </div>
         <div class="flex justify-center mt-6 mb-10 drop-shadow-xl">
             <div class="w-full max-w-xl mx-4 p-3 bg-[#997920] rounded-md">
@@ -237,53 +293,49 @@ color: gold;
                 <div id="result-box" class="w-full text-gray-300 text-lg rounded-md hidden overflow-y-auto max-h-60"></div>
             </div>
         </div>
-                    <div class="mx-auto py-2 max-w-7xl lg:py-4">
-                        <ul class="flex flex-col sm:flex-row flex-wrap">
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
-                                <div class="space-y-4">
-                                    <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
-                                        <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/reedy-high-school.jpeg" alt="Saratoga High School"/>
-                                    </div>
-                                    <div class="space-y-2">
-                                        <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="chapter-name text-lg font-bold leading-6">Reedy High School</h3>
-                                            <p class="text-yei-primary-main text-base">
-                                                Frisco, TX
-                                                <!-- -->
-                                                <a class="text-gray-400 text-sm whitespace-nowrap" target="_blank" href="mailto:siddhakanthi@gmail.com">
-                                                    (<u>contact</u>)
-                                                </a>
-                                            </p>
-                                            <div class="mt-0.5 mb-1">
-                                                <span class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Primary 
-                                                <!-- -->
-                                                Founding Club</span>
-                                            </div>
-                                        </div>
-                                    </div>
+        <div class="mx-auto py-2 max-w-7xl lg:py-4">
+            <div id="chapterContainer" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <!-- Chapter cards go here -->
+                <li class="chapter-card p-2 mb-2">
+                    <div class="space-y-4">
+                        <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
+                            <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/reedy-high-school.jpeg" alt="Saratoga High School"/>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="text-lg leading-6 font-medium space-y-1">
+                                <h3 class="chapter-name text-lg font-bold leading-6">Reedy High School</h3>
+                                <p class="text-yei-primary-main text-base">
+                                    Frisco, TX
+                                    <a class="text-gray-400 text-sm whitespace-nowrap" target="_blank" href="mailto:siddhakanthi@gmail.com">
+                                        (<u>contact</u>)
+                                    </a>
+                                </p>
+                                <div class="mt-0.5 mb-1">
+                                    <span class="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">Primary Founding Club</span>
                                 </div>
-                            </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
-                                <div class="space-y-4">
-                                    <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
-                                        <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/lebanon-trail-high-school.jpeg" alt="Centennial High School"/>
-                                    </div>
-                                    <div class="space-y-2">
-                                        <div class="text-lg leading-6 font-medium space-y-1">
-                                            <h3 class="chapter-name text-lg font-bold leading-6">Lebanon Trail High School</h3>
-                                            <p class="text-yei-primary-main text-base">
-                                                Frisco, TX
-                                                <!-- -->
-                                                <a class="text-gray-400 text-sm whitespace-nowrap" target="_blank" href="mailto:Arnav.senapathi@gmail.com">
-                                                    (<u>contact</u>
-                                                    )
-                                                </a>
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="chapter-card   p-2 mb-2">
+                    <div class="space-y-4">
+                        <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
+                            <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/lebanon-trail-high-school.jpeg" alt="Centennial High School"/>
+                        </div>
+                        <div class="space-y-2">
+                            <div class="text-lg leading-6 font-medium space-y-1">
+                                <h3 class="chapter-name text-lg font-bold leading-6">Lebanon Trail High School</h3>
+                                <p class="text-yei-primary-main text-base">
+                                    Frisco, TX
+                                    <a class="text-gray-400 text-sm whitespace-nowrap" target="_blank" href="mailto:Arnav.senapathi@gmail.com">
+                                        (<u>contact</u>)
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/montclair-high-school.jpeg" alt="Saratoga High School"/>
@@ -303,7 +355,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/pine-crest-high-school.jpeg" alt="Lynbrook High School"/>
@@ -323,7 +375,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/henry-gunn-high-school.jpeg" alt="Newton South High School"/>
@@ -343,7 +395,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/pine-richland-high-school.jpeg" alt="Harker School"/>
@@ -363,7 +415,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/central-high-school.jpeg" alt="Waubonsie Valley High School"/>
@@ -383,7 +435,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/plano-east-high-school.jpeg" alt="Eastlake High School"/>
@@ -403,7 +455,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/the-adelson-school.jpeg" alt="Joaquin Miller Middle School"/>
@@ -423,7 +475,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/bellarmine-college-prep.jpeg" alt="American High School"/>
@@ -443,7 +495,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/enloe-high-school.jpeg" alt="Chaparral High School"/>
@@ -463,7 +515,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/lick-wilmerding-high-school.jpeg" alt="Ardrey Kell"/>
@@ -483,7 +535,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/north-broward-prep.jpeg" alt="Vaels International School"/>
@@ -503,7 +555,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/shanghai-cambridge-international.jpeg" alt="Westwood High School"/>
@@ -523,7 +575,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/pioneer-heritage-school.jpeg" alt="GEMS Wellington Academy Silicon Oasis"/>
@@ -543,7 +595,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/edw-clark-high-school.jpeg" alt="BASIS Scottsdale"/>
@@ -563,7 +615,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/abraham-lincoln-high-school.jpeg" alt="Richard Montgomery High School"/>
@@ -583,7 +635,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/the-meadows-school.jpeg" alt="Green Hope High School"/>
@@ -603,7 +655,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/drmichael-krop-hish-school.jpeg" alt="Redwood Middle School"/>
@@ -623,7 +675,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/francis-howell-high-school.jpeg" alt="Palo Alto High School"/>
@@ -643,7 +695,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/griffin-middle-school.jpeg" alt="Homestead High School"/>
@@ -663,7 +715,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/gyanodaya-international-school.jpeg" alt="El Camino Fundamental High School"/>
@@ -683,7 +735,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/beijing-academy-school.jpeg" alt="Menlo High School"/>
@@ -703,7 +755,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/ray-braswell-school.png" alt="John P. Stevens High School"/>
@@ -723,7 +775,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/hampton-high-school.jpeg" alt="Leigh High School"/>
@@ -743,7 +795,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/jinan-foreign-school.jpeg" alt="Seven Lakes High School"/>
@@ -763,7 +815,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/dryb-patil-polytechnic.jpeg" alt="Sherwood Hall Senior Secondary School"/>
@@ -783,7 +835,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/green-level-high-school.jpeg" alt="Central High School"/>
@@ -803,7 +855,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/saratoga-high-school.jpeg" alt="Instituto Lange Ley"/>
@@ -823,7 +875,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/basis-international-school.jpeg" alt="Christian Heritage Academy"/>
@@ -843,7 +895,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/bergen-county_tech-high-school.jpeg" alt="Archbishop Mitty High School"/>
@@ -863,7 +915,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/heritage-high-school.jpeg" alt="Cupertino High School"/>
@@ -883,7 +935,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/cypress-ranch-high-school.jpeg" alt="Dublin High School"/>
@@ -903,7 +955,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/guangzhou-tianxin-school.jpeg" alt="Viewpoint School"/>
@@ -923,7 +975,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/ulink-college-shanghai.jpeg" alt="Frisco Heritage High School"/>
@@ -943,7 +995,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/frisco-high-school.jpeg" alt="Lower Merion High School"/>
@@ -963,7 +1015,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/liberty-high-school.jpeg" alt="Dougherty Valley High School"/>
@@ -983,7 +1035,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/westwood-high-school.jpeg" alt="Skyline High School"/>
@@ -1003,7 +1055,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/emerson-high-school.jpeg" alt="Allen High School"/>
@@ -1023,7 +1075,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/lewisville-harmon-high-school.jpeg" alt="Bothell High School"/>
@@ -1043,7 +1095,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/prosper-high-school.jpeg" alt="Charlotte Country Day"/>
@@ -1063,7 +1115,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/lone-star-high-school.jpeg" alt="GEMS Modern Academy"/>
@@ -1083,7 +1135,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/the-woodlands-high-school.jpeg" alt="Obra D. Tompkins High School"/>
@@ -1103,7 +1155,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/northallegheny-intermediate-school.jpeg" alt="Meadowbrook High School"/>
@@ -1123,7 +1175,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/benjamin-franklin-high-school.jpeg" alt="Milton Academy"/>
@@ -1143,7 +1195,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/wakeland-high-school.jpeg" alt="Santa Monica High School"/>
@@ -1163,7 +1215,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/roy-ketcham-high-school.jpeg" alt="Bridgewater-Raritan Regional High School"/>
@@ -1183,7 +1235,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/melissa-high-school.jpeg" alt="Mount Lebanon High School"/>
@@ -1203,7 +1255,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/independence-high-school.jpeg" alt="American Academy in Tbilisi"/>
@@ -1223,7 +1275,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/hebron-high-school.jpeg" alt="Santa Teresa High School"/>
@@ -1243,7 +1295,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/coppell-high-school.jpeg" alt="Doral Academy Preparatory"/>
@@ -1263,7 +1315,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/centennial-high-school.jpeg" alt="Hankuk Academy of Foreign Studies"/>
@@ -1283,7 +1335,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/manchester-essex-high-school.jpeg" alt="Najd National Schools"/>
@@ -1303,7 +1355,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/flower-mound-high-school.jpeg" alt="Los Altos High School"/>
@@ -1323,7 +1375,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/panther-creek-high-school.jpeg" alt="Alameda High Economics Club"/>
@@ -1343,7 +1395,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/north-allegheny-high-school.jpeg" alt="Blue Valley West High School"/>
@@ -1363,7 +1415,7 @@ color: gold;
                                     </div>
                                 </div>
                             </li>
-                            <li class="chapter-card sm:w-1/2 md:w-1/3 lg:w-1/4 p-2 mb-2">
+                            <li class="chapter-card   p-2 mb-2">
                                 <div class="space-y-4">
                                     <div class="overflow-hidden w-full shadow-lg h-64 bg-gray-800 rounded-xl">
                                         <img class="sm:h-80 md:h-72 w-full bg-gray-800 object-cover" src="images/clubs/parsippany-high-school.png" alt="Del Norte High School"/>
