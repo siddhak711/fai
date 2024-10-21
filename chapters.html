@@ -106,19 +106,19 @@
                 requestAnimationFrame(updateCount);
             }
 
-            chaptersCount.dataset.count = 57;
+            membersCount.dataset.count = 6,000;
+            membersCount.dataset.text = "";
+            membersCount.dataset.duration = 1800; // Faster duration in milliseconds
+            chaptersCount.dataset.count = 122;
             chaptersCount.dataset.text = "";
             chaptersCount.dataset.duration = 2600; // Duration in milliseconds
-            statesCount.dataset.count = 12;
+            statesCount.dataset.count = 20;
             statesCount.dataset.text = "";
             statesCount.dataset.duration = 2200; // Duration in milliseconds
-            countriesCount.dataset.count = 3;
-            countriesCount.dataset.text = "";
-            countriesCount.dataset.duration = 1800; // Faster duration in milliseconds
 
-            showElement(chaptersCount, 0);
-            showElement(statesCount, 300);
-            showElement(countriesCount, 900);
+            showElement(membersCount, 0);
+            showElement(chaptersCount, 300);
+            showElement(statesCount, 900);
         });
     </script>
     <style>
@@ -229,6 +229,12 @@ color: gold;
     <div class="h-[100vh] relative flex flex-row items-center text-center">
         <div class="bg-cover bg-center bg-no-repeat h-full w-full opacity-25" style="background-image: url('images/chaptersBG.png');">
         </div>
+        <div id="membersCount" class=" font-bold mt-32 absolute top-[25vh] right-[43vh] count-up">
+            <div class="title">
+                <span class="text-[#FFDE5A] sm:text-5xl text-3xl">0</span>
+                <div class="text-[#FFDE5A] sm:text-4xl text-2xl">Members</div>
+            </div>
+        </div>
         <div id="chaptersCount" class=" font-bold mt-32 absolute top-[25vh] left-[40vh] count-up">
             <div class="title flex-col">
                 <span class="text-[#FFDE5A] sm:text-5xl text-3xl">0</span>
@@ -239,12 +245,6 @@ color: gold;
             <div class="title">
                 <span class="text-[#FFDE5A] sm:text-5xl text-3xl">0</span>
                 <div class="text-[#FFDE5A] sm:text-4xl text-2xl">States</div>
-            </div>
-        </div>
-        <div id="countriesCount" class=" font-bold mt-32 absolute top-[25vh] right-[43vh] count-up">
-            <div class="title">
-                <span class="text-[#FFDE5A] sm:text-5xl text-3xl">0</span>
-                <div class="text-[#FFDE5A] sm:text-4xl text-2xl">Countries</div>
             </div>
         </div>
         <div class="absolute bottom-0 right-0 sm:px-14 p-4 sm:w-[42vw]">
