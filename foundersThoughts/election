@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="forest">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAI</title>
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link href="/dist/output.css" rel="stylesheet" >
+    <link href="/index.css" rel="stylesheet" >
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.9.4/dist/full.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  function openMenu(){
+    var elem = document.getElementById("fainavlinks");
+    elem.classList.toggle("hidden");
+    var menu = document.getElementById("fainavlinks-donate");
+    menu.classList.toggle("hidden");
+  }
+</script>
+    <style>
+        .authtag {
+          background-color: #FFDE5A;
+          color: #000000;
+          font-size: 0.75rem;
+          font-weight: 600;
+          padding: 0.25rem 0.5rem;
+          border-radius: 5px;
+          margin-bottom: 0.5rem;
+          display: inline-block;
+      }
+    </style>
+</head>
+<body>
+  
+  <div class="relative flex justify-center ">
+    <img src="/images/foundersThoughts/election.png" alt="The Financial Impact of the 2024 Election" class="w-full max-h-fit  object-cover opacity-50" style="height: 425px;">
+  
+  
+ 
+  </div>
+
+  <div class="lg:mx-[45vh] md:mx-36 sm:mx-16 mx-10 mt-20 text-white leading-relaxed">
+    <div class="md:relative">
+      <div class="md:mb-0 mb-4">
+        <a target="_self" href="/foundersThoughts.html" class="md:absolute right-0 top-0 
+    font-bold text-xl text-[#FFDE5A] hover:scale-110 transition">Back to All Thoughts</a>
+      </div>
+      <span class="authtag">Siddha Kanthi - November 18th, 2024</span>
+      
+    </div>
+        <p class="font-bold lg:text-3xl text-2xl mb-5">The Financial Impact of the 2024 Election/p>
+
+        <p>
+          The 2024 U.S. presidential election, which saw Donald Trump return to office, has had significant financial impacts across various sectors.
+        </p> 
+
+        <p class="font-bold my-5">Billionaire Wealth Soars</p>
+        
+        <p>
+          High-profile billionaires have experienced remarkable gains since the election. Elon Musk’s net worth has surged by approximately two-thirds, reaching $440 billion, with some analysts predicting he could become a trillionaire during this term. Similarly, other billionaires like Mark Zuckerberg and Jeff Bezos have seen substantial increases in wealth, highlighting a stark trend in wealth accumulation among the ultra-rich.
+        </p> 
+        
+        
+        <p class="font-bold my-5">Cryptocurrency’s Historic Milestone</p>
+        <p>
+          Bitcoin has broken the $100,000 barrier for the first time, fueled by optimism about the administration’s favorable stance on integrating cryptocurrency into mainstream finance. Trump’s plans to establish a bitcoin "strategic reserve" and form a crypto advisory council signal a major policy shift, further boosting confidence in the market.
+        </p>
+
+        <p class="font-bold my-5">Housing Market Growth in Swing Counties</p>
+        <p>
+          An academic study revealed that counties which flipped their vote to Trump in 2024 could experience significant home price growth. These “flip” counties are expected to outperform others during Trump’s second term, reflecting a unique correlation between voting patterns and real estate trends.
+        </p>
+    
+        <p class="font-bold my-5">Optimism Among Investors</p>
+        
+        <p>
+          Wall Street has responded positively to Trump’s economic agenda. Goldman Sachs CEO David Solomon has expressed optimism, citing the administration’s “pro-growth policies” as likely to drive a surge in mergers, acquisitions, and asset prices. This sentiment points to heightened activity in the financial markets over the coming years.
+        </p>
+
+        <p class="font-bold my-5">Divided Public Perception</p>
+        
+        <p>
+          Despite strong economic indicators like a low unemployment rate of 4.2% and a rising stock market, public opinion remains deeply divided. A recent AP-NORC poll shows that nearly 70% of Americans view the economy as performing poorly. This pessimism is particularly pronounced among Democrats, while Republicans are largely optimistic about the potential for economic improvement in 2025 under Trump’s leadership.
+        </p>
+
+        <p class="font-bold my-5">Policy Implications</p>
+        
+        <p>
+          Trump’s proposed policies—including mass deportations, universal tariffs on imports, and an energy-first approach—are expected to have widespread economic implications. While these initiatives aim to stimulate growth and bolster domestic industries, concerns about inflationary pressures and a rising federal deficit remain prominent.
+        </p>
+
+        <p class="font-bold my-5">Conclusion</p>
+        
+        <p>
+          In summary, the 2024 election has brought significant financial changes, with wealth gains among billionaires, optimism in the cryptocurrency and housing markets, and divided public sentiment. The full impact of Trump’s policies will likely unfold in the coming years, shaping the economic landscape in profound ways.
+
+        </p>
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+  </div>
+
+</body>
+</html>
