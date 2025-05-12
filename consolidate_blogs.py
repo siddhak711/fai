@@ -1,12 +1,11 @@
 import os
-import filecmp
 import shutil
 
 ROOT_DIR = "."
 BLOG_DIR = "blogs"
 BACKUP_DIR = "backup"
 EXTENSIONS_TO_UPDATE = {".html", ".js", ".css"}
-DRY_RUN = False  # Set to False to perform actual changes
+DRY_RUN = False  # Set to True to preview actions, False to apply changes
 
 def ensure_backup_dir():
     if not os.path.exists(BACKUP_DIR):
@@ -19,17 +18,14 @@ def backup_file(filepath):
     shutil.copy2(filepath, backup_path)
     print(f"[BACKUP] {filepath} -> {backup_path}")
 
-def find_duplicates():
+def find_duplicates_by_name():
     root_files = [f for f in os.listdir(ROOT_DIR) if f.startswith("blog_") and f.endswith(".html")]
     blog_files = [f for f in os.listdir(BLOG_DIR) if f.startswith("blog_") and f.endswith(".html")]
 
-    duplicates = []
-    for root_file in root_files:
-        if root_file in blog_files:
-            root_path = os.path.join(ROOT_DIR, root_file)
-            blog_path = os.path.join(BLOG_DIR, root_file)
-            if filecmp.cmp(root_path, blog_path, shallow=False):
-                duplicates.append(root_file)
+    print("Root blog files:", root_files)
+    print("Blogs folder files:", blog_files)
+
+    duplicates = [f for f in root_files if f in blog_files]
     return duplicates
 
 def delete_duplicates(duplicates):
@@ -69,12 +65,12 @@ def update_references():
 
 def main():
     ensure_backup_dir()
-    print("Finding duplicate blog files...")
-    duplicates = find_duplicates()
+    print("Finding duplicate blog files by filename...")
+    duplicates = find_duplicates_by_name()
     if not duplicates:
         print("No duplicates found.")
     else:
-        print(f"Duplicate files: {duplicates}")
+        print(f"Duplicate filenames: {duplicates}")
         delete_duplicates(duplicates)
 
     print("Scanning and updating references...")
